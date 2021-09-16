@@ -45,7 +45,7 @@ namespace DataStructures
             var s1 = r1.RemoveDuplicates(new int[10] { 0, 0, 1, 1, 1, 2, 2, 3, 3, 4 });
 
             BuyNSellStockProblemType1 pb1 = new BuyNSellStockProblemType1();
-            pb1.MaxProfit(new int[] { 0, 1, 5, 3, 6, 4 });
+            pb1.MaxProfit(new int[] { 7, 1, 5, 3, 6, 4 });
             //  Console.Write($"value = {s1}");
 
             SumProblemUsingRecursion sb = new SumProblemUsingRecursion();
@@ -88,9 +88,53 @@ namespace DataStructures
             linkedList.PrintLinkedList();
 
 
+            var thirdnode = new ListNode(300, new ListNode(400, new ListNode(500, null)));
+            var secondnode = new ListNode(200, thirdnode);
+            var head = new ListNode(100, secondnode);
+            ReverseLinkedListProblem obj = new ReverseLinkedListProblem();
+           var resultlist = obj.ReverseList(head);
 
-           
-            
+           while (resultlist !=null)
+           {
+               Console.WriteLine(resultlist.val);
+               resultlist = resultlist.next;
+           }
+
+            PalindromeLinkedListProblem plp = new PalindromeLinkedListProblem();
+            var head2 = new ListNode(1)
+            {
+                next = new ListNode(2)
+                {
+                    
+                    next = new ListNode(3)
+                    {
+                        next = new ListNode(2)
+                        {
+                            next = new ListNode(1)
+                        }
+                      
+                    }
+                }
+            };
+            var palindromeresult  = plp.IsPalindrome(head2);
+
+            MiddleOfLinkedList middleOfLinked = new MiddleOfLinkedList();
+            var head3 = new ListNode(100)
+            {
+                next = new ListNode(200)
+                {
+                    next = new ListNode(402)
+                    {
+                        next = new ListNode(109)
+                        {
+                            next =   new ListNode(500)
+                        }
+                    }
+                }
+            };
+            var middleNoderesult = middleOfLinked.MiddleNode(head3);
+
+
         }
     }
 }

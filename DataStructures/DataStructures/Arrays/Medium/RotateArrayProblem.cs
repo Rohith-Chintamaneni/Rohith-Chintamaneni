@@ -8,6 +8,7 @@ namespace DataStructures.Arrays.Medium
     {
         public void Rotate(int[] nums, int k)
         {
+            
             var steps = k % nums.Length;
 
             if (steps == 0)
