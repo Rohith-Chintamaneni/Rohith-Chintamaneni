@@ -14,6 +14,8 @@
 
   <ItemGroup>
     <Folder Include="BinarySearch\" />
+    <Folder Include="Queues\" />
+    <Folder Include="Stacks\" />
   </ItemGroup>
 
 </Project>
