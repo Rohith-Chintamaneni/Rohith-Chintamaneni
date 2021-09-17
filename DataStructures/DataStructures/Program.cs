@@ -1,11 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Runtime.InteropServices;
 using DataStructures.Arrays;
 using DataStructures.Arrays.Medium;
 using DataStructures.LinkedList;
+using DataStructures.Queues;
 using DataStructures.Recursion;
 using DataStructures.SlidingWindow;
 using DataStructures.Sort.MergeSort;
+using DataStructures.Stacks;
 
 namespace DataStructures
 {
@@ -133,6 +136,80 @@ namespace DataStructures
                 }
             };
             var middleNoderesult = middleOfLinked.MiddleNode(head3);
+
+
+
+            CustomStackUsingLinkedList stackobj = new CustomStackUsingLinkedList();
+            var isempty = stackobj.IsEmpty();
+            stackobj.Push(10);
+            stackobj.Push(20);
+            var isempty2 = stackobj.IsEmpty();
+            var peekedobj = stackobj.Peek();
+            var poppedval = stackobj.Pop();
+            var peekedobj2 = stackobj.Peek();
+            var poppedval2 = stackobj.Pop();
+
+
+
+            CustomQueueImplementation queueImplementation = new CustomQueueImplementation();
+            queueImplementation.Enqueue(10);
+            queueImplementation.Enqueue(20);
+            queueImplementation.Enqueue(30);
+            queueImplementation.Dequeue();
+            queueImplementation.Dequeue();
+            queueImplementation.Dequeue();
+            queueImplementation.Dequeue();
+
+            SmallestSubArrayProblem ssap = new SmallestSubArrayProblem();
+           int minwindowsize = ssap.smallestSubarray(8, new int[] { 4, 2, 2, 7, 8, 1, 2, 8, 1, 0 });
+
+           var DuplicateListnode = new Node(12)
+           {
+               NextNode = new Node(11)
+               {
+                   NextNode = new Node(12)
+                   {
+                       NextNode = new Node(21)
+                       {
+                           NextNode = new Node(41)
+                           {
+                               NextNode = new Node(43)
+                               {
+                                   NextNode = new Node(21)
+                               }
+                           }
+                       }
+                   }
+               }
+
+           };
+
+           RemoveDuplicateFromUnSortedLinkedList removeDuplicate = new RemoveDuplicateFromUnSortedLinkedList();
+          var afterremovingduplicatenodes= removeDuplicate.RemoveDuplicates(DuplicateListnode);
+
+          var duplicateListnodeSorted = new ListNode(11)
+          {
+              next = new ListNode(11)
+              {
+                  next = new ListNode(11)
+                  {
+                      next = new ListNode(21)
+                      {
+                          next = new ListNode(43)
+                          {
+                              next = new ListNode(43)
+                              {
+                                  next = new ListNode(60)
+                              }
+                          }
+                      }
+                  }
+              }
+
+          };
+
+          RemoveDuplicatesFromSortedList rdfs = new RemoveDuplicatesFromSortedList();
+          var responseofRemoveDuplicatesOfSorted= rdfs.RemoveDuplicatesFromSorted(duplicateListnodeSorted);
 
 
         }
