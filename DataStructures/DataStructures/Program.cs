@@ -4,6 +4,7 @@ using System.Runtime.InteropServices;
 using DataStructures.Arrays;
 using DataStructures.Arrays.Medium;
 using DataStructures.LinkedList;
+using DataStructures.LinkedList.Medium;
 using DataStructures.Queues;
 using DataStructures.Recursion;
 using DataStructures.SlidingWindow;
@@ -211,6 +212,31 @@ namespace DataStructures
           RemoveDuplicatesFromSortedList rdfs = new RemoveDuplicatesFromSortedList();
           var responseofRemoveDuplicatesOfSorted= rdfs.RemoveDuplicatesFromSorted(duplicateListnodeSorted);
 
+          RemoveDuplicatesFromSortedArrayProblemAuxStorage aux =new RemoveDuplicatesFromSortedArrayProblemAuxStorage();
+          var auxstorage = aux.RemoveDuplicates(new int[10] { 0, 0, 1, 1, 1, 2, 2, 3, 3, 4 });
+
+
+          var removeKthNodefromList =  new ListNode(11)
+          {
+              next = new ListNode(1)
+              {
+                  next = new ListNode(2)
+                  {
+                      next = new ListNode(3)
+                      {
+                          next = new ListNode(4)
+                          {
+                              next = new ListNode(5)
+                              
+                          }
+                      }
+                  }
+              }
+
+          };
+
+          DeleteKthElementFromLinkedList RkNfl = new DeleteKthElementFromLinkedList();
+          var ans = RkNfl.RemoveNthFromEnd(removeKthNodefromList, 2);
 
         }
     }
