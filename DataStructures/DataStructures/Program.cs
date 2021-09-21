@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using DataStructures.Arrays;
+using DataStructures.Arrays.BruteForce.SlidingWindowProblemPatterns;
 using DataStructures.Arrays.Medium;
 using DataStructures.LinkedList;
 using DataStructures.LinkedList.Medium;
@@ -49,7 +50,8 @@ namespace DataStructures
             var s1 = r1.RemoveDuplicates(new int[10] { 0, 0, 1, 1, 1, 2, 2, 3, 3, 4 });
 
             BuyNSellStockProblemType1 pb1 = new BuyNSellStockProblemType1();
-            pb1.MaxProfit(new int[] { 7, 1, 5, 3, 6, 4 });
+           Console.WriteLine(pb1.MaxProfit(new int[] { 7, 1, 5, 3, 6, 4 }));
+          
             //  Console.Write($"value = {s1}");
 
             SumProblemUsingRecursion sb = new SumProblemUsingRecursion();
@@ -235,8 +237,15 @@ namespace DataStructures
 
           };
 
+          //  verify the you tube kenny talks. Still not the correct way
           DeleteKthElementFromLinkedList RkNfl = new DeleteKthElementFromLinkedList();
           var ans = RkNfl.RemoveNthFromEnd(removeKthNodefromList, 2);
+
+          MaximumAverageSubarrayProblem MaspUb = new MaximumAverageSubarrayProblem();
+         Console.Write("Max Avg of subarray of size 3={0}", MaspUb.FindMaxAverage(new int[] {0, 1, 1, 3, 3},4));
+
+         MaximumSumOfAContinousArrayOfSizeK MSASC = new MaximumSumOfAContinousArrayOfSizeK();
+         Console.Write("max sum ={0}",MSASC.FindMaxSumSubArray(new int[] { 4, 2, 1, 7, 8, 1, 2, 8, 1, 0 }, 3));
 
         }
     }
