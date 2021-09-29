@@ -256,6 +256,10 @@ namespace DataStructures
 
          ReversePrefixOfAWordProblem RPOWP = new ReversePrefixOfAWordProblem();
          Console.WriteLine( "Reverse Prefix= {0}", RPOWP.ReversePrefix("abcdef", 'd'));
+
+         SquaresofaSortedArrayProblem SOSAP = new SquaresofaSortedArrayProblem();
+         var result = SOSAP.SortedSquares(new int[5] { -7, -3, 2, 3, 11});
+
         }
     }
 }
