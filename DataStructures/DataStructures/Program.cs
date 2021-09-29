@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.Runtime.InteropServices;
 using DataStructures.Arrays;
+using DataStructures.Arrays._2pointer;
 using DataStructures.Arrays.BruteForce.SlidingWindowProblemPatterns;
 using DataStructures.Arrays.Medium;
 using DataStructures.LinkedList;
@@ -242,11 +243,19 @@ namespace DataStructures
           var ans = RkNfl.RemoveNthFromEnd(removeKthNodefromList, 2);
 
           MaximumAverageSubarrayProblem MaspUb = new MaximumAverageSubarrayProblem();
-         Console.Write("Max Avg of subarray of size 3={0}", MaspUb.FindMaxAverage(new int[] {0, 1, 1, 3, 3},4));
+         Console.WriteLine("Max Avg of subarray of size 3={0}", MaspUb.FindMaxAverage(new int[] {0, 1, 1, 3, 3},4));
 
          MaximumSumOfAContinousArrayOfSizeK MSASC = new MaximumSumOfAContinousArrayOfSizeK();
-         Console.Write("max sum ={0}",MSASC.FindMaxSumSubArray(new int[] { 4, 2, 1, 7, 8, 1, 2, 8, 1, 0 }, 3));
+         Console.WriteLine("max sum ={0}",MSASC.FindMaxSumSubArray(new int[] { 4, 2, 1, 7, 8, 1, 2, 8, 1, 0 }, 3));
 
+
+
+         MergeTwoSortedArraysProblem MTSAP = new MergeTwoSortedArraysProblem();
+         MTSAP.Merge(new int[6] { 1, 2, 3,0,0,0 }, 3, new int[] { 2, 5, 6 }, 3);
+
+
+         ReversePrefixOfAWordProblem RPOWP = new ReversePrefixOfAWordProblem();
+         Console.WriteLine( "Reverse Prefix= {0}", RPOWP.ReversePrefix("abcdef", 'd'));
         }
     }
 }
