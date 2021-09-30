@@ -260,6 +260,9 @@ namespace DataStructures
          SquaresofaSortedArrayProblem SOSAP = new SquaresofaSortedArrayProblem();
          var result = SOSAP.SortedSquares(new int[5] { -7, -3, 2, 3, 11});
 
+         IntersectionofTwoArraysIIProblem IOTP = new IntersectionofTwoArraysIIProblem();
+         IOTP.Intersect(new[] { 4, 9, 5 }, new[] { 9, 4, 9, 8, 4 });
+
         }
     }
 }
