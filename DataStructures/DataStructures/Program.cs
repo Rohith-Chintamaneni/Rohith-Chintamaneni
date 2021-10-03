@@ -263,6 +263,13 @@ namespace DataStructures
          IntersectionofTwoArraysIIProblem IOTP = new IntersectionofTwoArraysIIProblem();
          IOTP.Intersect(new[] { 4, 9, 5 }, new[] { 9, 4, 9, 8, 4 });
 
+         ReverseWordsinaStringIIIProblem RWIASP = new ReverseWordsinaStringIIIProblem();
+         Console.WriteLine("Reverse String = {0}",RWIASP.ReverseWords("God Ding"));
+
+
+         ShortestDistancetoaCharacter SDTOC = new ShortestDistancetoaCharacter();
+         var SDTOCresult = SDTOC.ShortestToChar2("loveleetcode", 'e');
+
         }
     }
 }
