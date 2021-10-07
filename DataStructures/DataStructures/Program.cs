@@ -291,31 +291,31 @@ namespace DataStructures
          KidsWiththeGreatestNumberOfCandies numberOfCandies = new KidsWiththeGreatestNumberOfCandies();
          var numofcandiesresult = numberOfCandies.KidsWithCandies(new int[]{2, 3, 5, 1, 3}, 3);
 
-         //var Node1 = new ListNode(1)
-         //{
-         //    next = new ListNode(2)
-         //    {
-         //        next = new ListNode(4)
-                    
-         //    }
-         //};
+            var Node1 = new ListNode(1)
+            {
+                next = new ListNode(2)
+                {
+                    next = new ListNode(4)
 
-         //var Node2 = new ListNode(1)
-         //{
-         //    next = new ListNode(3)
-         //    {
-         //        next = new ListNode(4)
+                }
+            };
 
-         //    }
-         //};
+            var Node2 = new ListNode(1)
+            {
+                next = new ListNode(3)
+                {
+                    next = new ListNode(4)
 
-         var Node1 = new ListNode(2);
+                }
+            };
 
-         var Node2 = new ListNode(1);
+            //var Node1 = new ListNode(2);
+
+            //var Node2 = new ListNode(1);
 
 
             MergeTwoSortedLists MTSL = new MergeTwoSortedLists();
-            MTSL.MergeTwoLists(Node1, Node2);
+            var mergerlist = MTSL.MergeTwoLists(Node1, Node2);
 
 
         }

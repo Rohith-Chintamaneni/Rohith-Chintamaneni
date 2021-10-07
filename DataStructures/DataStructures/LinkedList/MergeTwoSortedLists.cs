@@ -16,48 +16,28 @@ namespace DataStructures.LinkedList
 
 
             ListNode DummyNode = new ListNode(0);
-           
-
-            ListNode resultnode = new ListNode(0);
-            DummyNode.next = resultnode;
+            var head = DummyNode;
 
             while (l1 != null || l2 != null)
             {
-
-                if (l2.val == l1.val)
+                if (l2 == null || (l1 != null && l1.val <= l2.val))
                 {
-                    var temp = new ListNode(l1.val);
-                    resultnode.next = temp;
-                    var temp2 = new ListNode(l2.val);
-                    resultnode.next.next = temp2;
+                    DummyNode.next = l1;
                     l1 = l1.next;
-                    l2 = l2.next;
-                    resultnode = resultnode.next.next;
-                }
-                else if(l2.val > l1.val)
-                {
-                   
-                    var temp2 = new ListNode(l1.val);
-                    resultnode.next = temp2;
-                    l1 = l1.next;
-                    resultnode = resultnode.next;
                 }
                 else
                 {
-                    var temp2 = new ListNode(l2.val);
-                    resultnode.next = temp2;
+                    DummyNode.next = l2;
                     l2 = l2.next;
-                    resultnode = resultnode.next;
                 }
-                
 
-                
+                DummyNode = DummyNode.next;
             }
 
 
 
 
-            return DummyNode.next.next;
+            return head.next;
         }
 
     }
