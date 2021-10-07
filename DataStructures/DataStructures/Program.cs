@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Runtime.InteropServices;
 using DataStructures.Arrays;
 using DataStructures.Arrays._2pointer;
@@ -269,6 +270,53 @@ namespace DataStructures
 
          ShortestDistancetoaCharacter SDTOC = new ShortestDistancetoaCharacter();
          var SDTOCresult = SDTOC.ShortestToChar2("loveleetcode", 'e');
+
+
+         SortArrayByParityProblem SABPA = new SortArrayByParityProblem();
+         SABPA.SortArrayByParity(new int[4]{3,1,2,4});
+
+
+         DuplicateArraysProblem DAP = new DuplicateArraysProblem();
+         DAP.DuplicateZerosSecondAppraoch(new int[]{ 0, 4, 1, 0, 0, 8, 0, 0, 3 });
+
+         ValidMountainProblem VMP = new ValidMountainProblem();
+         VMP.ValidMountainArray(new int[] { 0, 3, 2, 1 });
+
+
+            int[][] m = { new []{ 2, 3, 4 }, new []{ 3, 4, 5 } };
+
+         RichestCustomerWealth RCW = new RichestCustomerWealth();
+         RCW.MaximumWealth(m);
+
+         KidsWiththeGreatestNumberOfCandies numberOfCandies = new KidsWiththeGreatestNumberOfCandies();
+         var numofcandiesresult = numberOfCandies.KidsWithCandies(new int[]{2, 3, 5, 1, 3}, 3);
+
+         //var Node1 = new ListNode(1)
+         //{
+         //    next = new ListNode(2)
+         //    {
+         //        next = new ListNode(4)
+                    
+         //    }
+         //};
+
+         //var Node2 = new ListNode(1)
+         //{
+         //    next = new ListNode(3)
+         //    {
+         //        next = new ListNode(4)
+
+         //    }
+         //};
+
+         var Node1 = new ListNode(2);
+
+         var Node2 = new ListNode(1);
+
+
+            MergeTwoSortedLists MTSL = new MergeTwoSortedLists();
+            MTSL.MergeTwoLists(Node1, Node2);
+
 
         }
     }
