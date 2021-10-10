@@ -13,6 +13,7 @@ using DataStructures.Recursion;
 using DataStructures.SlidingWindow;
 using DataStructures.Sort.MergeSort;
 using DataStructures.Stacks;
+using DataStructures.Trees;
 
 namespace DataStructures
 {
@@ -317,7 +318,23 @@ namespace DataStructures
             MergeTwoSortedLists MTSL = new MergeTwoSortedLists();
             var mergerlist = MTSL.MergeTwoLists(Node1, Node2);
 
+            var root = new TreeNode(1);
+            root.leftNode = new TreeNode(3);
+            root.rightNode = new TreeNode(4);
+            root.leftNode.leftNode = new TreeNode(5);
+            root.leftNode.rightNode = new TreeNode(6);
+            SumFromNodes sFn = new SumFromNodes();
+           Console.WriteLine("Sum = {0}", sFn.CalculateSum(root));
 
+           TreeTraversing Tt = new TreeTraversing();
+           Tt.PrintLeftNodes(root);
+           Tt.PrintRightNodes(root);
+           Tt.PreOrderTraversal(root);
+           Tt.PreOrderTraversalWithOutRecursion(root);
+           Tt.InOrderTraversal(root);
+           Tt.InOrderTraversalWithOutRecursion(root);
+           Tt.POstOrderTraversal(root);
+           Tt.LevelOrderTraversalWithOutRecurrsion(root);
         }
     }
 }
