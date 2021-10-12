@@ -11,7 +11,7 @@ namespace DataStructures.Trees
         public int CalculateSum(TreeNode root)
         {
             if (root == null) return 0;
-            return root.data + CalculateSum(root.leftNode) + CalculateSum(root.rightNode);
+            return root.val + CalculateSum(root.left) + CalculateSum(root.right);
         }
 
       

@@ -6,15 +6,15 @@ namespace DataStructures.Trees
 {
     public class TreeNode
     {
-        public int data;
-        public TreeNode leftNode;
-        public TreeNode rightNode;
+        public int val;
+        public TreeNode left;
+        public TreeNode right;
 
         public TreeNode(int val)
         {
-            data = val;
-            leftNode = null;
-            rightNode = null;
+            this.val = val;
+            left = null;
+            right = null;
         }
 
 

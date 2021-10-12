@@ -11,8 +11,8 @@ namespace DataStructures.Trees
         {
             while (root != null)
             {
-                Console.WriteLine("Left Nodes ={0}", root.data);
-                root = root.leftNode;
+                Console.WriteLine("Left Nodes ={0}", root.val);
+                root = root.left;
             }
 
         }
@@ -21,8 +21,8 @@ namespace DataStructures.Trees
         {
             while (root != null)
             {
-                Console.WriteLine("Right Nodes ={0}", root.data);
-                root = root.rightNode;
+                Console.WriteLine("Right Nodes ={0}", root.val);
+                root = root.right;
             }
 
         }
@@ -30,9 +30,9 @@ namespace DataStructures.Trees
         public void PreOrderTraversal(TreeNode root)
         {
             if (root == null) return;
-            Console.WriteLine("PreOrder={0}", root.data);
-            PreOrderTraversal(root.leftNode);
-            PreOrderTraversal(root.rightNode);
+            Console.WriteLine("PreOrder={0}", root.val);
+            PreOrderTraversal(root.left);
+            PreOrderTraversal(root.right);
         }
 
         public void PreOrderTraversalWithOutRecursion(TreeNode root)
@@ -47,16 +47,16 @@ namespace DataStructures.Trees
 
                 while (currRoot != null)
                 {
-                    Console.WriteLine("pre Order using Iterative={0}", currRoot.data);
+                    Console.WriteLine("pre Order using Iterative={0}", currRoot.val);
                     S.Push(currRoot);
-                    currRoot = currRoot.leftNode;
+                    currRoot = currRoot.left;
                 }
 
                 currRoot = S.Pop();
 
                
 
-                currRoot = currRoot.rightNode;
+                currRoot = currRoot.right;
 
             }
 
@@ -67,11 +67,12 @@ namespace DataStructures.Trees
         public void InOrderTraversal(TreeNode root)
         {
             if (root == null) return;
-            InOrderTraversal(root.leftNode);
-            Console.WriteLine("InOrder={0}", root.data);
-            InOrderTraversal(root.rightNode);
+            InOrderTraversal(root.left);
+            Console.WriteLine("InOrder={0}", root.val);
+            InOrderTraversal(root.right);
         }
 
+        // While lo while to go over all left nodes first then pop print and set the currnode to its right
         public void InOrderTraversalWithOutRecursion(TreeNode root)
         {
 
@@ -85,14 +86,14 @@ namespace DataStructures.Trees
                 while (currRoot != null)
                 {
                     S.Push(currRoot);
-                    currRoot = currRoot.leftNode;
+                    currRoot = currRoot.left;
                 }
 
                 currRoot = S.Pop();
 
-                Console.WriteLine("In Order using Iterative={0}", currRoot.data);
+                Console.WriteLine("In Order using Iterative={0}", currRoot.val);
 
-                currRoot = currRoot.rightNode;
+                currRoot = currRoot.right;
 
             }
 
@@ -103,9 +104,9 @@ namespace DataStructures.Trees
         public void POstOrderTraversal(TreeNode root)
         {
             if (root == null) return;
-            POstOrderTraversal(root.rightNode);
-            Console.WriteLine("POstOrder={0}", root.data);
-            POstOrderTraversal(root.leftNode);
+            POstOrderTraversal(root.right);
+            Console.WriteLine("POstOrder={0}", root.val);
+            POstOrderTraversal(root.left);
         }
 
 
@@ -121,10 +122,10 @@ namespace DataStructures.Trees
             while ( S.Count >0)
             {
                 currnode = S.Dequeue();
-                Console.WriteLine("Level Order ={0}", currnode.data);
+                Console.WriteLine("Level Order ={0}", currnode.val);
                
-                if(currnode.leftNode != null) S.Enqueue(currnode.leftNode);
-                if (currnode.rightNode != null) S.Enqueue(currnode.rightNode);
+                if(currnode.left != null) S.Enqueue(currnode.left);
+                if (currnode.right != null) S.Enqueue(currnode.right);
             
             }
            
