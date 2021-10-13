@@ -66,6 +66,7 @@ namespace DataStructures
             CountUsingRecursion cb = new CountUsingRecursion();
             var countvalue = cb.Count(new int[4] { 5, 7, 93, 10 }, 4);
 
+            var staticRecursion = CountUsingRecursion.CountRecursiveWithNoVariables(5);
 
             MaxUsingRecursion MR = new MaxUsingRecursion();
             var Max = MR.Max(new int[4] { 5, 7, 93, 10 }, 4);
