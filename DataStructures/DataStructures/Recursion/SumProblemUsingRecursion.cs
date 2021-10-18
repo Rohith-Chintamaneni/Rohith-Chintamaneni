@@ -17,6 +17,25 @@ namespace DataStructures.Recursion
         }
 
 
+        public int SumOftwoNumbers(int x, int y)
+        {
+            if (y == 0) return x;
+
+           return 1 + SumOftwoNumbers(x, y - 1);
+
+            
+        }
+
+        public int ProductOftwoNumbers(int x, int y)
+        {
+            if (y == 1) return x;
+
+            return x + ProductOftwoNumbers(x, y - 1);
+
+
+        }
+
+
 
         //public int Sum(int[] a)
         //{

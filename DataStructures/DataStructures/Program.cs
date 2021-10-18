@@ -44,9 +44,9 @@ namespace DataStructures
             //}
 
 
-            //TwoSumProblem obj = new TwoSumProblem();
-            //var result =  obj.TwoSumNSquare(new int[4] {2,5 ,5,11 }, 10);
-            //Console.Write($"Indices = {result[0]}, {result[1]}");
+            TwoSumProblem TsumProblem = new TwoSumProblem();
+            var TsumProblemresult = TsumProblem.TwoSumN(new int[3] { 3, 2, 4 }, 6);
+            Console.Write($"Indices = {TsumProblemresult[0]}, {TsumProblemresult[1]}");
 
             //  RemoveElementProblem removeElementprbProblem = new RemoveElementProblem();
             // var removeElementprbProblemresult= removeElementprbProblem.RemoveElement(new int[8]{0, 1, 2, 2, 3, 0, 4, 2}, 2);
@@ -63,6 +63,8 @@ namespace DataStructures
             SumProblemUsingRecursion sb = new SumProblemUsingRecursion();
             var valsum = sb.Sum(new int[4] { 5, 7, 93, 10 }, 4); // size of array as second parameter
 
+            var sumproblem = sb.SumOftwoNumbers(10, 2);
+            var productProblem = sb.ProductOftwoNumbers(17, 7);
             CountUsingRecursion cb = new CountUsingRecursion();
             var countvalue = cb.Count(new int[4] { 5, 7, 93, 10 }, 4);
 
@@ -366,6 +368,15 @@ namespace DataStructures
 
             BinaryTreeInorderTraversal BTIT = new BinaryTreeInorderTraversal();
             var btitresult = BTIT.InorderTraversal(btroot);
+
+            var sllnode = new TreeNode(3);
+            sllnode.left = new TreeNode(9);
+            sllnode.right = new TreeNode(20);
+            sllnode.right.left = new TreeNode(15);
+            sllnode.right.right = new TreeNode(7);
+            SumofLeftLeaves Sll = new SumofLeftLeaves();
+            var sllans= Sll.SumOfLeftLeaves(sllnode);
+
         }
     }
 }
