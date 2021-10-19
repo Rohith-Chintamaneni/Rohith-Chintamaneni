@@ -16,6 +16,32 @@ namespace DataStructures.Recursion
             return (Sum(A, N - 1) + A[N - 1]);
         }
 
+        public int Sum2(int[] A)
+        {
+      
+            return Sum2Helper(A, A.Length);
+        }
+
+        public int Sum2Helper(int[] a, int indexcount)
+        {
+          
+            if (indexcount == 0) return 0;
+
+           return Sum2Helper(a, indexcount - 1) + a[indexcount-1];
+          
+        }
+
+        public int Sum3(int[] A)
+        {
+
+            return Sum3Helper(A, 0,0);
+        }
+
+        public int Sum3Helper(int[] a, int sum, int index)
+        {
+            if (index == a.Length) return sum; sum += a[index]; return Sum3Helper(a, sum, index + 1);
+
+        }
 
         public int SumOftwoNumbers(int x, int y)
         {

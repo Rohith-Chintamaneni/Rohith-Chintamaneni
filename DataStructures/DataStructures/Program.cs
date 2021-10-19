@@ -63,6 +63,7 @@ namespace DataStructures
 
             SumProblemUsingRecursion sb = new SumProblemUsingRecursion();
             var valsum = sb.Sum(new int[4] { 5, 7, 93, 10 }, 4); // size of array as second parameter
+            var valsum2 = sb.Sum2(new int[4] { 5, 7, 93, 10 });
 
             var sumproblem = sb.SumOftwoNumbers(10, 2);
             var productProblem = sb.ProductOftwoNumbers(17, 7);
