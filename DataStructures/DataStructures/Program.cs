@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations;
 using System.Runtime.InteropServices;
+using System.Text.RegularExpressions;
 using DataStructures.Arrays;
 using DataStructures.Arrays._2pointer;
 using DataStructures.Arrays.BruteForce.SlidingWindowProblemPatterns;
@@ -75,9 +76,8 @@ namespace DataStructures
 
 
             RotateArrayProblem RPA = new RotateArrayProblem();
-            RPA.Rotate(new int[] { 1, 2, 3, 4, 5, 6, 7 },
-                3); // rotate 3 positions, the right paramters tells you how many times to rotate
-
+           // RPA.Rotate(new int[] { 1, 2, 3, 4, 5, 6, 7 },3); // rotate 3 positions, the right paramters tells you how many times to rotate
+           RPA.Rotate2ndApproach(new int[] { 1, 2, 3, 4, 5, 6, 7 }, 3);
 
             QuickSort Qs = new QuickSort();
             Qs.QuickSortImplementation(new int[] { 5, 3, 2, 11, 1, 0, -8, 10 }, 0,

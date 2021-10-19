@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection.Metadata.Ecma335;
 using System.Text;
 
 namespace DataStructures.Arrays
@@ -50,36 +51,62 @@ namespace DataStructures.Arrays
 
             return new int[2];
         }
+
+
+        public int[] TwoSumN2pointer(int[] nums, int target)
+        {
+            int[] result = new int[2];
+            int i = 0, n = nums.Length-1;
+            while (i<n)
+            {
+                if (nums[i] + nums[n] > target) n--;
+
+                if (nums[i] + nums[n] < target) i++;
+
+                if (nums[i] + nums[n] == target)
+                {
+                    result[0] = ++i;
+                    result[1] = ++n;
+                }
+            }
+
+
+            return result;
+        }
     }
+
+
+   
+
     //var existingVals = new Dictionary<int, int>();
 
-           //for (int i = 0; i < nums.Length; i++)
-           //{
-           //    if (existingVals.ContainsKey(target - nums[i]))
-           //        return new int[] { i, existingVals[target - nums[i]] };
+        //for (int i = 0; i < nums.Length; i++)
+        //{
+        //    if (existingVals.ContainsKey(target - nums[i]))
+        //        return new int[] { i, existingVals[target - nums[i]] };
 
-           //    existingVals.TryAdd(nums[i], i);
-           //}
-           //return new int[] { };
-       
+        //    existingVals.TryAdd(nums[i], i);
+        //}
+        //return new int[] { };
 
 
-          
-           //if (nums == null || nums.Length < 2)
-           //    return new int[2];
 
-           //Dictionary<int, int> dic = new Dictionary<int, int>();
 
-           //for (int i = 0; i < nums.Length; i++)
-           //{
-           //    if (dic.ContainsKey(target - nums[i]) && true && true)
-           //        return new int[] { i, dic[target - nums[i]] };
-           //    else if (!dic.ContainsKey(nums[i]))
-           //        dic.Add(nums[i], i);
-           //}
+        //if (nums == null || nums.Length < 2)
+        //    return new int[2];
 
-           //return new int[2];
-     
+        //Dictionary<int, int> dic = new Dictionary<int, int>();
+
+        //for (int i = 0; i < nums.Length; i++)
+        //{
+        //    if (dic.ContainsKey(target - nums[i]) && true && true)
+        //        return new int[] { i, dic[target - nums[i]] };
+        //    else if (!dic.ContainsKey(nums[i]))
+        //        dic.Add(nums[i], i);
+        //}
+
+        //return new int[2];
+
     }
 
 
