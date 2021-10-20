@@ -9,23 +9,31 @@ namespace DataStructures.Arrays
         public int RemoveDuplicates(int[] nums)
         {
 
-            if (nums.Length == 0)
+            if (nums == null || nums.Length == 0)
                 return 0;
-            // keep track of the last position we swapped the value with.
+            else if (nums.Length == 1)
+                return 1;
 
-            int lastPosition = 0;
+            int index1 = 0,
+                index2 = 1;
 
-            for (int i = 0; i < nums.Length; i++)
+            while (index2 < nums.Length)
             {
+                if (nums[index1] != nums[index2])
+                {
+                    index1++;
+                    nums[index1] = nums[index2];
+                    index2++;
 
-                if (nums[i] != nums[lastPosition])
-                    nums[++lastPosition] = nums[i];
+                }
+                else
+                {
+                    index2++;
 
+                }
             }
 
-
-            return lastPosition + 1;
-
+            return index1 + 1;
 
 
             // approach 2
@@ -44,7 +52,7 @@ namespace DataStructures.Arrays
             //        nums[++index1] = nums[index2++];
 
             //return ++index1;
-          
+
         }
     }
 }
