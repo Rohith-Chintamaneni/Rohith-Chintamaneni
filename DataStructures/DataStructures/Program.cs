@@ -385,6 +385,10 @@ namespace DataStructures
 
             SelectionSort selectionSortj = new SelectionSort();
             var selectionSortjresultSelectionSorting = selectionSortj.SelectionSorting(new int[] { 0,43, 5, 1, 2, });
+
+            MajorityElement meMajorityElement = new MajorityElement();
+           var memajorityelement= meMajorityElement.MajorityElementProblem(new int[] { 3, 1, 2, 3, 3, 3, 3 });
+
         }
     }
 }
