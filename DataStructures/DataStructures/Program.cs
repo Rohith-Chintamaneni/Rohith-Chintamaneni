@@ -14,6 +14,7 @@ using DataStructures.LinkedList.Medium;
 using DataStructures.Queues;
 using DataStructures.Recursion;
 using DataStructures.SlidingWindow;
+using DataStructures.Sort;
 using DataStructures.Sort.MergeSort;
 using DataStructures.Stacks;
 using DataStructures.Trees;
@@ -378,6 +379,12 @@ namespace DataStructures
             SumofLeftLeaves Sll = new SumofLeftLeaves();
             var sllans= Sll.SumOfLeftLeaves(sllnode);
 
+            InsertionSort Isort = new InsertionSort();
+            var rsultIsort = Isort.InsertionSorting(new int[]{ 0, 43, 5, 1, 2, });
+
+
+            SelectionSort selectionSortj = new SelectionSort();
+            var selectionSortjresultSelectionSorting = selectionSortj.SelectionSorting(new int[] { 0,43, 5, 1, 2, });
         }
     }
 }

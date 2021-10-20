@@ -9,7 +9,7 @@ namespace DataStructures.Sort
 {
     class InsertionSort
     {
-        public void InsertionSort(int[] numbers)
+        public int[] InsertionSorting(int[] numbers)
         {
             // this sort is very similar to holding a pack of cards. When a new card is taken you will compare it previous cards in your hand and move them n positions to insert it
             // insertion sort does not swap, it moves(copies) all the items less than current item to right
@@ -19,7 +19,7 @@ namespace DataStructures.Sort
             {
                 int curr = numbers[i];
                 int j = i-1;
-                while (numbers[j] > curr && j>=0)
+                while (j >= 0 && numbers[j] > curr)
                 {
                     // all elements have been shifted to right
                     numbers[j+1] = numbers[j];
@@ -31,7 +31,7 @@ namespace DataStructures.Sort
 
             }
 
-
+            return numbers;
         }
     }
 }
