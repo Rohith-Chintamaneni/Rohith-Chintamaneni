@@ -14,6 +14,7 @@ using DataStructures.LinkedList.Medium;
 using DataStructures.Queues;
 using DataStructures.Recursion;
 using DataStructures.SlidingWindow;
+using DataStructures.SlidingWindow.Medium;
 using DataStructures.Sort;
 using DataStructures.Sort.MergeSort;
 using DataStructures.Stacks;
@@ -388,6 +389,29 @@ namespace DataStructures
 
             MajorityElement meMajorityElement = new MajorityElement();
            var memajorityelement= meMajorityElement.MajorityElementProblem(new int[] { 3, 1, 2, 3, 3, 3, 3 });
+
+
+           LongestSubStringWithoutRepeatingCharactersProblem Lswrcp =
+               new LongestSubStringWithoutRepeatingCharactersProblem();
+          var Lswrcpresult = Lswrcp.LengthOfLongestSubstring("abcabcbb");
+
+          var lswrcpresultbrute = Lswrcp.LengthOfLongestSubstringBFOptimized_O_Nsquare("dvdf");
+
+          ListNode reorderlist = new ListNode(1)
+          {
+              next = new ListNode(2)
+              {
+                  next = new ListNode(3)
+                  {
+                      next = new ListNode(4)
+                          { next = new ListNode(5) }
+                  }
+              }
+          };
+
+
+          ReorderListProblem rlpobj = new ReorderListProblem();
+             rlpobj.ReorderList(reorderlist);
 
         }
     }

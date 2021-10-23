@@ -22,7 +22,7 @@ namespace DataStructures.SlidingWindow.Medium
                 }
                 maxSubstringLength =
                     Math.Max(maxSubstringLength, i - prevNonRepeatingSubstringStartIndex + 1);
-                prevAppearance[s[i]] = i;
+                prevAppearance[s[i]] = i; 
             }
 
             return maxSubstringLength;
@@ -32,5 +32,84 @@ namespace DataStructures.SlidingWindow.Medium
 
         }
 
+        // Brute Force
+        public int LengthOfLongestSubstringBF(string s)
+        {
+            int maxlength = 0;
+            for (int i = 0; i < s.Length; i++)
+            {
+                for (int j = 0; j < s.Length; j++)
+                {
+                    if (IsUnique(s, i, j))
+                    {
+                        maxlength = Math.Max(maxlength, j - i + 1);
+                    }
+                }
+            }
+            return maxlength;
+        }
+
+        public int LengthOfLongestSubstringBFOptimized_O_Nsquare(string s)
+        {
+            int maxlength = 0;
+            int j = 0;
+            bool[] visited ; 
+
+            while (j < s.Length)
+            {
+                visited = new bool[256];
+                int i = j;
+                while (i < s.Length && visited[s[i]] == false)
+                {
+                    maxlength = Math.Max(maxlength, i - j + 1);
+                    visited[s[i]] = true;
+                    i++;
+                }
+
+                visited[s[j]] = false;
+                j++;
+            }
+            return maxlength;
+        }
+
+        public int LengthOfLongestSubstringBFOptimized_O_N(string s)
+        {
+            int maxlength = 0;
+            int j = 0, i=0;
+            HashSet<char> set = new HashSet<char>();
+
+            while (i < s.Length && j < s.Length)
+            {
+                if (!set.Contains(s[j]))
+                {
+                    set.Add(s[j]);
+                    j++;
+                    maxlength = Math.Max(maxlength, j - i);
+                }
+                else
+                {
+                    set.Remove(s[i]);
+                    i++;
+                }
+                
+            }
+          
+            return maxlength;
+        }
+
+        private bool IsUnique(string s, int i, int j)
+        {
+            bool[] visited = new bool[256];
+            bool isExist = true;
+            for (int k = i; k <= j; k++)
+            {
+                if (visited[s[k]]) isExist= false;
+                else
+                    visited[s[k]] = true;
+
+            }
+
+            return isExist;
+        }
     }
 }
