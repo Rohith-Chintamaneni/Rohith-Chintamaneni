@@ -16,6 +16,7 @@ using DataStructures.Recursion;
 using DataStructures.SlidingWindow;
 using DataStructures.SlidingWindow.Medium;
 using DataStructures.Sort;
+using DataStructures.Sort.CyclicSort;
 using DataStructures.Sort.MergeSort;
 using DataStructures.Stacks;
 using DataStructures.Trees;
@@ -413,6 +414,9 @@ namespace DataStructures
           ReorderListProblem rlpobj = new ReorderListProblem();
              rlpobj.ReorderList(reorderlist);
 
+
+             MissingNumberProblem Mnp = new MissingNumberProblem();
+             var mnpreslt = Mnp.MissingNumber(new int[]{3, 0, 1});
         }
     }
 }

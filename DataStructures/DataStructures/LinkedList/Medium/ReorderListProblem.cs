@@ -42,7 +42,10 @@ namespace DataStructures.LinkedList.Medium
 
             return prev;
         }
-
+        // remember what should each element must point.
+        // 1->2
+        //5->4->3
+        // 1->5->2->4->3
         private void merge(ListNode head1, ListNode head2)
         {
             while (head2 != null)
