@@ -417,6 +417,11 @@ namespace DataStructures
 
              MissingNumberProblem Mnp = new MissingNumberProblem();
              var mnpreslt = Mnp.MissingNumber(new int[]{3, 0, 1});
+
+             FindtheDuplicateNumber FtDn = new FindtheDuplicateNumber();
+             var Ftdnresult= FtDn.FindDuplicateLinkedList(new int[] { 1, 3, 4, 2, 2 });
+
+            
         }
     }
 }
