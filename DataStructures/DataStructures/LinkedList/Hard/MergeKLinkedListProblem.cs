@@ -130,5 +130,28 @@ namespace DataStructures.LinkedList.Hard
 
             return lists[0];
         }
+
+
+        public ListNode MergeKLists_Improvised(ListNode[] lists)
+        {
+            if (lists.Length == 0) return null;
+            return DFS(lists, 0, lists.Length - 1);
+        }
+
+        private ListNode DFS(ListNode[] lists, int left, int right)
+        {
+            if (left == right)
+            {
+                return lists[left];
+            }
+            var mid = left + (right - left) / 2;
+            var leftSortedListNode = DFS(lists, left, mid);
+            var rightSortedListNode = DFS(lists, mid + 1, right);
+
+            var mergedSortedListNode = mergeTwoLists(leftSortedListNode, rightSortedListNode);
+            return mergedSortedListNode;
+        }
+
+       
     }
 }
