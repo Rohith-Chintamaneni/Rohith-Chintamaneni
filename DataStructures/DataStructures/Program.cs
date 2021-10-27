@@ -1,15 +1,12 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations;
-using System.Runtime.InteropServices;
-using System.Text.RegularExpressions;
 using DataStructures.Arrays;
 using DataStructures.Arrays._2pointer;
-using DataStructures.Arrays.BruteForce.SlidingWindowProblemPatterns;
 using DataStructures.Arrays.Medium;
 using DataStructures.BinarySearch;
 using DataStructures.Heaps;
 using DataStructures.LinkedList;
+using DataStructures.LinkedList.Hard;
 using DataStructures.LinkedList.Medium;
 using DataStructures.Queues;
 using DataStructures.Recursion;
@@ -20,7 +17,6 @@ using DataStructures.Sort.CyclicSort;
 using DataStructures.Sort.MergeSort;
 using DataStructures.Stacks;
 using DataStructures.Trees;
-using TreeNode = DataStructures.Trees.TreeNode;
 
 namespace DataStructures
 {
@@ -60,7 +56,7 @@ namespace DataStructures
             var s1 = r1.RemoveDuplicates(new int[10] { 0, 0, 1, 1, 1, 2, 2, 3, 3, 4 });
 
             BuyNSellStockProblemType1 pb1 = new BuyNSellStockProblemType1();
-            Console.WriteLine(pb1.MaxProfit(new int[] { 7, 1, 5, 3, 6, 4 }));
+            Console.WriteLine(pb1.MaxProfit(new[] { 7, 1, 5, 3, 6, 4 }));
 
             //  Console.Write($"value = {s1}");
 
@@ -81,10 +77,10 @@ namespace DataStructures
 
             RotateArrayProblem RPA = new RotateArrayProblem();
            // RPA.Rotate(new int[] { 1, 2, 3, 4, 5, 6, 7 },3); // rotate 3 positions, the right paramters tells you how many times to rotate
-           RPA.Rotate2ndApproach(new int[] { 1, 2, 3, 4, 5, 6, 7 }, 3);
+           RPA.Rotate2ndApproach(new[] { 1, 2, 3, 4, 5, 6, 7 }, 3);
 
             QuickSort Qs = new QuickSort();
-            Qs.QuickSortImplementation(new int[] { 5, 3, 2, 11, 1, 0, -8, 10 }, 0,
+            Qs.QuickSortImplementation(new[] { 5, 3, 2, 11, 1, 0, -8, 10 }, 0,
                 7); // 0 and 4 are start and length of array-1
 
             //  int[] input = new int[] { 4, 2, 2, 7, 8, 1, 2, 8, 10 };
@@ -109,7 +105,7 @@ namespace DataStructures
             linkedList.PrintLinkedList();
 
 
-            var thirdnode = new ListNode(300, new ListNode(400, new ListNode(500, null)));
+            var thirdnode = new ListNode(300, new ListNode(400, new ListNode(500)));
             var secondnode = new ListNode(200, thirdnode);
             var head = new ListNode(100, secondnode);
             ReverseLinkedListProblem obj = new ReverseLinkedListProblem();
@@ -179,7 +175,7 @@ namespace DataStructures
             queueImplementation.Dequeue();
 
             SmallestSubArrayProblem ssap = new SmallestSubArrayProblem();
-            int minwindowsize = ssap.smallestSubarray(8, new int[] { 4, 2, 2, 7, 8, 1, 2, 8, 1, 0 });
+            int minwindowsize = ssap.smallestSubarray(8, new[] { 4, 2, 2, 7, 8, 1, 2, 8, 1, 0 });
 
             var DuplicateListnode = new Node(12)
             {
@@ -259,15 +255,15 @@ namespace DataStructures
 
             MaximumAverageSubarrayProblem MaspUb = new MaximumAverageSubarrayProblem();
             Console.WriteLine("Max Avg of subarray of size 3={0}",
-                MaspUb.FindMaxAverage(new int[] { 0, 1, 1, 3, 3 }, 4));
+                MaspUb.FindMaxAverage(new[] { 0, 1, 1, 3, 3 }, 4));
 
             MaximumSumOfAContinousArrayOfSizeK MSASC = new MaximumSumOfAContinousArrayOfSizeK();
-            Console.WriteLine("max sum ={0}", MSASC.FindMaxSumSubArray(new int[] { 4, 2, 1, 7, 8, 1, 2, 8, 1, 0 }, 3));
+            Console.WriteLine("max sum ={0}", MSASC.FindMaxSumSubArray(new[] { 4, 2, 1, 7, 8, 1, 2, 8, 1, 0 }, 3));
 
 
 
             MergeTwoSortedArraysProblem MTSAP = new MergeTwoSortedArraysProblem();
-            MTSAP.Merge(new int[6] { 1, 2, 3, 0, 0, 0 }, 3, new int[] { 2, 5, 6 }, 3);
+            MTSAP.Merge(new int[6] { 1, 2, 3, 0, 0, 0 }, 3, new[] { 2, 5, 6 }, 3);
 
 
             ReversePrefixOfAWordProblem RPOWP = new ReversePrefixOfAWordProblem();
@@ -292,10 +288,10 @@ namespace DataStructures
 
 
             DuplicateArraysProblem DAP = new DuplicateArraysProblem();
-            DAP.DuplicateZerosSecondAppraoch(new int[] { 0, 4, 1, 0, 0, 8, 0, 0, 3 });
+            DAP.DuplicateZerosSecondAppraoch(new[] { 0, 4, 1, 0, 0, 8, 0, 0, 3 });
 
             ValidMountainProblem VMP = new ValidMountainProblem();
-            VMP.ValidMountainArray(new int[] { 0, 3, 2, 1 });
+            VMP.ValidMountainArray(new[] { 0, 3, 2, 1 });
 
 
             int[][] m = { new[] { 2, 3, 4 }, new[] { 3, 4, 5 } };
@@ -304,7 +300,7 @@ namespace DataStructures
             RCW.MaximumWealth(m);
 
             KidsWiththeGreatestNumberOfCandies numberOfCandies = new KidsWiththeGreatestNumberOfCandies();
-            var numofcandiesresult = numberOfCandies.KidsWithCandies(new int[] { 2, 3, 5, 1, 3 }, 3);
+            var numofcandiesresult = numberOfCandies.KidsWithCandies(new[] { 2, 3, 5, 1, 3 }, 3);
 
             var Node1 = new ListNode(1)
             {
@@ -351,7 +347,7 @@ namespace DataStructures
             Tt.LevelOrderTraversalWithOutRecurrsion(root);
 
             MaxheapImplementation MHI = new MaxheapImplementation();
-            var mhipresult = MHI.MaxHeapSort(new int[] { 2, 9, 10, 10, 9, 9 });
+            var mhipresult = MHI.MaxHeapSort(new[] { 2, 9, 10, 10, 9, 9 });
             //Console.WriteLine("Max value of Heap = {0}", MHI.Peek(mhipresult));
            
 
@@ -382,14 +378,14 @@ namespace DataStructures
             var sllans= Sll.SumOfLeftLeaves(sllnode);
 
             InsertionSort Isort = new InsertionSort();
-            var rsultIsort = Isort.InsertionSorting(new int[]{ 0, 43, 5, 1, 2, });
+            var rsultIsort = Isort.InsertionSorting(new[]{ 0, 43, 5, 1, 2, });
 
 
             SelectionSort selectionSortj = new SelectionSort();
-            var selectionSortjresultSelectionSorting = selectionSortj.SelectionSorting(new int[] { 0,43, 5, 1, 2, });
+            var selectionSortjresultSelectionSorting = selectionSortj.SelectionSorting(new[] { 0,43, 5, 1, 2, });
 
             MajorityElement meMajorityElement = new MajorityElement();
-           var memajorityelement= meMajorityElement.MajorityElementProblem(new int[] { 3, 1, 2, 3, 3, 3, 3 });
+           var memajorityelement= meMajorityElement.MajorityElementProblem(new[] { 3, 1, 2, 3, 3, 3, 3 });
 
 
            LongestSubStringWithoutRepeatingCharactersProblem Lswrcp =
@@ -416,12 +412,18 @@ namespace DataStructures
 
 
              MissingNumberProblem Mnp = new MissingNumberProblem();
-             var mnpreslt = Mnp.MissingNumber(new int[]{3, 0, 1});
+             var mnpreslt = Mnp.MissingNumber(new[]{3, 0, 1});
 
              FindtheDuplicateNumber FtDn = new FindtheDuplicateNumber();
-             var Ftdnresult= FtDn.FindDuplicateLinkedList(new int[] { 1, 3, 4, 2, 2 });
+             var Ftdnresult= FtDn.FindDuplicateLinkedList(new[] { 1, 3, 4, 2, 2 });
 
-            
+             MergeKLinkedListProblem MKLp =new MergeKLinkedListProblem();
+             var Mklpresponse = MKLp.mergeKListsusingDivideAndConquer(new[]
+             {
+                 new ListNode(1){next= new ListNode(4){next = new ListNode(5)}},
+                 new ListNode(1){next= new ListNode(3){next = new ListNode(4)}},
+                 new ListNode(2){next = new ListNode(6)}
+             });
         }
     }
 }
