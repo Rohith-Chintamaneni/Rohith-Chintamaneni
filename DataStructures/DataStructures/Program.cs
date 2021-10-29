@@ -2,9 +2,11 @@
 using System.Collections.Generic;
 using DataStructures.Arrays;
 using DataStructures.Arrays._2pointer;
+using DataStructures.Arrays.JaggedArrays;
 using DataStructures.Arrays.Medium;
 using DataStructures.BinarySearch;
 using DataStructures.Heaps;
+using DataStructures.Intervals;
 using DataStructures.LinkedList;
 using DataStructures.LinkedList.Hard;
 using DataStructures.LinkedList.Medium;
@@ -418,12 +420,28 @@ namespace DataStructures
              var Ftdnresult= FtDn.FindDuplicateLinkedList(new[] { 1, 3, 4, 2, 2 });
 
              MergeKLinkedListProblem MKLp =new MergeKLinkedListProblem();
-             var Mklpresponse = MKLp.mergeKListsusingDivideAndConquer(new[]
+             var Mklpresponse = MKLp.MergeKLists_Improvised(new[]
              {
                  new ListNode(1){next= new ListNode(4){next = new ListNode(5)}},
                  new ListNode(1){next= new ListNode(3){next = new ListNode(4)}},
                  new ListNode(2){next = new ListNode(6)}
              });
+
+
+             var jaggedarray = new int[][]
+             {
+                new int[] { 1, 2 },
+                new int[] { 3, 4 },
+                new int[] { 5, 11 },
+                new int[] { 6, 16 }
+             };
+
+             BasicsOfJaggedArray BOJA = new BasicsOfJaggedArray();
+             BOJA.AccessArrays(jaggedarray);
+
+
+             MergeIntervalsProblem MIP = new MergeIntervalsProblem();
+             var miresult = MIP.Merge(jaggedarray);
         }
     }
 }
