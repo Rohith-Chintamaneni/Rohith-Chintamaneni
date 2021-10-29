@@ -442,6 +442,17 @@ namespace DataStructures
 
              MergeIntervalsProblem MIP = new MergeIntervalsProblem();
              var miresult = MIP.Merge(jaggedarray);
+
+            
+             var IIParray = new int[][]
+             {
+                 new int[] { 1, 3 },
+                 new int[] { 6, 9 },
+             };
+
+             var newinterval = new int[] { 2, 5 };
+             InsertIntervalProblem IIP = new InsertIntervalProblem();
+             var IIPresult = IIP.Insert(IIParray, newinterval);
         }
     }
 }

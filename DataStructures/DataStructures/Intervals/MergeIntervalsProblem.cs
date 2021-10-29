@@ -15,7 +15,7 @@ namespace DataStructures.Intervals
 
             List<int[]> result = new List<int[]>();
             // Iterate over Intervals
-            result.Add(intervals[0]);
+            //result.Add(intervals[0]);
 
             foreach (var interval in intervals)
             {
@@ -35,14 +35,16 @@ namespace DataStructures.Intervals
                 }
 
             }
-           
-            
+
+
 
             return result.ToArray();
         }
 
         public bool IntervalsOverlap(int[] i1, int[] i2)
         {
+            if (i1 == null) return false;
+
             int front = 0, back = 0;
             for (int i = 0; i < i1.Length - 1; i++)
             {
