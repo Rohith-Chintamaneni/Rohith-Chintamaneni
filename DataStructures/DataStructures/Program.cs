@@ -446,11 +446,12 @@ namespace DataStructures
             
              var IIParray = new int[][]
              {
-                 new int[] { 1, 3 },
-                 new int[] { 6, 9 },
+                 new int[] { 1, 5 },
+               //  new int[] { 6, 9 },
              };
 
-             var newinterval = new int[] { 2, 5 };
+             
+             var newinterval = new int[] { 0, 0 };
              InsertIntervalProblem IIP = new InsertIntervalProblem();
              var IIPresult = IIP.Insert(IIParray, newinterval);
         }

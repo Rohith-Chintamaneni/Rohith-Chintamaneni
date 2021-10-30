@@ -15,7 +15,7 @@ namespace DataStructures.Intervals
             if (intervals.Length == 0) return new int[][] { newInterval };
             List<int[]> rst = new List<int[]>();
             int i = 0, n = intervals.Length;
-            while (i < n && intervals[i][1] < newInterval[0])
+            while (i < n &&  intervals[i][1] < newInterval[0])
             {
                 rst.Add(intervals[i]);
                 ++i;
@@ -35,6 +35,35 @@ namespace DataStructures.Intervals
 
             return rst.ToArray();
         }
+
+
+        public int[][] Insert_WIthMergeandOverlapFunctions(int[][] intervals, int[] newInterval)
+        {
+            if (intervals.Length == 0) return new int[][] { newInterval };
+            List<int[]> rst = new List<int[]>();
+            int i = 0, n = intervals.Length;
+            while (i < n && intervals[i][1] < newInterval[0])
+            {
+                rst.Add(intervals[i]);
+                ++i;
+            }
+            while (i < n && IntervalsOverlap(intervals[i],newInterval))
+            {
+              var mergedinterval=  MergeOverlappedIntervals(intervals[i], newInterval);
+              newInterval[0] = mergedinterval[0]; // Math.Min(intervals[i][0], newInterval[0]);
+                newInterval[1] = mergedinterval[1]; //Math.Max(intervals[i][1], newInterval[1]);
+                ++i;
+            }
+            rst.Add(newInterval);
+            while (i < n)
+            {
+                rst.Add(intervals[i]);
+                ++i;
+            }
+
+            return rst.ToArray();
+        }
+
 
         public int[][] Insert_AnotherApproach(int[][] intervals, int[] newInterval)
         {
@@ -67,6 +96,19 @@ namespace DataStructures.Intervals
             return result.ToArray();
         }
 
+        public bool IntervalsOverlap(int[] i1, int[] i2)
+        {
+            if (i1 == null) return false;
+
+            int front = 0, back = 0;
+            for (int i = 0; i < i1.Length - 1; i++)
+            {
+                front = Math.Max(i1[i], i2[i]);
+                back = Math.Min(i1[i + 1], i2[i + 1]);
+            }
+
+            return back - front >= 0;
+        }
 
         public int[] MergeOverlappedIntervals(int[] i1, int[] i2)
         {
