@@ -441,7 +441,7 @@ namespace DataStructures
 
 
              MergeIntervalsProblem MIP = new MergeIntervalsProblem();
-             var miresult = MIP.Merge(jaggedarray);
+             var miresult = MIP.MergeAlternate_RC(jaggedarray);
 
             
              var IIParray = new int[][]

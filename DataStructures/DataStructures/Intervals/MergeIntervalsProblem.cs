@@ -51,6 +51,7 @@ namespace DataStructures.Intervals
                 front = Math.Max(i1[i], i2[i]);
                 back = Math.Min(i1[i + 1], i2[i + 1]);
             }
+
             return back - front >= 0;
         }
 
@@ -63,5 +64,65 @@ namespace DataStructures.Intervals
 
         }
 
+
+
+        public int[][] MergeAlternate(int[][] intervals)
+        {
+            if (intervals.Length <= 1)
+                return intervals;
+
+            // Sort by ascending starting point
+            Array.Sort(intervals, (i1, i2) => i1[0] - i2[0]);
+
+            List<int[]> result = new List<int[]>();
+            int[] newInterval = intervals[0];
+            result.Add(newInterval);
+            foreach (var interval in intervals)
+            {
+
+                //}
+
+                //(int[] interval : intervals)
+                //{
+                if (interval[0] <= newInterval[1]) // Overlapping intervals, move the end if needed
+                    newInterval[1] = Math.Max(newInterval[1], interval[1]);
+                else
+                {
+                    // Disjoint intervals, add the new interval to the list
+                    newInterval = interval;
+                    result.Add(newInterval);
+                }
+            }
+
+            return result.ToArray();
+        }
+
+       
+        public int[][] MergeAlternate_RC(int[][] intervals)
+        {
+            if (intervals.Length <= 1) return intervals;
+
+            Array.Sort(intervals, (i1, i2)=> i1[0]-i2[0]);
+
+            var Oldinterval = intervals[0];
+            var results = new List<int[]>();
+            results.Add(Oldinterval);
+            foreach (var curr in intervals)
+            {
+                if (curr[0] <= Oldinterval[1]) // overlap exist, if currentinterval.start <= oldinterval.endtime
+                {
+
+                    Oldinterval[1] = Math.Max(curr[1], Oldinterval[1]); // then the old interval endtime will be updated based on Max
+                     
+                }
+                else
+                {
+                    Oldinterval = curr;
+                    results.Add(Oldinterval);
+                }
+            }
+
+            return results.ToArray();
+        }
     }
 }

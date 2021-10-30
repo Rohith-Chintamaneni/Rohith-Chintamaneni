@@ -8,27 +8,63 @@ namespace DataStructures.Intervals
 {
     class InsertIntervalProblem
     {
+        //Input: intervals = [[1,3],[6,9]], newInterval = [2,5]
+       //  Output: [[1,5],[6,9]]
         public int[][] Insert(int[][] intervals, int[] newInterval)
         {
+            if (intervals.Length == 0) return new int[][] { newInterval };
+            List<int[]> rst = new List<int[]>();
+            int i = 0, n = intervals.Length;
+            while (i < n && intervals[i][1] < newInterval[0])
+            {
+                rst.Add(intervals[i]);
+                ++i;
+            }
+            while (i < n && intervals[i][0] <= newInterval[1])
+            {
+                newInterval[0] = Math.Min(intervals[i][0], newInterval[0]);
+                newInterval[1] = Math.Max(intervals[i][1], newInterval[1]);
+                ++i;
+            }
+            rst.Add(newInterval);
+            while (i < n)
+            {
+                rst.Add(intervals[i]);
+                ++i;
+            }
 
-           
-            List<int[]> results = new List<int[]>();
-       
-         
-
-            return results.ToArray();
+            return rst.ToArray();
         }
 
-        public bool IntervalsOverlap(int[] i1, int[] i2)
+        public int[][] Insert_AnotherApproach(int[][] intervals, int[] newInterval)
         {
-            if (i1 == null) return false;
-            int front = 0, back = 0;
-            for (int i = 0; i < i1.Length - 1; i++)
+            List<int[]> result = new List<int[]>();
+
+            foreach (var i in intervals)
             {
-                front = Math.Max(i1[i], i2[i]);
-                back = Math.Min(i1[i + 1], i2[i + 1]);
+                if (newInterval == null || i[1] < newInterval[0])
+                {
+                    result.Add(i);
+                }
+                else if (i[0] > newInterval[1])
+                {
+                    // be carefult the sequence here
+                    result.Add(newInterval);
+                    result.Add(i);
+                    newInterval = null;
+                }
+                else
+                {
+
+                    newInterval[0] = Math.Min(newInterval[0], i[0]);//get min
+                    newInterval[1] = Math.Max(newInterval[1], i[1]);//get max
+                }
             }
-            return back - front >= 0;
+
+            if (newInterval != null)
+                result.Add(newInterval);
+
+            return result.ToArray();
         }
 
 
