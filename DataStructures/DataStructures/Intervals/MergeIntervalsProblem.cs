@@ -112,7 +112,7 @@ namespace DataStructures.Intervals
                 if (curr[0] <= Oldinterval[1]) // overlap exist, if currentinterval.start <= oldinterval.endtime
                 {
 
-                    Oldinterval[1] = Math.Max(curr[1], Oldinterval[1]); // then the old interval endtime will be updated based on Max
+                    Oldinterval[1] = Math.Max(curr[1], Oldinterval[1]); // then the old interval endtime will be updated based on Max, since this is Array the value in the List also automatically gets updated
                      
                 }
                 else

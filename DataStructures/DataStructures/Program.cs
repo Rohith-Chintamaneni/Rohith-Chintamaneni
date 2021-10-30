@@ -430,12 +430,12 @@ namespace DataStructures
 
              var jaggedarray = new int[][]
              {
-                new int[] { 1, 2 },
-                new int[] { 3, 4 },
-                new int[] { 5, 11 },
-                new int[] { 6, 16 }
+                new int[] { 1, 3 },
+                new int[] { 2, 6 },
+                new int[] { 8, 10 },
+                new int[] { 15, 18 }
              };
-
+             //[1,3],[2,6],[8,10],[15,18]
              BasicsOfJaggedArray BOJA = new BasicsOfJaggedArray();
              BOJA.AccessArrays(jaggedarray);
 
@@ -454,6 +454,18 @@ namespace DataStructures
              var newinterval = new int[] { 0, 0 };
              InsertIntervalProblem IIP = new InsertIntervalProblem();
              var IIPresult = IIP.Insert(IIParray, newinterval);
+
+            var nonparameter = new int[][]
+            {
+                new int[] { 1, 2 },
+                new int[] { 1, 2 },
+                new int[] { 1, 2 },
+              //  new int[] { 1, 3 },
+                //  new int[] { 6, 9 },
+            };
+            //[[1,2],[2,3],[3,4],[1,3]]
+            NonOverlappingIntervals noi = new NonOverlappingIntervals();
+            noi.EraseOverlapIntervals(nonparameter);
         }
     }
 }
