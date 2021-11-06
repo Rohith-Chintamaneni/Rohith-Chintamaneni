@@ -5,6 +5,7 @@ using DataStructures.Arrays._2pointer;
 using DataStructures.Arrays.JaggedArrays;
 using DataStructures.Arrays.Medium;
 using DataStructures.BinarySearch;
+using DataStructures.BitManipulation;
 using DataStructures.Heaps;
 using DataStructures.Intervals;
 using DataStructures.LinkedList;
@@ -466,6 +467,10 @@ namespace DataStructures
             //[[1,2],[2,3],[3,4],[1,3]]
             NonOverlappingIntervals noi = new NonOverlappingIntervals();
             noi.EraseOverlapIntervals(nonparameter);
+
+
+            SumofTwoIntegers SOTI = new SumofTwoIntegers();
+            Console.WriteLine(SOTI.GetSum(0, -1));
         }
     }
 }
