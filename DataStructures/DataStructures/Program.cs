@@ -471,6 +471,14 @@ namespace DataStructures
 
             SumofTwoIntegers SOTI = new SumofTwoIntegers();
             Console.WriteLine(SOTI.GetSum(0, -1));
+
+            NumberOf1bits nob = new NumberOf1bits();
+            nob.HammingWeight(10);
+
+
+            CountingBits CBs = new CountingBits();
+            CBs.CountBits(10);
+
         }
     }
 }
