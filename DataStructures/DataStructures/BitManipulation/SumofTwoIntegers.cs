@@ -44,5 +44,20 @@ namespace DataStructures.BitManipulation
 
             return sign * x;
         }
+
+        // since C# handles the two's complement for negative numbers
+        public int GetSumLanguageSpecific(int a, int b)
+        {
+            if (a < b) return GetSum(b, a);
+
+            while (b != 0)
+            {
+                int sum = a ^ b;
+                int carry = (a & b) << 1;
+                a = sum;
+                b = carry;
+            }
+            return a;
+        }
     }
 }

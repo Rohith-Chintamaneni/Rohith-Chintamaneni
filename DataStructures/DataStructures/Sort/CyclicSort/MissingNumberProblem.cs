@@ -10,7 +10,7 @@ namespace DataStructures.Sort.CyclicSort
     {
         public int MissingNumber(int[] nums)
         {
-            int index = 0, value=-1;
+            int index = 0, value = -1;
             while (index < nums.Length)
             {
                 if (nums[index] < nums.Length && nums[index] != index)
@@ -19,7 +19,7 @@ namespace DataStructures.Sort.CyclicSort
                     nums[nums[index]] = nums[index];
                     nums[index] = temp;
                 }
-                    else index++;
+                else index++;
 
             }
 
@@ -30,6 +30,18 @@ namespace DataStructures.Sort.CyclicSort
 
 
             return nums.Length;
+        }
+
+        public int MissingNumberUsingGauss(int[] nums)
+        {
+            int expectedsum = nums.Length * (nums.Length + 1) / 2;
+            int calculatedsum = 0;
+            foreach (var num in nums)
+            {
+                calculatedsum += num;
+            }
+
+            return expectedsum - calculatedsum;
         }
     }
 }
