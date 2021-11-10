@@ -12,18 +12,19 @@ namespace DataStructures.Intervals
         {
 
             Array.Sort(intervals, (i1, i2) => i1[0] - i2[0]);
-            bool canUserAttendallMeetings = true;
+          //  bool canUserAttendallMeetings = true;
             for (int i = 0; i < intervals.Length - 1; i++)
             {
 
                 if (Overlap(intervals[i], intervals[i + 1]))
                 {
-                    canUserAttendallMeetings = false;
+                    return false;
+                    //  canUserAttendallMeetings = false;  // why this killed your performance. you can return right then and there why do you want the loop to finish all the way to the end?
                 }
 
 
             }
-            return canUserAttendallMeetings;
+            return true;
         }
 
 
