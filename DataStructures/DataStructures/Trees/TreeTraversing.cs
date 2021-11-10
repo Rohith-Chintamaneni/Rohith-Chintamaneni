@@ -5,6 +5,7 @@ using Microsoft.VisualBasic;
 
 namespace DataStructures.Trees
 {
+    
     public class TreeTraversing
     {
         public void PrintLeftNodes(TreeNode root)
@@ -14,7 +15,7 @@ namespace DataStructures.Trees
                 Console.WriteLine("Left Nodes ={0}", root.val);
                 root = root.left;
             }
-
+            
         }
 
         public void PrintRightNodes(TreeNode root)

@@ -470,7 +470,7 @@ namespace DataStructures
 
 
             SumofTwoIntegers SOTI = new SumofTwoIntegers();
-            Console.WriteLine(SOTI.GetSum(0, -1));
+            Console.WriteLine(SOTI.GetSumLanguageSpecific(15, 8));
 
             NumberOf1bits nob = new NumberOf1bits();
             nob.HammingWeight(10);
@@ -478,6 +478,18 @@ namespace DataStructures
 
             CountingBits CBs = new CountingBits();
             CBs.CountBits(10);
+
+            ReversingBits rbs = new ReversingBits();
+           var rbsresult= rbs.ReverseBitsUsingBitManipulation(14);
+
+           var meetingroomsobject = new int[][]
+           {
+                new int[]{7, 10},
+               new int[] {2, 4}
+           };
+
+           MeetingRooms meetingRooms = new MeetingRooms();
+          var mrresult= meetingRooms.CanAttendMeetings(meetingroomsobject);
 
         }
     }
