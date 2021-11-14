@@ -6,6 +6,7 @@ using DataStructures.Arrays.JaggedArrays;
 using DataStructures.Arrays.Medium;
 using DataStructures.BinarySearch;
 using DataStructures.BitManipulation;
+using DataStructures.Dynamic_Programming;
 using DataStructures.Heaps;
 using DataStructures.Intervals;
 using DataStructures.LinkedList;
@@ -19,6 +20,7 @@ using DataStructures.Sort;
 using DataStructures.Sort.CyclicSort;
 using DataStructures.Sort.MergeSort;
 using DataStructures.Stacks;
+using DataStructures.Strings;
 using DataStructures.Trees;
 
 namespace DataStructures
@@ -490,6 +492,28 @@ namespace DataStructures
 
            MeetingRooms meetingRooms = new MeetingRooms();
           var mrresult= meetingRooms.CanAttendMeetings(meetingroomsobject);
+
+
+          MeetingRooms2 meetingRooms2 = new MeetingRooms2();
+          var mr2result = meetingRooms2.MinMeetingRooms(meetingroomsobject);
+
+
+          ValidPalindrome vp = new ValidPalindrome();
+          Console.WriteLine(vp.isPalindrome2("race a car"));
+
+          HowmanyApplesCanYouPutInBasket HMAB = new HowmanyApplesCanYouPutInBasket();
+          Console.WriteLine(HMAB.MaxNumberOfApples(new int[]{ 988, 641, 984, 635, 461, 527, 491, 610, 274, 104, 348, 468, 220, 837, 126, 111, 536, 368, 89, 201, 589, 481, 849, 708, 258, 853, 563, 868, 92, 76, 566, 398, 272, 697, 584, 851, 302, 766, 88, 428, 276, 797, 460, 244, 950, 134, 838, 161, 15, 330 }));
+
+
+          FibonacciUsingMemoization fum = new FibonacciUsingMemoization();
+          Console.WriteLine("Fibonacci Number={0}", fum.CalculateFibonacci(50));
+
+
+          //FibonacciUsingMemoization fum2 = new FibonacciUsingMemoization();
+          //Console.WriteLine("Fibonacci Number without memoization={0}", fum2.FibonacciWithOutMemoization(50));
+
+          KnapsackProblem ksp = new KnapsackProblem();
+          Console.WriteLine("Max cost ={0}", ksp.KnapsackDPTopDown(new int[] { 1, 4, 5, 2 }, new int[] { 10, 15, 4, 6 }, 7, 4)); 
 
         }
     }
