@@ -513,7 +513,15 @@ namespace DataStructures
           //Console.WriteLine("Fibonacci Number without memoization={0}", fum2.FibonacciWithOutMemoization(50));
 
           KnapsackProblem ksp = new KnapsackProblem();
-          Console.WriteLine("Max cost ={0}", ksp.KnapsackDPTopDown(new int[] { 1, 4, 5, 2 }, new int[] { 10, 15, 4, 6 }, 7, 4)); 
+          Console.WriteLine("Max cost using recursion with DP ={0}", ksp.KnapsackDPTopDown(new int[] { 1, 4, 5, 2 }, new int[] { 10, 15, 4, 6 }, 7, 4));
+          Console.WriteLine("Max cost using Bottom up with DP ={0}", ksp.KnapsackDPBottomUp(new int[] { 1, 4, 5, 2 }, new int[] { 10, 15, 4, 6 }, 7, 4));
+
+
+          SubsetSum ssSubsetSum = new SubsetSum();
+         Console.WriteLine("Does Subset exist = {0}", ssSubsetSum.SubSetSum_Recursion(new int[] { 2, 3, 6, 8, 10 }, 80, 5));
+
+         PartitionEqualSubsetSum pess = new PartitionEqualSubsetSum();
+         Console.WriteLine("Equal Sum Partition Exist = {0}",pess.canPartitionUsingRecursion(new int[] { 1, 2, 3, 4 }));
 
         }
     }
