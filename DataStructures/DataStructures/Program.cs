@@ -523,6 +523,9 @@ namespace DataStructures
          PartitionEqualSubsetSum pess = new PartitionEqualSubsetSum();
          Console.WriteLine("Equal Sum Partition Exist = {0}",pess.canPartitionUsingRecursion(new int[] { 1, 2, 3, 4 }));
 
+         CountOfSubSetProblem cosp = new CountOfSubSetProblem();
+         Console.WriteLine("Count of subsets in an array equal to input sum ={0}", cosp.COuntOfSubsetUsingRecursion(new int[]{2,3,5,8,10}, 10));
+
         }
     }
 }

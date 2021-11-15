@@ -6,6 +6,9 @@ using System.Threading.Tasks;
 
 namespace DataStructures.Dynamic_Programming
 {
+
+    // Problem: In a given array check if there is a subset whose sum is equal to capacity or not.
+
     class SubsetSum
     {
         public bool?[,] t;

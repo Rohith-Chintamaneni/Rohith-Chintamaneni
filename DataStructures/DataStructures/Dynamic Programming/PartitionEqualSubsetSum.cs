@@ -6,6 +6,7 @@ using System.Threading.Tasks;
 
 namespace DataStructures.Dynamic_Programming
 {
+    // Problem 416 leetcode:
     class PartitionEqualSubsetSum
     {
 
@@ -113,8 +114,18 @@ namespace DataStructures.Dynamic_Programming
             if (length == 0 || capacity < 0) return false;
 
             if (t[length, capacity] != null) return t[length, capacity].Value;
+            bool result;
+            if (arr[length - 1] > capacity)
+            {
+                result = DFS(arr, length - 1, capacity);
+            }
+            else
+            {
+                result = DFS(arr, length - 1, capacity - arr[length - 1]) || DFS(arr, length - 1, capacity);
+            }
+                // both approaches can be followed
 
-            bool result = DFS(arr, length - 1,capacity-arr[length-1]) || DFS(arr, length - 1, capacity);
+          //  bool result = DFS(arr, length - 1,capacity-arr[length-1]) || DFS(arr, length - 1, capacity);
 
             t[length, capacity] = result;
             return result;
