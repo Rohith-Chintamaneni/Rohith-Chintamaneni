@@ -518,13 +518,19 @@ namespace DataStructures
 
 
           SubsetSum ssSubsetSum = new SubsetSum();
-         Console.WriteLine("Does Subset exist = {0}", ssSubsetSum.SubSetSum_Recursion(new int[] { 2, 3, 6, 8, 10 }, 80, 5));
+         Console.WriteLine("Does Subset exist = {0}", ssSubsetSum.SubSetSum_DP(new int[] { 2, 3, 6, 8, 10 }, 15, 5));
 
          PartitionEqualSubsetSum pess = new PartitionEqualSubsetSum();
-         Console.WriteLine("Equal Sum Partition Exist = {0}",pess.canPartitionUsingRecursion(new int[] { 1, 2, 3, 4 }));
+         Console.WriteLine("Equal Sum Partition Exist = {0}",pess.canPartitionUsingRecursion(new int[] { 1, 2, 3, 7 }));
 
          CountOfSubSetProblem cosp = new CountOfSubSetProblem();
          Console.WriteLine("Count of subsets in an array equal to input sum ={0}", cosp.COuntOfSubsetUsingRecursion(new int[]{2,3,5,8,10}, 10));
+
+         UnboundKnapsack uksp = new UnboundKnapsack();
+         Console.WriteLine("unbound knapsack max cost using recursion={0}", uksp.UnboundknapsackUsingRecursionMemoization(new int[] { 1, 4, 5, 2 }, new int[] { 10, 15, 4, 6 }, 7, 4));
+
+         CoinChangeWithMaximumWays ccwmw = new CoinChangeWithMaximumWays();
+         Console.WriteLine("maximum ways to get sum from coin array using recursion={0}", ccwmw.CoinChangeWithMaximumWaysDP(new int[] { 1, 2, 5}, 5));
 
         }
     }
