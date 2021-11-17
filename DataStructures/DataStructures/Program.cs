@@ -530,7 +530,8 @@ namespace DataStructures
          Console.WriteLine("unbound knapsack max cost using recursion={0}", uksp.UnboundknapsackUsingRecursionMemoization(new int[] { 1, 4, 5, 2 }, new int[] { 10, 15, 4, 6 }, 7, 4));
 
          CoinChangeWithMaximumWays ccwmw = new CoinChangeWithMaximumWays();
-         Console.WriteLine("maximum ways to get sum from coin array using recursion={0}", ccwmw.CoinChangeWithMaximumWaysDP(new int[] { 1, 2, 5}, 5));
+         Console.WriteLine("maximum ways to get sum from coin array using DP={0}", ccwmw.CoinChangeWithMaximumWaysDP(new int[] { 1, 2, 5}, 5));
+         Console.WriteLine("maximum ways to get sum from coin array using recursion={0}", ccwmw.CoinChangeWithMaximumWaysRecursion_Memoize(new int[] { 1, 2, 5 }, 5));
 
         }
     }
