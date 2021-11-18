@@ -26,7 +26,7 @@ namespace DataStructures.Dynamic_Programming
             int count;
             if (coins[length - 1] <= amount)
             {
-                count = 1+ Math.Min(CoinChange_Recursion(coins, amount - coins[length-1], length),
+                count =  Math.Min(CoinChange_Recursion(coins, amount - coins[length-1], length)+1,
                     CoinChange_Recursion(coins, amount, length - 1));
             }
             else

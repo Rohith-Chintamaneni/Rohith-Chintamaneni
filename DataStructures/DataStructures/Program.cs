@@ -534,7 +534,7 @@ namespace DataStructures
          Console.WriteLine("maximum ways to get sum from coin array using recursion={0}", ccwmw.CoinChangeWithMaximumWaysRecursion_Memoize(new int[] { 1, 2, 5 }, 5));
 
          CoinChangeProblemMinimumNumberofCoins ccpm = new CoinChangeProblemMinimumNumberofCoins();
-         Console.WriteLine("Minimum number of ways to get to sum = {0}", ccpm.CoinChangeUsingRecursion(new int[]{ 1, 2, 5 }, 11));
+         Console.WriteLine("Minimum number of ways to get to sum = {0}", ccpm.CoinChangeUsingRecursionWithMemoize(new int[]{ 1, 2, 5 }, 11));
          Console.WriteLine("Minimum number of ways to get to sum = {0}", ccpm.CoinChangeUsingDP(new int[] { 1, 2, 5 }, 11));
         }
     }
