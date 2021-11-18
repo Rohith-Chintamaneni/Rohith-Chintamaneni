@@ -536,6 +536,10 @@ namespace DataStructures
          CoinChangeProblemMinimumNumberofCoins ccpm = new CoinChangeProblemMinimumNumberofCoins();
          Console.WriteLine("Minimum number of ways to get to sum = {0}", ccpm.CoinChangeUsingRecursionWithMemoize(new int[]{ 1, 2, 5 }, 11));
          Console.WriteLine("Minimum number of ways to get to sum = {0}", ccpm.CoinChangeUsingDP(new int[] { 1, 2, 5 }, 11));
+
+
+         LongestCommonSubSequenceProblem lcsp = new LongestCommonSubSequenceProblem();
+         Console.WriteLine("Longest common Subsequence = {0}", lcsp.LongestCommonSubsequence3("abcde", "ace"));
         }
     }
 }
