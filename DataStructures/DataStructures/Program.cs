@@ -540,6 +540,10 @@ namespace DataStructures
 
          LongestCommonSubSequenceProblem lcsp = new LongestCommonSubSequenceProblem();
          Console.WriteLine("Longest common Subsequence = {0}", lcsp.LongestCommonSubsequence3("abcde", "ace"));
+
+         LongestCommonSubstringProblem lcsbp = new LongestCommonSubstringProblem();
+         Console.WriteLine("Longest common substring = {0}", lcsbp.LongestSubstring("abcde", "abdcf"));
+
         }
     }
 }

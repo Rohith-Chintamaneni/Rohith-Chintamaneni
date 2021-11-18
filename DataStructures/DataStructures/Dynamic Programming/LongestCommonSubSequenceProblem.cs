@@ -57,13 +57,6 @@ namespace DataStructures.Dynamic_Programming
         public int LongestCommonSubsequence3(string text1, string text2)
         {
             t = new int[text1.Length + 1, text2.Length + 1];
-            for (int i = 0; i < text1.Length + 1; i++)
-            {
-                for (int j = 0; j < text2.Length + 1; j++)
-                {
-                    t[i, j] = -1;
-                }
-            }
 
             return LongestCommonSubsequence_DP(text1, text2, text1.Length, text2.Length);
         }
