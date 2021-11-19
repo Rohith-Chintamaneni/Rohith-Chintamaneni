@@ -547,6 +547,9 @@ namespace DataStructures
          PrintLongestCommonSubSequence pcls = new PrintLongestCommonSubSequence();
          Console.WriteLine("Printing Longest common Subsequence = {0}", pcls.PrintLongestCommonSubsequence("abcde", "ace", 5,3));
 
+         ShortestCommonSuperSequenceProblem Scssp = new ShortestCommonSuperSequenceProblem();
+         Console.WriteLine("Shortest common Super sequence = {0}", Scssp.ShortestCommonSuperSequence_DP("abcdemnk", "acenk", 8, 5));
+
         }
     }
 }
