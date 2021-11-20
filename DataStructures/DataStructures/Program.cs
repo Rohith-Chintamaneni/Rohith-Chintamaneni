@@ -550,6 +550,9 @@ namespace DataStructures
          ShortestCommonSuperSequenceProblem Scssp = new ShortestCommonSuperSequenceProblem();
          Console.WriteLine("Shortest common Super sequence = {0}", Scssp.ShortestCommonSuperSequence_DP("abcdemnk", "acenk", 8, 5));
 
+         MinimumNumberOfInsertionAndDeletion mnoi = new MinimumNumberOfInsertionAndDeletion();
+         Console.WriteLine("Minimum number of inserts and deletes = {0}", mnoi.MinimumNumberOfInsertionAndDeletion_DP("heap", "pea", 4, 3));
+
         }
     }
 }
