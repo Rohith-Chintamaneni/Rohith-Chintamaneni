@@ -348,7 +348,9 @@ namespace DataStructures
             Tt.PreOrderTraversalWithOutRecursion(root);
             Tt.InOrderTraversal(root);
             Tt.InOrderTraversalWithOutRecursion(root);
+            Tt.InOrderTraversalWithOutRecursion2(root);  // this is not INorder it is preOrder
             Tt.POstOrderTraversal(root);
+         //   Tt.POstOrderTraversalWithOutRecursion(root); failing
             Tt.LevelOrderTraversalWithOutRecurrsion(root);
 
             MaxheapImplementation MHI = new MaxheapImplementation();
@@ -553,6 +555,66 @@ namespace DataStructures
          MinimumNumberOfInsertionAndDeletion mnoi = new MinimumNumberOfInsertionAndDeletion();
          Console.WriteLine("Minimum number of inserts and deletes = {0}", mnoi.MinimumNumberOfInsertionAndDeletion_DP("heap", "pea", 4, 3));
 
+         LongestPalindromicSubsequenceProblem lpsp = new LongestPalindromicSubsequenceProblem();
+         Console.WriteLine("Longest palindrome subsequence  = {0}", lpsp.LongestPalindromeSubsequence("bbbab"));
+
+            SubSetsProblem ssp = new SubSetsProblem();
+            var aaspresilt = ssp.Subsets2(new int[] { 1, 2, 3 });
+
+            PermutationsProblem Pp = new PermutationsProblem();
+            var ppreuslt = Pp.Permute(new int[] { 1, 2, 3 });
+
+            List<int> obj1 = new List<int> { 1, 2, 3 };
+            List<int> obj2 = new List<int>(obj1);
+            obj2[0] = 100;
+
+            foreach (var item in obj1)
+            {
+                Console.WriteLine(item);
+            }
+
+            foreach (var item in obj2)
+            {
+                Console.WriteLine(item);
+            }
+
+            List<Person> objstr1 = new List<Person> { new Person(1, "Rohtih" ),new Person(2, "ram" )
+            };
+            List<Person> objstr2 = new List<Person>(objstr1);
+            objstr2[0].Age = 35;
+            objstr2[0].Name = "Sam";
+
+            foreach (var item in objstr1)
+            {
+                Console.WriteLine(item.Age+ " " + item.Name);
+            }
+
+            foreach (var item in objstr2)
+            {
+                Console.WriteLine(item.Age + " " + item.Name);
+            }
+
+
+
+            var root1 = new TreeNode(1);
+            root1.left = new TreeNode(2);
+            //root1.right = new TreeNode(20);
+            //root1.right.left = new TreeNode(15);
+            //root1.right.right = new TreeNode(7);
+            LevelOrderTraversalProblem lotp = new LevelOrderTraversalProblem();
+           var levelorderresults = lotp.LevelOrder(root1);
+
+        }
+
+        public class Person
+        {
+            public int Age { get; set; }
+            public string Name { get; set; }
+            public Person(int age, string name)
+            {
+                Age = age;
+                Name = name;
+            }
         }
     }
 }

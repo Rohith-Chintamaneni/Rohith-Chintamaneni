@@ -101,13 +101,65 @@ namespace DataStructures.Trees
 
         }
 
+        public void POstOrderTraversalWithOutRecursion(TreeNode root)
+        {
 
+            if (root == null) return;
+
+            Stack<TreeNode> S = new Stack<TreeNode>();
+            var currRoot = root;
+            while (currRoot != null || S.Count > 0)
+            {
+
+                while (currRoot != null)
+                {
+                    S.Push(currRoot);
+                    currRoot = currRoot.left;
+                }
+
+                currRoot = S.Pop();
+
+               
+
+                currRoot = currRoot.right;
+                Console.WriteLine("POst Order using Iterative={0}", currRoot.val);
+            }
+
+
+        }
+
+        public void InOrderTraversalWithOutRecursion2(TreeNode root)
+        {
+            List<int> answer = new List<int>();
+            Stack<TreeNode> s = new Stack<TreeNode>();
+            if (root != null)
+            {
+                s.Push(root);
+            }
+            TreeNode cur;
+            while (s.Count >  0)
+            {
+                cur = s.Pop();
+            
+                //  answer.Add(cur.val);            // visit the root
+                if (cur.right != null)
+                {
+                    s.Push(cur.right);          // push right child to stack if it is not null
+                }
+                Console.WriteLine("In Order using Iterative using second method={0}", cur.val);
+                if (cur.left != null)
+                {
+                    s.Push(cur.left);           // push left child to stack if it is not null
+                }
+            }
+            //return answer;
+        }
         public void POstOrderTraversal(TreeNode root)
         {
             if (root == null) return;
+            POstOrderTraversal(root.left);          
             POstOrderTraversal(root.right);
             Console.WriteLine("POstOrder={0}", root.val);
-            POstOrderTraversal(root.left);
         }
 
 
