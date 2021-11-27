@@ -24,7 +24,9 @@ namespace DataStructures.Trees
         {
             if (result.Count <= level)
                 result.Add(new List<int>());
+
             result[level].Add(root.val);
+
             TreeNode left = root.left;
             TreeNode right = root.right;
             if (left != null)
@@ -32,5 +34,9 @@ namespace DataStructures.Trees
             if (right != null)
                 TraverseTree(right, level + 1);
         }
+
+
+        // Level order traversal using Iterative Solution: TO DO
+
     }
 }

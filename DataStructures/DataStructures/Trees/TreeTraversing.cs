@@ -32,8 +32,8 @@ namespace DataStructures.Trees
         {
             if (root == null) return;
             Console.WriteLine("PreOrder={0}", root.val);
-            PreOrderTraversal(root.left);
             PreOrderTraversal(root.right);
+            PreOrderTraversal(root.left);
         }
 
         public void PreOrderTraversalWithOutRecursion(TreeNode root)
@@ -101,32 +101,33 @@ namespace DataStructures.Trees
 
         }
 
-        public void POstOrderTraversalWithOutRecursion(TreeNode root)
-        {
+        // Not working
+        //public void POstOrderTraversalWithOutRecursion(TreeNode root)
+        //{
 
-            if (root == null) return;
+        //    if (root == null) return;
 
-            Stack<TreeNode> S = new Stack<TreeNode>();
-            var currRoot = root;
-            while (currRoot != null || S.Count > 0)
-            {
+        //    Stack<TreeNode> S = new Stack<TreeNode>();
+        //    var currRoot = root;
+        //    while (currRoot != null || S.Count > 0)
+        //    {
 
-                while (currRoot != null)
-                {
-                    S.Push(currRoot);
-                    currRoot = currRoot.left;
-                }
+        //        while (currRoot != null)
+        //        {
+        //            S.Push(currRoot);
+        //            currRoot = currRoot.left;
+        //        }
 
-                currRoot = S.Pop();
+        //        currRoot = S.Pop();
 
                
 
-                currRoot = currRoot.right;
-                Console.WriteLine("POst Order using Iterative={0}", currRoot.val);
-            }
+        //        currRoot = currRoot.right;
+        //        Console.WriteLine("POst Order using Iterative={0}", currRoot.val);
+        //    }
 
 
-        }
+        //}
 
         public void InOrderTraversalWithOutRecursion2(TreeNode root)
         {
@@ -186,6 +187,55 @@ namespace DataStructures.Trees
            
            
         }
+
+
+        void PreOrderTraveringAgain(TreeNode root)
+        {
+
+            Stack<TreeNode> s = new Stack<TreeNode>();
+            var curr = root;
+
+            while(curr != null || s.Count >0)
+            {
+
+                while( curr != null)
+                {
+                    Console.WriteLine("Preorder =" + curr.val);
+                    s.Push(curr.left);
+                    curr = curr.left;
+                }
+
+                curr = s.Pop();
+                curr = curr.right;
+
+            }
+
+        }
+
+        void InOrderTraveringAgain(TreeNode root)
+        {
+
+            Stack<TreeNode> s = new Stack<TreeNode>();
+            var curr = root;
+
+            while (curr != null || s.Count > 0)
+            {
+
+                while (curr != null)
+                {
+                    s.Push(curr.left);
+                    curr = curr.left;
+                }
+
+                curr = s.Pop();
+                Console.WriteLine("Inorder =" + curr.val);
+                curr = curr.right;
+
+            }
+
+        }
+
+
     }
 
 

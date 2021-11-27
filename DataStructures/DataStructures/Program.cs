@@ -337,6 +337,7 @@ namespace DataStructures
             root.left = new TreeNode(3);
             root.right = new TreeNode(4);
             root.left.left = new TreeNode(5);
+            root.left.right = new TreeNode(7);
             root.right.right = new TreeNode(6);
             SumFromNodes sFn = new SumFromNodes();
             Console.WriteLine("Sum = {0}", sFn.CalculateSum(root));
@@ -603,6 +604,15 @@ namespace DataStructures
             //root1.right.right = new TreeNode(7);
             LevelOrderTraversalProblem lotp = new LevelOrderTraversalProblem();
            var levelorderresults = lotp.LevelOrder(root1);
+
+            TreeNode vbst = new TreeNode(20);
+            vbst.left = new TreeNode(17);
+            vbst.right = new TreeNode(28);
+            vbst.left.left = new TreeNode(15);
+            vbst.left.left = new TreeNode(16);
+            vbst.left.left.left = new TreeNode(10);
+            ValidateBinarySearchTreeProblem vbtp = new ValidateBinarySearchTreeProblem();
+           Console.WriteLine("Is Give tree a valid binary tree = {0}", vbtp.IsValidBST(vbst));
 
         }
 
