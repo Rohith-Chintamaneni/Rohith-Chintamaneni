@@ -32,8 +32,8 @@ namespace DataStructures.Trees
         {
             if (root == null) return;
             Console.WriteLine("PreOrder={0}", root.val);
-            PreOrderTraversal(root.right);
             PreOrderTraversal(root.left);
+            PreOrderTraversal(root.right);
         }
 
         public void PreOrderTraversalWithOutRecursion(TreeNode root)
@@ -129,7 +129,7 @@ namespace DataStructures.Trees
 
         //}
 
-        public void InOrderTraversalWithOutRecursion2(TreeNode root)
+        public void PreOrderTraversalWithOutRecursion2(TreeNode root)
         {
             List<int> answer = new List<int>();
             Stack<TreeNode> s = new Stack<TreeNode>();

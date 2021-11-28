@@ -347,9 +347,9 @@ namespace DataStructures
             Tt.PrintRightNodes(root);
             Tt.PreOrderTraversal(root);
             Tt.PreOrderTraversalWithOutRecursion(root);
+            Tt.PreOrderTraversalWithOutRecursion2(root);
             Tt.InOrderTraversal(root);
-            Tt.InOrderTraversalWithOutRecursion(root);
-            Tt.InOrderTraversalWithOutRecursion2(root);  // this is not INorder it is preOrder
+            Tt.InOrderTraversalWithOutRecursion(root);           
             Tt.POstOrderTraversal(root);
          //   Tt.POstOrderTraversalWithOutRecursion(root); failing
             Tt.LevelOrderTraversalWithOutRecurrsion(root);
@@ -621,8 +621,10 @@ namespace DataStructures
             ksmbstt.left.right = new TreeNode(2);
             //ksmbstt.left.left.left = new TreeNode(10);
             KthSmallestElementinaBSTProblem ksmbst = new KthSmallestElementinaBSTProblem();
-            Console.WriteLine("Kth Smallest Element in a BST = {0}", ksmbst.KthSmallest(ksmbstt, 1)); 
+            Console.WriteLine("Kth Smallest Element in a BST = {0}", ksmbst.KthSmallest(ksmbstt, 1));
 
+            PathSumProblem psp = new PathSumProblem();
+            Console.WriteLine("PathSum exist? = {0}", psp.HasPathSum(ksmbstt, 10));
         }
 
         public class Person
