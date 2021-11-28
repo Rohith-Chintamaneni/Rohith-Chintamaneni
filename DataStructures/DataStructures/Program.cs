@@ -614,6 +614,15 @@ namespace DataStructures
             ValidateBinarySearchTreeProblem vbtp = new ValidateBinarySearchTreeProblem();
            Console.WriteLine("Is Give tree a valid binary tree = {0}", vbtp.IsValidBST(vbst));
 
+            TreeNode ksmbstt = new TreeNode(3);
+            ksmbstt.left = new TreeNode(1);
+            ksmbstt.right = new TreeNode(4);
+          //  ksmbstt.left.left = new TreeNode(15);
+            ksmbstt.left.right = new TreeNode(2);
+            //ksmbstt.left.left.left = new TreeNode(10);
+            KthSmallestElementinaBSTProblem ksmbst = new KthSmallestElementinaBSTProblem();
+            Console.WriteLine("Kth Smallest Element in a BST = {0}", ksmbst.KthSmallest(ksmbstt, 1)); 
+
         }
 
         public class Person
