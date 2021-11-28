@@ -624,7 +624,7 @@ namespace DataStructures
             Console.WriteLine("Kth Smallest Element in a BST = {0}", ksmbst.KthSmallest(ksmbstt, 1));
 
             PathSumProblem psp = new PathSumProblem();
-            Console.WriteLine("PathSum exist? = {0}", psp.HasPathSum(ksmbstt, 10));
+            Console.WriteLine("PathSum exist? = {0}", psp.HasPathSumIterative(ksmbstt, 10));
         }
 
         public class Person

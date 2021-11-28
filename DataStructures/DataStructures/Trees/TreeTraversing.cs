@@ -147,7 +147,7 @@ namespace DataStructures.Trees
                 {
                     s.Push(cur.right);          // push right child to stack if it is not null
                 }
-                Console.WriteLine("In Order using Iterative using second method={0}", cur.val);
+                Console.WriteLine("Pre Order using Iterative using second method with single loop={0}", cur.val);
                 if (cur.left != null)
                 {
                     s.Push(cur.left);           // push left child to stack if it is not null
