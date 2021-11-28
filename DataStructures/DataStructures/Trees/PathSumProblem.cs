@@ -8,6 +8,7 @@ namespace DataStructures.Trees
 {
     class PathSumProblem
     {
+        // top down
         public bool HasPathSum(TreeNode root, int targetSum)
         {
             if (root == null) return false;
@@ -18,6 +19,28 @@ namespace DataStructures.Trees
 
 
             return HasPathSum(root.left, targetSum) || HasPathSum(root.right, targetSum);
+        }
+
+        // bottom up
+        public bool HasPathSum2(TreeNode root, int sum)
+        {
+            bool ans = false;
+            TraverseTopDown(ref ans, root, TargetSum: sum, CurSum: 0);
+            return ans;
+        }
+        void TraverseTopDown(ref bool ans, TreeNode node, int TargetSum, int CurSum)
+        {
+            if (node == null)
+                return;
+
+            CurSum += node.val;
+            if (node.left == null && node.right == null && CurSum == TargetSum)
+            {
+                ans = true;
+                return;
+            }
+            TraverseTopDown(ref ans, node.left, TargetSum, CurSum);
+            TraverseTopDown(ref ans, node.right, TargetSum, CurSum);
         }
 
         // todo 

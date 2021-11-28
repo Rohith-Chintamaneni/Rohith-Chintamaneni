@@ -625,6 +625,21 @@ namespace DataStructures
 
             PathSumProblem psp = new PathSumProblem();
             Console.WriteLine("PathSum exist? = {0}", psp.HasPathSumIterative(ksmbstt, 10));
+
+
+            MaxDeptOfBInaryTreeProblem mdobtp = new MaxDeptOfBInaryTreeProblem();
+            Console.WriteLine("TOP down Approach of recursion = {0}", mdobtp.MaxDepthTopDown(ksmbstt));
+            Console.WriteLine("Bottom Up Approach of recursion = {0}", mdobtp.MaxDepthBottomUp(ksmbstt));
+
+            TreeNode custv = new TreeNode(5);
+            custv.left = new TreeNode(1);
+            custv.right = new TreeNode(5);
+            custv.left.left = new TreeNode(5);
+            custv.left.right = new TreeNode(5);
+            custv.right.right = new TreeNode(5);
+            CountUniValueSubTreesProblem cuvst =new CountUniValueSubTreesProblem();
+            Console.WriteLine("Top down Approach of uni value nodes = {0}", cuvst.CountUnivalSubtrees(custv));
+
         }
 
         public class Person
