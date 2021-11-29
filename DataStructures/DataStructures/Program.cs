@@ -640,6 +640,15 @@ namespace DataStructures
             CountUniValueSubTreesProblem cuvst =new CountUniValueSubTreesProblem();
             Console.WriteLine("Top down Approach of uni value nodes = {0}", cuvst.CountUnivalSubtrees(custv));
 
+            ValidAnagramProblem vap = new ValidAnagramProblem();
+            Console.WriteLine("Are the given string form anagram {0}",vap.IsAnagramUsingArray( "anagram",  "samuela"));
+
+            GroupAnagramProblem gap = new GroupAnagramProblem();
+            var list = gap.GroupAnagrams(new string[] { "eat", "tea", "tan", "ate", "nat", "bat" });
+
+            ValidParenthesesProblem vpp = new ValidParenthesesProblem();
+            Console.WriteLine("Is given input has valid parenthesis {0}", vpp.IsValid("()"));
+
         }
 
         public class Person
