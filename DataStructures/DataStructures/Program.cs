@@ -649,6 +649,14 @@ namespace DataStructures
             ValidParenthesesProblem vpp = new ValidParenthesesProblem();
             Console.WriteLine("Is given input has valid parenthesis {0}", vpp.IsValid("()"));
 
+            var muotppa = new int[3][];
+            muotppa[0] = new int[] { 1, 3 };
+            muotppa[1] = new int[] { 2, 2 };
+            muotppa[2] = new int[] { 3, 1 };
+        
+
+            MaximumUnitsonaTruckProblem muotp = new MaximumUnitsonaTruckProblem();
+            Console.WriteLine("max number of units = {0}", muotp.MaximumUnits(muotppa, 4));
         }
 
         public class Person
