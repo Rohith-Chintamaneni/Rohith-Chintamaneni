@@ -657,6 +657,10 @@ namespace DataStructures
 
             MaximumUnitsonaTruckProblem muotp = new MaximumUnitsonaTruckProblem();
             Console.WriteLine("max number of units = {0}", muotp.MaximumUnits(muotppa, 4));
+
+            MaximumSubarrayProblem msp = new MaximumSubarrayProblem();
+            Console.WriteLine("Maximum Subarray = {0}", msp.MaxSubArrayKadaneAlgorithm(new int[] { -2, 1, -3, 4, -1, 2, 1, -5, 4 }));
+        
         }
 
         public class Person
