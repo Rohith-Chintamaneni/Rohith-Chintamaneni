@@ -47,14 +47,22 @@ namespace DataStructures.LinkedList.Medium
         // 1->2
         //5->4->3
         // 1->5->2->4->3
+        // refer neat code to understand more
         private void merge(ListNode head1, ListNode head2)
         {
             while (head2 != null)
             {
-                ListNode next = head1.next;
+                // Both next nodes are first put in temp variables
+                ListNode temp1 = head1.next;
+                ListNode temp2 = head2.next;
+
+                // first node is pointing to secondnode and secondnode is pointing to firstnode's next node
                 head1.next = head2;
-                head1 = head2;
-                head2 = next;
+                head2.next = temp1;
+
+                // both firstnode and second advance to next nodes
+                head1 = temp1;
+                head2 = temp2;
             }
         }
 

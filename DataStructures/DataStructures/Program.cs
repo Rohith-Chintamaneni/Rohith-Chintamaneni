@@ -419,7 +419,7 @@ namespace DataStructures
 
 
           ReorderListProblem rlpobj = new ReorderListProblem();
-             rlpobj.reorderList2(reorderlist);
+             rlpobj.ReorderList(reorderlist);
 
 
              MissingNumberProblem Mnp = new MissingNumberProblem();
