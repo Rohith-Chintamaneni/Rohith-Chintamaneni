@@ -124,5 +124,49 @@ namespace DataStructures.Intervals
 
             return results.ToArray();
         }
+
+        // using the method about intervals
+        public int[][] Merge2(int[][] intervals)
+        {
+
+            Array.Sort(intervals, (i1, i2) => i1[0] - i2[0]);
+
+            List<int[]> results = new List<int[]>();
+            var oldinterval = intervals[0];
+            results.Add(oldinterval);
+            for(int i =1; i< intervals.Length; i++)
+            {
+                if (OverlapExists(oldinterval, intervals[i]))
+                {
+                    var mergedInterval = MergeIntervals(oldinterval, intervals[i]);
+                    results.Remove(oldinterval);
+                    results.Add(mergedInterval);
+                    oldinterval = mergedInterval;
+                }
+                else
+                {
+                    oldinterval = intervals[i];
+                    results.Add(oldinterval);
+                }
+               
+            }
+
+            return results.ToArray();
+        }
+
+        public bool OverlapExists(int[] i1, int[] i2)
+        {
+            var front = Math.Max(i1[0], i2[0]);
+            var back = Math.Min(i1[1], i2[1]);
+            return back - front >= 0;
+
+        }
+
+        public int[] MergeIntervals(int[] i1, int[] i2)
+        {
+            var front = Math.Min(i1[0], i2[0]);
+            var back = Math.Max(i1[1], i2[1]);
+            return new int[] { front, back };
+        }
     }
 }

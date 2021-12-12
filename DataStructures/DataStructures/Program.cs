@@ -429,7 +429,7 @@ namespace DataStructures
              var Ftdnresult= FtDn.FindDuplicateLinkedList(new[] { 1, 3, 4, 2, 2 });
 
              MergeKLinkedListProblem MKLp =new MergeKLinkedListProblem();
-             var Mklpresponse = MKLp.MergeKLists_Improvised(new[]
+             var Mklpresponse = MKLp.mergeKListsusingDivideAndConquer(new[]
              {
                  new ListNode(1){next= new ListNode(4){next = new ListNode(5)}},
                  new ListNode(1){next= new ListNode(3){next = new ListNode(4)}},
@@ -448,9 +448,15 @@ namespace DataStructures
              BasicsOfJaggedArray BOJA = new BasicsOfJaggedArray();
              BOJA.AccessArrays(jaggedarray);
 
+            var secondcase = new int[][]
+            {
+                new int[]{1, 4 },
+                new int[]{0, 2 },
+                new int[]{3, 5 }
+            };
 
              MergeIntervalsProblem MIP = new MergeIntervalsProblem();
-             var miresult = MIP.MergeAlternate_RC(jaggedarray);
+             var miresult = MIP.MergeAlternate_RC(secondcase);
 
             
              var IIParray = new int[][]
