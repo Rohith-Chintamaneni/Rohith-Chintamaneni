@@ -29,5 +29,30 @@ namespace DataStructures.LinkedList.Medium
             slowNode.next = slowNode.next.next;
             return dumNode.next;
         }
+
+
+        public ListNode RemoveNthFromEnd2(ListNode head, int n)
+        {
+            ListNode dummynode = new ListNode(0);
+            dummynode.next = head;
+            ListNode slow = dummynode;
+            ListNode fast = dummynode;
+
+            while (n >= 0)
+            {
+                fast = fast.next;
+                n--;
+            }
+
+            while (fast != null)
+            {
+                slow = slow.next;
+                fast = fast.next;
+            }
+
+            slow.next = slow.next.next;
+
+            return dummynode.next;
+        }
     }
 }

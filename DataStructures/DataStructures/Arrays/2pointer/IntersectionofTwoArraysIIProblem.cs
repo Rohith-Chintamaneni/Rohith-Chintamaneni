@@ -77,6 +77,39 @@ namespace DataStructures.Arrays._2pointer
             //   return result.ToArray();
         }
 
+        public int[] Intersect2(int[] nums1, int[] nums2)
+        {
+            if (nums2.Length < nums1.Length)
+            {
+                Intersect2(nums2, nums1);
+            }
+
+            var dictionary = new Dictionary<int, int>();
+
+            for (int i = 0; i < nums2.Length; i++)
+            {
+                if (dictionary.ContainsKey(nums2[i]))
+                {
+                    dictionary[nums2[i]] = dictionary.GetValueOrDefault(nums2[i]) + 1;
+                }
+                else
+                    dictionary[nums2[i]] = 1;
+
+
+            }
+            var ans = new List<int>();
+            for (int i = 0; i < nums1.Length; i++)
+            {
+                if (dictionary.ContainsKey(nums1[i]) && dictionary.GetValueOrDefault(nums1[i]) > 0)
+                {
+                    ans.Add(nums1[i]);
+                    dictionary[nums1[i]] = dictionary.GetValueOrDefault(nums1[i]) - 1;
+                }
+
+            }
+            return ans.ToArray();
+        }
+
 
     }
 }

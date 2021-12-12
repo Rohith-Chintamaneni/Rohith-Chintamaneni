@@ -61,6 +61,54 @@ namespace DataStructures.LinkedList
             return previousnode;
         }
 
+
+
+        public bool IsPalindrome2(ListNode head)
+        {
+
+
+
+            var slow = head;
+            var fast = head;
+            var original = head;
+
+
+            while (fast != null && fast.next != null)
+            {
+                slow = slow.next;
+                fast = fast.next.next;
+            }
+
+            var reverselist = reverse(slow);
+
+            while (original != null && reverselist != null)
+            {
+                if (original.val != reverselist.val)
+                {
+                    return false;
+                }
+                original = original.next;
+                reverselist = reverselist.next;
+            }
+            return true;
+        }
+
+
+        public ListNode reverse(ListNode head)
+        {
+            var ans = head;
+            ListNode prev = null;
+            while (head != null)
+            {
+                var temp = head.next;
+                head.next = prev;
+                prev = head;
+                head = temp;
+
+            }
+
+            return prev;
+        }
     }
 
    

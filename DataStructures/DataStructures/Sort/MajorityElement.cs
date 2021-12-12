@@ -9,6 +9,7 @@ namespace DataStructures.Sort
 {
     class MajorityElement
     {
+        //Boyers Moore alogirthm
         public int MajorityElementProblem(int[] num)
         {
             int majorelement = num[0], count = 1;

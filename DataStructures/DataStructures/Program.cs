@@ -138,7 +138,7 @@ namespace DataStructures
                     }
                 }
             };
-            var palindromeresult = plp.IsPalindrome(head2);
+            var palindromeresult = plp.IsPalindrome2(head2);
 
             MiddleOfLinkedList middleOfLinked = new MiddleOfLinkedList();
             var head3 = new ListNode(100)
@@ -256,7 +256,7 @@ namespace DataStructures
 
             //  verify the you tube kenny talks. Still not the correct way
             DeleteKthElementFromLinkedList RkNfl = new DeleteKthElementFromLinkedList();
-            var ans = RkNfl.RemoveNthFromEnd(removeKthNodefromList, 2);
+            var ans = RkNfl.RemoveNthFromEnd2(removeKthNodefromList, 2);
 
             MaximumAverageSubarrayProblem MaspUb = new MaximumAverageSubarrayProblem();
             Console.WriteLine("Max Avg of subarray of size 3={0}",
@@ -278,7 +278,10 @@ namespace DataStructures
             var result = SOSAP.SortedSquares(new int[5] { -7, -3, 2, 3, 11 });
 
             IntersectionofTwoArraysIIProblem IOTP = new IntersectionofTwoArraysIIProblem();
-            IOTP.Intersect(new[] { 4, 9, 5 }, new[] { 9, 4, 9, 8, 4 });
+            IOTP.Intersect2(new[] { 4, 9, 5 }, new[] { 9, 4, 9, 8, 4 });
+
+            IntersectionofTwoArrays IOTA = new IntersectionofTwoArrays();
+            IOTA.Intersection(new[] { 4, 9, 5 }, new[] { 9, 4, 9, 8, 4 });
 
             ReverseWordsinaStringIIIProblem RWIASP = new ReverseWordsinaStringIIIProblem();
             Console.WriteLine("Reverse String = {0}", RWIASP.ReverseWords("God Ding"));
@@ -398,7 +401,7 @@ namespace DataStructures
 
            LongestSubStringWithoutRepeatingCharactersProblem Lswrcp =
                new LongestSubStringWithoutRepeatingCharactersProblem();
-          var Lswrcpresult = Lswrcp.LengthOfLongestSubstring("abcabcbb");
+          var Lswrcpresult = Lswrcp.LengthOfLongestSubstringBF(" ");
 
           var lswrcpresultbrute = Lswrcp.LengthOfLongestSubstringBFOptimized_O_Nsquare("dvdf");
 
@@ -416,7 +419,7 @@ namespace DataStructures
 
 
           ReorderListProblem rlpobj = new ReorderListProblem();
-             rlpobj.ReorderList(reorderlist);
+             rlpobj.reorderList2(reorderlist);
 
 
              MissingNumberProblem Mnp = new MissingNumberProblem();
@@ -660,7 +663,10 @@ namespace DataStructures
 
             MaximumSubarrayProblem msp = new MaximumSubarrayProblem();
             Console.WriteLine("Maximum Subarray = {0}", msp.MaxSubArrayKadaneAlgorithm(new int[] { -2, 1, -3, 4, -1, 2, 1, -5, 4 }));
-        
+
+            ShuffletheArrayProblem sap = new ShuffletheArrayProblem();
+            var saps = sap.Shuffle3(new int[] { 2, 5, 1, 3, 4, 7 }, 3);
+
         }
 
         public class Person

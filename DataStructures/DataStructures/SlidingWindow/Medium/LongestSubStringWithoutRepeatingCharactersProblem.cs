@@ -111,5 +111,30 @@ namespace DataStructures.SlidingWindow.Medium
 
             return isExist;
         }
+
+
+
+      
+            public int lengthOfLongestSubstringOptimizedSLidingWindowBydirectlyskipping(String s)
+            {
+            Dictionary<char, int> map = new Dictionary<char, int>();
+            int start = 0, len = 0;
+
+            // abba
+            for (int i = 0; i < s.Length; i++)
+            {
+                char c = s[i];
+                if (map.ContainsKey(c))
+                {
+                    if (map[c] >= start)
+                        start = map[c] + 1;
+                }
+                len = Math.Max(len, i - start + 1);
+                map.Add(c, i);
+            }
+
+            return len;
+        }
+        
     }
 }

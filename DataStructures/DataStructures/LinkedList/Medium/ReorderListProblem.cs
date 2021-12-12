@@ -14,7 +14,8 @@ namespace DataStructures.LinkedList.Medium
             if (head == null || head.next == null) return;
 
             // Find the middle node
-            ListNode slow = head, fast = head.next.next;
+            ListNode slow = head;
+            ListNode fast = head;
             while (fast != null && fast.next != null)
             {
                 slow = slow.next;
@@ -55,6 +56,42 @@ namespace DataStructures.LinkedList.Medium
                 head1 = head2;
                 head2 = next;
             }
+        }
+
+
+
+        public void reorderList2(ListNode head)
+        {
+            if (head == null) return;
+            reorderList(head, head.next);
+        }
+
+        public ListNode reorderList(ListNode root, ListNode curr)
+        {
+            if (curr == null) return root;
+
+            // keep on passing the intial root to the end
+            root = reorderList(root, curr.next);
+
+            if (root == null) return null;
+            /** 
+             * we stop reconfiguring in 2 cases. 
+             *   1. returned new root is same as head: Odd number of list items so we have come to the middle
+             *   2. returned new root's next is same as head: Even number of list items
+             **/
+            ListNode temp = null;
+            if (root == curr || root.next == curr)
+            {
+                curr.next = null;
+            }
+            else
+            {
+                // make returned root's next to be curr and return root's next as the new root
+                temp = root.next;
+                root.next = curr;
+                curr.next = temp;
+            }
+            return temp;
         }
     }
 }

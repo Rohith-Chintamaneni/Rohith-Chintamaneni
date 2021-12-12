@@ -36,6 +36,18 @@ namespace DataStructures.Arrays
 
             return nums;
         }
+
+        public int[] Shuffle3(int[] nums, int n)
+        {
+            var ans = new int[nums.Length];
+            int s = nums.Length / 2;
+            for (int i = 0; i < s; i++)
+            {
+                ans[2 * i] = nums[i];
+                ans[2 * i + 1] = nums[i + s];
+            }
+            return ans;
+        }
     }
 
 }
