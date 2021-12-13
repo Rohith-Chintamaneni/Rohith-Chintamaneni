@@ -569,7 +569,7 @@ namespace DataStructures
          Console.WriteLine("Longest palindrome subsequence  = {0}", lpsp.LongestPalindromeSubsequence("bbbab"));
 
             SubSetsProblem ssp = new SubSetsProblem();
-            var aaspresilt = ssp.Subsets2(new int[] { 1, 2, 3 });
+            var aaspresilt = ssp.SubsetsIncludeExcludeMethod(new int[] { 1, 2});
 
             PermutationsProblem Pp = new PermutationsProblem();
             var ppreuslt = Pp.Permute(new int[] { 1, 2, 3 });

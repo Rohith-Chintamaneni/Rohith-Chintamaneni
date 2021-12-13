@@ -88,6 +88,32 @@ namespace DataStructures.Recursion
             }
         }
 
+        // include exclude method which is easy to follow
+        public IList<IList<int>> SubsetsIncludeExcludeMethod(int[] nums)
+        {
+            List<List<int>> subsets = new List<List<int>>();
+
+            helper(nums, 0, new List<int>(), subsets);
+
+            return subsets.ToArray();
+        }
+
+        public void helper(int[] nums, int idx, List<int> slate, List<List<int>> subsets)
+        {
+            if (idx == nums.Length)
+            {
+                subsets.Add(new List<int>(slate)); // still need to do a deep copy if not local change will modify the global value
+                return;
+            }
+
+            // Exclude the current value.
+            helper(nums, idx + 1, slate, subsets);
+
+            // Include the current value.
+            slate.Add(nums[idx]);
+            helper(nums, idx + 1, slate, subsets);
+            slate.RemoveAt(slate.Count() - 1);
+        }
     }
     
 }
