@@ -677,6 +677,8 @@ namespace DataStructures
             FindANumberInSortedArray faisa = new FindANumberInSortedArray();
             Console.WriteLine("the searchindex = {0}", faisa.FindNumberInSortedArrayProblem(new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 }, 1));
 
+            FindFirstandLastPositionofElementinSortedArray fflp = new FindFirstandLastPositionofElementinSortedArray();
+            var fflpresult = fflp.SearchRange(new int[] { 1, 3, 4, 7, 7, 8, 9 }, 7);
         }
 
         public class Person
