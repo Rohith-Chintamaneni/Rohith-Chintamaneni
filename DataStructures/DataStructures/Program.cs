@@ -5,6 +5,7 @@ using DataStructures.Arrays._2pointer;
 using DataStructures.Arrays.JaggedArrays;
 using DataStructures.Arrays.Medium;
 using DataStructures.BinarySearch;
+using DataStructures.BinarySearchArrays;
 using DataStructures.BitManipulation;
 using DataStructures.Dynamic_Programming;
 using DataStructures.Heaps;
@@ -672,6 +673,9 @@ namespace DataStructures
 
             ShuffletheArrayProblem sap = new ShuffletheArrayProblem();
             var saps = sap.Shuffle3(new int[] { 2, 5, 1, 3, 4, 7 }, 3);
+
+            FindANumberInSortedArray faisa = new FindANumberInSortedArray();
+            Console.WriteLine("the searchindex = {0}", faisa.FindNumberInSortedArrayProblem(new int[] { 1, 2, 3, 4, 5, 6, 7, 8, 9 }, 1));
 
         }
 
