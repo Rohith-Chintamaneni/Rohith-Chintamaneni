@@ -114,6 +114,29 @@ namespace DataStructures.Recursion
             helper(nums, idx + 1, slate, subsets);
             slate.RemoveAt(slate.Count() - 1);
         }
+
+        // iterative approach
+
+        public IList<IList<int>> findSubsets(int[] nums)
+        {
+            List<List<int>> subsets = new List<List<int>>();
+            // start by adding the empty subset
+            subsets.Add(new List<int>());
+            foreach (var currentNumber in nums)
+            {
+                // we will take all existing subsets and insert the current number in them to create new subsets
+                int n = subsets.Count;
+                for (int i = 0; i < n; i++)
+                {
+                    // create a new subset from the existing subset and insert the current element to it
+                    List<int> set = new List<int>(subsets[i]);
+                    set.Add(currentNumber);
+                    subsets.Add(set);
+                }
+            }
+            return subsets.ToArray();
+        }
+
     }
-    
+
 }
