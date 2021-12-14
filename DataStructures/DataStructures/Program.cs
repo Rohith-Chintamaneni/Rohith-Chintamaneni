@@ -682,6 +682,10 @@ namespace DataStructures
 
             CountTheElementsInASortedArray cteia = new CountTheElementsInASortedArray();
             var cteiaresult = cteia.COunttheElementsINSortedArrayProblem(new int[] { 1, 3, 7, 7, 7, 8, 9 }, 7);
+
+            FIndPeakElementProblem fpep = new FIndPeakElementProblem();
+            var fpepresult = fpep.FindPeakElement(new int[] { 1, 2, 3, 1 });
+        
         }
 
         public class Person
