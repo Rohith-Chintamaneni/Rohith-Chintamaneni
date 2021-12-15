@@ -58,5 +58,47 @@ namespace DataStructures.Recursion
 
         }
 
+        // using Swap Method
+
+        public IList<IList<int>> PermuteUsingSwap(int[] nums)
+        {
+            var ans = new List<List<int>>();
+
+            Permute(nums, ans, 0);
+            return ans.ToArray();
+        }
+
+        public void Permute(int[] nums, List<List<int>> ans, int start)
+        {
+            if (start == nums.Length)
+            {
+                ans.Add(ToList(nums));
+            }
+
+            for (int j = start; j < nums.Length; j++)
+            {
+                Swap(nums, start, j);
+                Permute(nums, ans, start + 1);
+                Swap(nums, start, j);
+            }
+
+        }
+
+        public void Swap(int[] nums, int i, int j)
+        {
+            var temp = nums[i];
+            nums[i] = nums[j];
+            nums[j] = temp;
+        }
+
+        public List<int> ToList(int[] nums)
+        {
+            var temp = new List<int>();
+            foreach (var n in nums)
+            {
+                temp.Add(n);
+            }
+            return temp;
+        }
     }
 }
