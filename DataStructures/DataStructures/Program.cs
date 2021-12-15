@@ -609,9 +609,9 @@ namespace DataStructures
 
             var root1 = new TreeNode(1);
             root1.left = new TreeNode(2);
-            //root1.right = new TreeNode(20);
-            //root1.right.left = new TreeNode(15);
-            //root1.right.right = new TreeNode(7);
+            root1.right = new TreeNode(20);
+            root1.right.left = new TreeNode(15);
+            root1.right.right = new TreeNode(7);
             LevelOrderTraversalProblem lotp = new LevelOrderTraversalProblem();
            var levelorderresults = lotp.LevelOrder(root1);
 
@@ -685,7 +685,10 @@ namespace DataStructures
 
             FIndPeakElementProblem fpep = new FIndPeakElementProblem();
             var fpepresult = fpep.FindPeakElement(new int[] { 1, 2, 3, 1 });
-        
+
+            PermutationsProblem pp = new PermutationsProblem();
+            var ppresult = pp.PermuteUsingSwap(new int[] { 1, 2, 3 });
+
         }
 
         public class Person
