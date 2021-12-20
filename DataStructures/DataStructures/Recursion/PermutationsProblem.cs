@@ -73,11 +73,13 @@ namespace DataStructures.Recursion
             if (start == nums.Length)
             {
                 ans.Add(ToList(nums));
+                return; // adding return statement is definately better performant
             }
 
             for (int j = start; j < nums.Length; j++)
             {
                 Swap(nums, start, j);
+             //   Console.WriteLine(nums[start]);
                 Permute(nums, ans, start + 1);
                 Swap(nums, start, j);
             }

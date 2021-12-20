@@ -687,7 +687,7 @@ namespace DataStructures
             var fpepresult = fpep.FindPeakElement(new int[] { 1, 2, 3, 1 });
 
             PermutationsProblem pp = new PermutationsProblem();
-            var ppresult = pp.PermuteUsingSwap(new int[] { 1, 2, 3 });
+            var ppresult = pp.PermuteUsingSwap(new int[] { 1, 2 });
 
         }
 
