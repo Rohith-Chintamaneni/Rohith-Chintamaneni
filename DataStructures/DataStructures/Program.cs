@@ -714,6 +714,9 @@ namespace DataStructures
 
             PascalTriangleProblem ptp = new PascalTriangleProblem();
             var ptpresult = ptp.GeneratePascalTriangle(5);
+
+            PascalTriangle2Problem ptp2 = new PascalTriangle2Problem();
+            var ptpresult2 = ptp2.GetRow(3);
         }
 
         public class Person
