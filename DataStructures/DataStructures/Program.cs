@@ -711,6 +711,9 @@ namespace DataStructures
             SwapNodesInPairsProblem snip = new SwapNodesInPairsProblem();
            // var snipresult = snip.SwapPairsIterative(swapNodeslist);
             var snipresulrrecursive = snip.SwapPairsRecursive(swapNodeslist);
+
+            PascalTriangleProblem ptp = new PascalTriangleProblem();
+            var ptpresult = ptp.GeneratePascalTriangle(5);
         }
 
         public class Person
