@@ -689,6 +689,28 @@ namespace DataStructures
             PermutationsProblem pp = new PermutationsProblem();
             var ppresult = pp.PermuteUsingSwap(new int[] { 1, 2 });
 
+
+            var swapNodeslist = new ListNode(99)
+            {
+                next = new ListNode(1)
+                {
+                    next = new ListNode(2)
+                    {
+                        next = new ListNode(3)
+                        {
+                            next = new ListNode(4)
+                            {
+                                next = new ListNode(5)
+
+                            }
+                        }
+                    }
+                }
+
+            };
+            SwapNodesInPairsProblem snip = new SwapNodesInPairsProblem();
+           // var snipresult = snip.SwapPairsIterative(swapNodeslist);
+            var snipresulrrecursive = snip.SwapPairsRecursive(swapNodeslist);
         }
 
         public class Person
