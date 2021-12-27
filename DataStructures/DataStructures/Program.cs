@@ -749,6 +749,18 @@ namespace DataStructures
             var bfsagpresult = BFSAgp.BFS(adjlist, 6, 0);
 
            BFSAgp.BFSDIS(adjlist, 7);
+
+        
+                var edges = new int[][]
+                {
+                    new int[]{0,1},
+                    new int[]{1,2},
+                    new int[]{3,4}
+                };
+
+            NumberofConnectedComponentsinanUndirectedGraphProblem noccugp = new NumberofConnectedComponentsinanUndirectedGraphProblem();
+            var noccupgresult = noccugp.CountComponentsUsingDFS(5, edges);
+
         }
 
         public class Person
