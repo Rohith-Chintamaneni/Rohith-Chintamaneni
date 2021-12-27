@@ -23,6 +23,7 @@ using DataStructures.Sort.MergeSort;
 using DataStructures.Stacks;
 using DataStructures.Strings;
 using DataStructures.Trees;
+using DataStructures.Graphs;
 
 namespace DataStructures
 {
@@ -717,6 +718,37 @@ namespace DataStructures
 
             PascalTriangle2Problem ptp2 = new PascalTriangle2Problem();
             var ptpresult2 = ptp2.GetRow(3);
+
+            ClimbingStairsProblem csp = new ClimbingStairsProblem();
+            var cspresult = csp.ClimbStairsUsingDP(5);
+
+            PrintAdjacentGraphProblem pagp = new PrintAdjacentGraphProblem();
+           //initialize
+            var adjlist = new List<List<int>>();
+            adjlist.Add(new List<int>());
+            adjlist.Add(new List<int>());
+            adjlist.Add(new List<int>());
+            adjlist.Add(new List<int>());
+          
+            // add list
+            var AdjList = pagp.AddEdge(adjlist,0,1) ;         
+            AdjList = pagp.AddEdge(adjlist, 0, 2);         
+            AdjList = pagp.AddEdge(adjlist, 1, 2);         
+            AdjList = pagp.AddEdge(adjlist, 1, 3);
+          
+            var paganns = pagp.PrintGraph(4, AdjList);
+
+            adjlist.Add(new List<int>());
+            adjlist.Add(new List<int>());
+            adjlist.Add(new List<int>());
+            AdjList = pagp.AddEdge(adjlist, 4, 5);
+            AdjList = pagp.AddEdge(adjlist, 5, 6);
+            AdjList = pagp.AddEdge(adjlist, 4, 6);
+            BFSOFAGraphProblem BFSAgp = new BFSOFAGraphProblem();
+            // adjacency list, number of vertices and source vertice 
+            var bfsagpresult = BFSAgp.BFS(adjlist, 6, 0);
+
+           BFSAgp.BFSDIS(adjlist, 7);
         }
 
         public class Person
