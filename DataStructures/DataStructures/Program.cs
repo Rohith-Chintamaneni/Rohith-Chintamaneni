@@ -761,6 +761,15 @@ namespace DataStructures
             NumberofConnectedComponentsinanUndirectedGraphProblem noccugp = new NumberofConnectedComponentsinanUndirectedGraphProblem();
             var noccupgresult = noccugp.CountComponentsUsingDFS(5, edges);
 
+
+
+            IterativeBinarySearchInSortedArray IBSISA = new IterativeBinarySearchInSortedArray();
+            Console.WriteLine("Element is found at an index = {0}",IBSISA.FindtheIndexOfElementInSortedArrray(new int[] { 10, 20, 30, 40, 50, 60 }, 50));
+
+
+            RecursiveBinarySearchOfSortedArray RBSISA = new RecursiveBinarySearchOfSortedArray();
+            Console.WriteLine("Element is found at an index using recursion = {0}", RBSISA.BSearchRecursive(new int[] { 10, 20, 30, 40, 50, 60 }, 10, 0, 5));
+
         }
 
         public class Person
