@@ -770,6 +770,13 @@ namespace DataStructures
             RecursiveBinarySearchOfSortedArray RBSISA = new RecursiveBinarySearchOfSortedArray();
             Console.WriteLine("Element is found at an index using recursion = {0}", RBSISA.BSearchRecursive(new int[] { 10, 20, 30, 40, 50, 60 }, 10, 0, 5));
 
+            ArrangingCoins AC = new ArrangingCoins();
+            Console.WriteLine("Number of rows = {0}", AC.ArrangeCoins(5));
+
+
+
+            SearchInsertPosition SIP = new SearchInsertPosition();
+            Console.WriteLine("Index = {0}", SIP.SearchInsert(new int[] { 1, 2, 5, 6 }, 7));
         }
 
         public class Person
