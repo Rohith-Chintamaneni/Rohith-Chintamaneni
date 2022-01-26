@@ -787,6 +787,10 @@ namespace DataStructures
 
             CountOfOccurencesInSortedArray CoISA = new CountOfOccurencesInSortedArray();
             Console.WriteLine("Count of occurences an element exist ={0}", CoISA.CountOfOccurences(new int[] { 10, 20, 30, 30, 30, 30 }, 30));
+
+            CountOf1sInASortedBinaryArray CoASBA = new CountOf1sInASortedBinaryArray();
+            Console.WriteLine("Count of 1s in a sorted Binary array={0}", CoASBA.CountOfOnesBinaryArray(new int[] { 0, 0, 0, 0, 1, 1, 1 }));
+
         }
 
         public class Person
