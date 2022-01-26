@@ -777,6 +777,16 @@ namespace DataStructures
 
             SearchInsertPosition SIP = new SearchInsertPosition();
             Console.WriteLine("Index = {0}", SIP.SearchInsert(new int[] { 1, 2, 5, 6 }, 7));
+
+            FirstOccurenceInSortedArray FoISA = new FirstOccurenceInSortedArray();
+            Console.WriteLine("INdex of First Occurence Element ={0}", FoISA.FirstOccurence(new int[] { 10, 20, 30, 30, 30, 50 }, 30));
+
+
+            LastOccurenceInASortedArray LoISA = new LastOccurenceInASortedArray();
+            Console.WriteLine("INdex of Last Occurence Element ={0}", LoISA.LastOccurence(new int[] { 10, 20, 30, 30, 30, 30 }, 30));
+
+            CountOfOccurencesInSortedArray CoISA = new CountOfOccurencesInSortedArray();
+            Console.WriteLine("Count of occurences an element exist ={0}", CoISA.CountOfOccurences(new int[] { 10, 20, 30, 30, 30, 30 }, 30));
         }
 
         public class Person
