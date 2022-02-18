@@ -791,6 +791,9 @@ namespace DataStructures
             CountOf1sInASortedBinaryArray CoASBA = new CountOf1sInASortedBinaryArray();
             Console.WriteLine("Count of 1s in a sorted Binary array={0}", CoASBA.CountOfOnesBinaryArray(new int[] { 0, 0, 0, 0, 1, 1, 1 }));
 
+            SQRT sqr = new SQRT();
+            Console.WriteLine("SquareRoot of number {0}= {1}", 16, sqr.SquareOFnumber(16));
+
         }
 
         public class Person
