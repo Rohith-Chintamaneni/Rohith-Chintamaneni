@@ -67,6 +67,7 @@ namespace DataStructures.Arrays
                 {
                     result[0] = ++i;
                     result[1] = ++n;
+                    break;
                 }
             }
 

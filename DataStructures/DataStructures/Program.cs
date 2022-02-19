@@ -794,6 +794,9 @@ namespace DataStructures
             SQRT sqr = new SQRT();
             Console.WriteLine("SquareRoot of number {0}= {1}", 16, sqr.SquareOFnumber(16));
 
+
+            TwoSumProblemIndexed tspi = new TwoSumProblemIndexed();
+            var tspiresult = tspi.TwoSumN2pointer(new int[] { 2, 3, 4 }, 6);
         }
 
         public class Person
