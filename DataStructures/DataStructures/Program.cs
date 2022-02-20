@@ -83,8 +83,8 @@ namespace DataStructures
 
 
             RotateArrayProblem RPA = new RotateArrayProblem();
-           // RPA.Rotate(new int[] { 1, 2, 3, 4, 5, 6, 7 },3); // rotate 3 positions, the right paramters tells you how many times to rotate
-           RPA.Rotate2ndApproach(new[] { 1, 2, 3, 4, 5, 6, 7 }, 3);
+            // RPA.Rotate(new int[] { 1, 2, 3, 4, 5, 6, 7 },3); // rotate 3 positions, the right paramters tells you how many times to rotate
+            RPA.Rotate2ndApproach(new[] { 1, 2, 3, 4, 5, 6, 7 }, 3);
 
             QuickSort Qs = new QuickSort();
             Qs.QuickSortImplementation(new[] { 5, 3, 2, 11, 1, 0, -8, 10 }, 0,
@@ -301,7 +301,7 @@ namespace DataStructures
             DAP.DuplicateZerosSecondAppraoch(new[] { 0, 4, 1, 0, 0, 8, 0, 0, 3 });
 
             ValidMountainProblem VMP = new ValidMountainProblem();
-            VMP.ValidMountainArray(new[] { 0, 3, 2, 1 });
+            VMP.validMountainNewWay(new[] {0, 1, 2, 3, 4, 5, 6, 7, 8, 9});
 
 
             int[][] m = { new[] { 2, 3, 4 }, new[] { 3, 4, 5 } };
@@ -797,9 +797,25 @@ namespace DataStructures
 
             TwoSumProblemIndexed tspi = new TwoSumProblemIndexed();
             var tspiresult = tspi.TwoSumN2pointer(new int[] { 2, 3, 4 }, 6);
+
+            IntersectionofTwoArraysII Iso2 = new IntersectionofTwoArraysII();
+            var Iso2result = Iso2.Intersect3(new int[] { 4, 9, 5 }, new int[] {9, 4, 9, 8, 4});
+            var Iso2result2 = Iso2.Intersect3(new int[] { 1,2,2,1 }, new int[] { 2,2 });
+
+            TransposeMatrix867 TM = new TransposeMatrix867();
+            var matrix = new int[][] { new int[] { 1, 2, 3 },
+                                       new int[]{ 4, 5, 6 },
+                                       new int[] { 7, 8, 9 }
+                                                     };
+            var matrix2 = new int[][] { new int[] { 1, 2, 3 },
+                                       new int[]{ 4, 5, 6 }
+                                      
+                                                     };
+            var resulttm = TM.Transpose(matrix2);
+        
         }
 
-        public class Person
+    public class Person
         {
             public int Age { get; set; }
             public string Name { get; set; }

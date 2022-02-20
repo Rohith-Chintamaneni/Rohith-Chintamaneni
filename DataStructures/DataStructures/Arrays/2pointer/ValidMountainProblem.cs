@@ -55,6 +55,31 @@ namespace DataStructures.Arrays._2pointer
             return i == N - 1;
         }
 
+
+        public bool validMountainNewWay(int[] A)
+        {
+             if (A.Length < 3) return false;
+
+            int i = 0;
+            while ((i < A.Length - 1) && A[i] < A[i + 1])
+            {
+                i++;
+            }
+
+            // Peak can't be at start and END
+            if (A[0] > A[1] || A[A.Length - 1] > A[A.Length - 2]) return false;
+
+            while ((i < A.Length - 1) && (A[i] > A[i + 1]))
+            {
+                i++;
+            }
+
+
+
+            return A.Length - 1 == i;
+
+        }
+
         public bool validMountainArrayUsing2pointer(int[] A)
         {
             int n = A.Length, i = 0, j = n - 1;
