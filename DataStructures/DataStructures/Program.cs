@@ -815,6 +815,13 @@ namespace DataStructures
 
             ReverseAstring186 reverseAstring = new ReverseAstring186();
             var reverseresult = reverseAstring.ReverseWords(new char[] { 't', 'h', 'e', ' ', 's', 'k', 'y', ' ', 'i', 's', ' ', 'b', 'l', 'u', 'e' });
+
+            AddStrings415 as415 = new AddStrings415();
+            var as415result = as415.AddStrings("11", "123");
+
+            FirstUniqueCharacterinaString387 fucs = new FirstUniqueCharacterinaString387();
+            var fucsindex = fucs.FirstUniqChar("leetcode");
+
         }
 
     public class Person
