@@ -31,5 +31,49 @@ namespace DataStructures.Sort.CyclicSort
             }
             return result;
         }
+ 
+
+
+    public List<int> FindDisappearedNumbers2(int[] nums)
+    {
+    int i = 0;
+
+    int n = nums.Length;
+        while(i<n)
+    {
+        /*
+            [2, 2, 3, 4, 5] 
+            for this example when i = 0, does 2 present at nums[2 - 1] index, if not then perform the swap operation, if yes simply increment i
+        */
+        if (nums[i] != nums[nums[i] - 1])
+        {
+            swap(nums, i, nums[i] - 1);
+        }
+        else
+        {
+            i++;
+        }
+
     }
+
+    List<int> ans = new List<int>();
+        for (i = 0; i<nums.Length; i++)
+    {
+        if (i != nums[i] - 1)
+        {
+            ans.Add(i + 1);
+        }
+        }
+    
+    return ans;
+}
+    public void swap(int[] nums, int i, int j)
+    {
+        int temp = nums[i];
+        nums[i] = nums[j];
+        nums[j] = temp;
+    }
+
+
+    }  
 }
