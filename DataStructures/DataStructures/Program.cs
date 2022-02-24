@@ -822,6 +822,8 @@ namespace DataStructures
             FirstUniqueCharacterinaString387 fucs = new FirstUniqueCharacterinaString387();
             var fucsindex = fucs.FirstUniqChar("leetcode");
 
+            FindAllNumbersDisappearedInArray448 fandia = new FindAllNumbersDisappearedInArray448();
+            var fandiaresult = fandia.FindDisappearedNumbers(new int[] { 4, 3, 2, 7, 8, 2, 3, 1 });
         }
 
     public class Person
