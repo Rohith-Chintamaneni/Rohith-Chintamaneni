@@ -824,6 +824,13 @@ namespace DataStructures
 
             FindAllNumbersDisappearedInArray448 fandia = new FindAllNumbersDisappearedInArray448();
             var fandiaresult = fandia.FindDisappearedNumbers(new int[] { 4, 3, 2, 7, 8, 2, 3, 1 });
+
+            RecursionBasics rb = new RecursionBasics();
+            var rbinterative = rb.CountListIterative(new List<int> { 1, 2, 3, 4 });
+
+            var rbrecursion1 = rb.CountListRecursive1(new List<int> { 1, 2, 3, 4 });
+
+            var rbrecursion3 = rb.CountListRecursive3(new List<int> { 1, 2, 3, 4 });
         }
 
     public class Person
