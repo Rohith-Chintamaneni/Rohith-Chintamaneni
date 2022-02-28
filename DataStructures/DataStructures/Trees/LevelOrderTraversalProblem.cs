@@ -36,7 +36,44 @@ namespace DataStructures.Trees
         }
 
 
+       
+        
+        
+        
+        
         // Level order traversal using Iterative Solution: TO DO
 
+
+        public IList<IList<int>> LevelOrderIterative(TreeNode root)
+        {
+            IList<IList<int>> list = new List<IList<int>>();
+            if (root == null)
+                return list;
+            Queue<TreeNode> nodes = new Queue<TreeNode>();
+            nodes.Enqueue(root);
+            while (nodes.Count > 0)
+            {
+                IList<int> row = new List<int>();
+                int length = nodes.Count();
+                for (int i = 0; i < length; i++)
+                {
+                    TreeNode visit = nodes.Dequeue();
+                    row.Add(visit.val);
+                    if (visit.left != null)
+                        nodes.Enqueue(visit.left);
+                    if (visit.right != null)
+                        nodes.Enqueue(visit.right);
+                }
+                list.Add(row);
+            }
+            return list;
+        }
+
+
+
     }
+
+
+
+  
 }

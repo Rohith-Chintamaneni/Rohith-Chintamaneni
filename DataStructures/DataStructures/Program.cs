@@ -607,14 +607,14 @@ namespace DataStructures
             }
 
 
-
+            //  [1,2,3,4,null,null,5]
             var root1 = new TreeNode(1);
             root1.left = new TreeNode(2);
-            root1.right = new TreeNode(20);
-            root1.right.left = new TreeNode(15);
-            root1.right.right = new TreeNode(7);
+            root1.right = new TreeNode(3);
+            root1.left.left = new TreeNode(4);
+            root1.right.right = new TreeNode(5);
             LevelOrderTraversalProblem lotp = new LevelOrderTraversalProblem();
-           var levelorderresults = lotp.LevelOrder(root1);
+           var levelorderresults = lotp.LevelOrderIterative(root1);
 
             TreeNode vbst = new TreeNode(20);
             vbst.left = new TreeNode(17);
