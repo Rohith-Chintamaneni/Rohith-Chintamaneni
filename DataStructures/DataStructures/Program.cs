@@ -831,6 +831,10 @@ namespace DataStructures
             var rbrecursion1 = rb.CountListRecursive1(new List<int> { 1, 2, 3, 4 });
 
             var rbrecursion3 = rb.CountListRecursive3(new List<int> { 1, 2, 3, 4 });
+
+
+            CanPlaceFlowers605 cpf = new CanPlaceFlowers605();
+            var cpfresult = cpf.CanPlaceFlowers(new int[] { 1, 0, 0, 0, 1 }, 2);
         }
 
     public class Person
