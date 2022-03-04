@@ -835,6 +835,9 @@ namespace DataStructures
 
             CanPlaceFlowers605 cpf = new CanPlaceFlowers605();
             var cpfresult = cpf.CanPlaceFlowers(new int[] { 1, 0, 0, 0, 1 }, 2);
+
+            RotateString796 rs = new RotateString796();
+            var rsresult = rs.RotateString("abcde", "abced");
         }
 
     public class Person
