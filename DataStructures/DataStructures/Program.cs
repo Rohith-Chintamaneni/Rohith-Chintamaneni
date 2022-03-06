@@ -24,6 +24,7 @@ using DataStructures.Stacks;
 using DataStructures.Strings;
 using DataStructures.Trees;
 using DataStructures.Graphs;
+using DataStructures.MathProblems;
 
 namespace DataStructures
 {
@@ -838,6 +839,13 @@ namespace DataStructures
 
             RotateString796 rs = new RotateString796();
             var rsresult = rs.RotateString("abcde", "abced");
+
+            SquareRoot Sq = new SquareRoot();
+            var sqresult = Sq.FindSquareRoot(11);
+
+            SQRT69 sq69 = new SQRT69();
+            var sq69result = sq69.MySqrt(8);
+
         }
 
     public class Person
