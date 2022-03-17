@@ -24,6 +24,7 @@ using DataStructures.Stacks;
 using DataStructures.Strings;
 using DataStructures.Trees;
 using DataStructures.Graphs;
+using DataStructures.LowLevelDesign.SlotMachine;
 using DataStructures.MathProblems;
 
 namespace DataStructures
@@ -846,6 +847,36 @@ namespace DataStructures
             SQRT69 sq69 = new SQRT69();
             var sq69result = sq69.MySqrt(8);
 
+
+            List<List<int>> fulllist = new List<List<int>>(2);
+            Console.WriteLine("Capacity of fulllist={0}", fulllist.Capacity);
+            var sublist = new List<int>();
+            for (int mk = 0; mk < 4; mk++)
+            {
+                sublist.Add(mk);
+            }
+            fulllist.Add(sublist);
+            fulllist.Add(sublist);
+            fulllist.Add(sublist);
+            fulllist.Add(sublist);
+            Console.WriteLine("Capacity of fulllist={0}", fulllist.Capacity);
+            Console.WriteLine("Capacity of sublist={0}", sublist.Capacity);
+            Console.WriteLine("count of fulllist={0}", fulllist.Count);
+            Console.WriteLine("COunt of sublist={0}", sublist.Count);
+
+
+            var slotMachine = CreateSlotMachine();
+            var slotmachineresult = slotMachine.Play();
+            Console.WriteLine(slotmachineresult.ToString());
+
+        }
+
+        public static SlotMachine CreateSlotMachine()
+        {
+            Console.WriteLine("Please enter the roller Size");
+            var rollersize = Convert.ToInt16(Console.ReadLine());
+            SlotMachine m = new SlotMachine(rollersize, new List<IRule> {new EvenNumberWinningLottery(), new SameNumberWinningLottery()});
+            return m;
         }
 
     public class Person
