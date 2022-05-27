@@ -31,10 +31,9 @@ namespace DataStructures.LowLevelDesign.SlotMachine
                 rollerresults.Add(random.Next(0, 9));
             }
 
-            foreach (var rule in rules)
-            {
-              ruleresults.Add(rule.Evaluate(rollerresults));
-            }
+            rules.ForEach(x =>ruleresults.Add(x.Evaluate(rollerresults))); 
+
+           
             return new PayoutResult(ruleresults.Any(x=>x));
 
 
