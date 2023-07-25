@@ -26,6 +26,7 @@ using DataStructures.Trees;
 using DataStructures.Graphs;
 using DataStructures.LowLevelDesign.SlotMachine;
 using DataStructures.MathProblems;
+using DataStructures.SimpleForloops;
 
 namespace DataStructures
 {
@@ -595,8 +596,9 @@ namespace DataStructures
             List<Person> objstr1 = new List<Person> { new Person(1, "Rohtih" ),new Person(2, "ram" )
             };
             List<Person> objstr2 = new List<Person>(objstr1);
-            objstr2[0].Age = 35;
-            objstr2[0].Name = "Sam";
+
+            Person p1 = new Person(10, "Ram");
+          
 
             foreach (var item in objstr1)
             {
@@ -865,9 +867,16 @@ namespace DataStructures
             Console.WriteLine("COunt of sublist={0}", sublist.Count);
 
 
-            var slotMachine = CreateSlotMachine();
-            var slotmachineresult = slotMachine.Play();
-            Console.WriteLine(slotmachineresult.ToString());
+            FiveStarsinRow Fsir = new FiveStarsinRow();
+            Fsir.Print5StarsInRow();
+
+            Console.ReadLine();
+
+
+
+            //var slotMachine = CreateSlotMachine();
+            //var slotmachineresult = slotMachine.Play();
+            //Console.WriteLine(slotmachineresult.ToString());
 
         }
 
@@ -882,7 +891,7 @@ namespace DataStructures
     public class Person
         {
             public int Age { get; set; }
-            public string Name { get; set; }
+            public string Name { get; private set; }
             public Person(int age, string name)
             {
                 Age = age;
