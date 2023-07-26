@@ -867,8 +867,14 @@ namespace DataStructures
             Console.WriteLine("COunt of sublist={0}", sublist.Count);
 
 
-            FiveStarsinRow Fsir = new FiveStarsinRow();
-            Fsir.Print5StarsInRow();
+            FiveStarsPatterns Fsir = new FiveStarsPatterns();
+            Fsir.Print5StarsInRow(5);
+
+            Fsir.PrintStarsOneInRowBasedOnlines(5);
+
+            Fsir.Pattern3(5);
+            Fsir.Pattern4(5);
+            Fsir.Pattern5(5);
 
             Console.ReadLine();
 
