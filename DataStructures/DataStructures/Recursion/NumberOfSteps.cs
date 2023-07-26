@@ -1,0 +1,29 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace DataStructures.Recursion
+{
+    public class NumberOfSteps
+    {
+        // I have to count so this tells me that I need to keep a variable to track now many steps are required.
+        // Hence it makes sense to use a helper function
+        public int COuntNumberOfStepsToZero(int n)
+        {
+            return COuntNumberOfStepsToZeroHelper(n, 0);
+        }
+
+        private int COuntNumberOfStepsToZeroHelper(int n, int count)
+        {
+            if (n == 0) return count;
+
+            if (n % 2 == 0)           
+            {                
+                return COuntNumberOfStepsToZeroHelper(n / 2, count+1);
+            }
+            else return COuntNumberOfStepsToZeroHelper(n - 1, count + 1);
+        }
+    }
+}

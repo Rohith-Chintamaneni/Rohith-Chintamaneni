@@ -889,6 +889,9 @@ namespace DataStructures
             CountNumberofZerosUsingRecursion Cnzr = new CountNumberofZerosUsingRecursion();
             Console.WriteLine("COunt of Zeros in a given number = {0}", Cnzr.CountNumberofZeros(0060));
 
+            NumberOfSteps NOS = new NumberOfSteps();
+            Console.WriteLine("NUmber of Steps to convert a number to Zero = {0}", NOS.COuntNumberOfStepsToZero(8));
+
             Console.ReadLine();
 
 
