@@ -876,6 +876,19 @@ namespace DataStructures
             Fsir.Pattern4(5);
             Fsir.Pattern5(5);
 
+            SumofDigitsUsingRecurison SDUR = new SumofDigitsUsingRecurison();
+            Console.WriteLine("Sum of digits using recurison = {0}", SDUR.SumofDigits(51));
+
+            ReverseDigits RD = new ReverseDigits();
+            RD.Reverse1(1294);
+            Console.WriteLine("Reversing Digits using method 1 = {0}", RD.sum);
+
+            Console.WriteLine("Reversing Digits using method 2 = {0}", RD.Reverse2(1294));
+
+
+            CountNumberofZerosUsingRecursion Cnzr = new CountNumberofZerosUsingRecursion();
+            Console.WriteLine("COunt of Zeros in a given number = {0}", Cnzr.CountNumberofZeros(0060));
+
             Console.ReadLine();
 
 
