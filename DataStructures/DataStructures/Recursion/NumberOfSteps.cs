@@ -14,7 +14,7 @@ namespace DataStructures.Recursion
         {
             return COuntNumberOfStepsToZeroHelper(n, 0);
         }
-
+        // passed accumalator as a variable inside method. Count in this case
         private int COuntNumberOfStepsToZeroHelper(int n, int count)
         {
             if (n == 0) return count;
@@ -23,7 +23,26 @@ namespace DataStructures.Recursion
             {                
                 return COuntNumberOfStepsToZeroHelper(n / 2, count+1);
             }
-            else return COuntNumberOfStepsToZeroHelper(n - 1, count + 1);
+            return COuntNumberOfStepsToZeroHelper(n - 1, count + 1);
+        }
+
+        // used accumaltor inside the recursive call itself
+        public int COuntNumberOfStepsToZeroHelper1(int n)
+        {
+            if (n == 0) return 0;
+            int count = 0;
+            if (n % 2 == 0)
+            {
+                count++;
+                count += COuntNumberOfStepsToZeroHelper1(n / 2);
+            }
+            else
+            {
+                count++;
+                count += COuntNumberOfStepsToZeroHelper1(n - 1);
+            }
+
+            return count;
         }
     }
 }

@@ -892,6 +892,9 @@ namespace DataStructures
             NumberOfSteps NOS = new NumberOfSteps();
             Console.WriteLine("NUmber of Steps to convert a number to Zero = {0}", NOS.COuntNumberOfStepsToZero(8));
 
+            NumberOfSteps NOS2 = new NumberOfSteps();
+            Console.WriteLine("NUmber of Steps to convert a number to Zero = {0}", NOS2.COuntNumberOfStepsToZeroHelper1(14));
+
             Console.ReadLine();
 
 
