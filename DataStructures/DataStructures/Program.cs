@@ -895,6 +895,13 @@ namespace DataStructures
             NumberOfSteps NOS2 = new NumberOfSteps();
             Console.WriteLine("NUmber of Steps to convert a number to Zero = {0}", NOS2.COuntNumberOfStepsToZeroHelper1(14));
 
+
+            SortedArray sa = new SortedArray();
+            Console.WriteLine("IS the given array sorted = {0}", sa.CHeckIfArrayisSorted(new int[] { 3,2, 4, 5, 8, 7 }));
+
+            SortedArray sa1 = new SortedArray();
+            Console.WriteLine("IS the given array sorted = {0}", sa1.CHeckIfArrayisSortedHelper1(new int[] { 1, 2, 4, 5, 7, 8 }, 0 , 5));
+
             Console.ReadLine();
 
 
