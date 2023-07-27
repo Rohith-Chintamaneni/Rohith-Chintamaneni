@@ -902,6 +902,10 @@ namespace DataStructures
             SortedArray sa1 = new SortedArray();
             Console.WriteLine("IS the given array sorted = {0}", sa1.CHeckIfArrayisSortedHelper1(new int[] { 1, 2, 4, 5, 7, 8 }, 0 , 5));
 
+            LinearSearchUsingRecursion LSUr = new LinearSearchUsingRecursion();
+            Console.WriteLine("target is found in given array at index = {0}", LSUr.PerformLinearSearch(new int[] { 1, 2, 4, 5, 7, 8 }, 7));
+
+
             Console.ReadLine();
 
 
