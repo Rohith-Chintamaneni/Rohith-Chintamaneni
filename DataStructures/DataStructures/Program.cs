@@ -310,7 +310,10 @@ namespace DataStructures
             int[][] m = { new[] { 2, 3, 4 }, new[] { 3, 4, 5 } };
 
             RichestCustomerWealth RCW = new RichestCustomerWealth();
-            RCW.MaximumWealth(m);
+           Console.WriteLine("Richest Wealth = {0}", RCW.MaximumWealth(m));
+
+            RichestCustomerWealth RCW1 = new RichestCustomerWealth();
+            Console.WriteLine("Richest Wealth using method 2 = {0}", RCW1.MaximumWealth1(m));
 
             KidsWiththeGreatestNumberOfCandies numberOfCandies = new KidsWiththeGreatestNumberOfCandies();
             var numofcandiesresult = numberOfCandies.KidsWithCandies(new[] { 2, 3, 5, 1, 3 }, 3);
@@ -905,10 +908,23 @@ namespace DataStructures
             LinearSearchUsingRecursion LSUr = new LinearSearchUsingRecursion();
             Console.WriteLine("target is found in given array at index = {0}", LSUr.PerformLinearSearch(new int[] { 1, 2, 4, 5, 7, 8 }, 7));
 
+            LinearSearchUsingRecursion LSUr1 = new LinearSearchUsingRecursion();
+            var  resultsforMatchingMultipleElements = LSUr1.PerformSearchForMultipleMatchingElements(new int[] { 1, 2, 7, 7, 7, 8 }, 7);
+            foreach (var item in resultsforMatchingMultipleElements)
+            {
+                Console.WriteLine("Indexes = {0}", item);
+            }
+           
+
+            ImplementBinarySearch IBS = new ImplementBinarySearch();
+            Console.WriteLine("IMplement Binary Search using REcursion. The index for target is {0}", IBS.SearchusingRecursion(new int[] { 1, 4, 5, 6, 8, 9, 13, 18 }, 18));
+
+            ImplementBinarySearch IBS1 = new ImplementBinarySearch();
+            Console.WriteLine("IMplement Binary Search using REcursion. The index for target is {0}", IBS1.SearchUsingInteration(new int[] { 1, 4, 5, 6, 8, 9, 13, 18 }, 18));
 
             Console.ReadLine();
 
-
+          
 
             //var slotMachine = CreateSlotMachine();
             //var slotmachineresult = slotMachine.Play();
