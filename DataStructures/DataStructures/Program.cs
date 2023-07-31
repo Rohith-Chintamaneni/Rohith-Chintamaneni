@@ -925,6 +925,9 @@ namespace DataStructures
             SquareRootUsingBinarySearch Srur = new SquareRootUsingBinarySearch();
             Console.WriteLine("Square root of a number = {0}", Srur.FindSquareRootBinarySearch(2));
 
+            CelingOfASortedArray Cosa = new CelingOfASortedArray();
+            Console.WriteLine("Celing of a Sorted Array for a target element {1}= {0}", Cosa.FindCeilingOfGivenNumber(new int[] { 2, 3, 5, 9, 14, 16, 18 }, 15), 15);
+
             Console.ReadLine();
 
           
