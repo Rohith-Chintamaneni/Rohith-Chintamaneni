@@ -922,6 +922,9 @@ namespace DataStructures
             ImplementBinarySearch IBS1 = new ImplementBinarySearch();
             Console.WriteLine("IMplement Binary Search using REcursion. The index for target is {0}", IBS1.SearchUsingInteration(new int[] { 1, 4, 5, 6, 8, 9, 13, 18 }, 18));
 
+            SquareRootUsingBinarySearch Srur = new SquareRootUsingBinarySearch();
+            Console.WriteLine("Square root of a number = {0}", Srur.FindSquareRootBinarySearch(2));
+
             Console.ReadLine();
 
           
