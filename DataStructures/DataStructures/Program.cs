@@ -928,6 +928,21 @@ namespace DataStructures
             CelingOfASortedArray Cosa = new CelingOfASortedArray();
             Console.WriteLine("Celing of a Sorted Array for a target element {1}= {0}", Cosa.FindCeilingOfGivenNumber(new int[] { 2, 3, 5, 9, 14, 16, 18 }, 15), 15);
 
+            int[] arr1 = new int[] { 1, 5, 8, 10 };
+            PassingArrays pa = new PassingArrays();
+            pa.PassByValue(arr1);
+            foreach (var item in arr1)
+            {
+                Console.WriteLine("Array elements using pass by value");
+                Console.WriteLine(item);
+            }
+            pa.PassByReference(ref arr1);
+            foreach (var item in arr1)
+            {
+                Console.WriteLine("Array elements using pass by reference");
+                Console.WriteLine(item);
+            }
+
             Console.ReadLine();
 
           
