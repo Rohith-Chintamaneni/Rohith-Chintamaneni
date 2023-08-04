@@ -22,7 +22,7 @@ namespace DataStructures.Arrays
             return max;
         }
         // Prefix sum
-        public int LargestAltitude(int[] gain)
+        public int LargestAltitude1(int[] gain)
         {
             // Initialize variables to store the maximum altitude and the current cumulative sum.
             int maxAlt = 0;
