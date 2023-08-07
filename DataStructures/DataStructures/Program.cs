@@ -955,10 +955,20 @@ namespace DataStructures
             FindHighestAltitude FHA = new FindHighestAltitude();
             Console.WriteLine(FHA.LargestAltitude(new int[] { 44, 32, -9, 52, 23, -50, 50, 33, -84, 47, -14, 84, 36, -62, 37, 81, -36, -85, -39, 67, -63, 64, -47, 95, 91, -40, 65, 67, 92, -28, 97, 100, 81 }));
 
+            AddToArrayForm addToArray = new AddToArrayForm();
+            var responseofaddtoArray = addToArray.AddToArray(new int[] { 0 }, 23);
+
+            MaxPopulationYear mpy = new MaxPopulationYear();
+            Console.WriteLine("MOst populationYear = {0}", mpy.MaximumPopulation2(new int[][] {
+                new int[]{ 1950, 1961 } ,
+                new int[] {1960,1971},
+                new int[] {1970,1981}
+                           }));
+
             Console.ReadLine();
 
-          
-
+            //   [1987,2047],[1952,2006],[2021,2042],[2047,2049],[2036,2040],[1994,2009]
+           // [1950,1961],[1960,1971],[1970,1981]
             //var slotMachine = CreateSlotMachine();
             //var slotmachineresult = slotMachine.Play();
             //Console.WriteLine(slotmachineresult.ToString());
