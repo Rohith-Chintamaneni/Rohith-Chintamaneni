@@ -965,6 +965,9 @@ namespace DataStructures
                 new int[] {1970,1981}
                            }));
 
+            Palindrome ps = new Palindrome();
+            Console.WriteLine("Is Given number palindrome {0}", ps.IsPalindrome(10));
+
             Console.ReadLine();
 
             //   [1987,2047],[1952,2006],[2021,2042],[2047,2049],[2036,2040],[1994,2009]
