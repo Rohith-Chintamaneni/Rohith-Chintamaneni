@@ -27,6 +27,7 @@ using DataStructures.Graphs;
 using DataStructures.LowLevelDesign.SlotMachine;
 using DataStructures.MathProblems;
 using DataStructures.SimpleForloops;
+using DataStructures.Arrays.Matrix;
 
 namespace DataStructures
 {
@@ -304,13 +305,13 @@ namespace DataStructures
             DAP.DuplicateZerosSecondAppraoch(new[] { 0, 4, 1, 0, 0, 8, 0, 0, 3 });
 
             ValidMountainProblem VMP = new ValidMountainProblem();
-            VMP.validMountainNewWay(new[] {0, 1, 2, 3, 4, 5, 6, 7, 8, 9});
+            VMP.validMountainNewWay(new[] { 0, 1, 2, 3, 4, 5, 6, 7, 8, 9 });
 
 
             int[][] m = { new[] { 2, 3, 4 }, new[] { 3, 4, 5 } };
 
             RichestCustomerWealth RCW = new RichestCustomerWealth();
-           Console.WriteLine("Richest Wealth = {0}", RCW.MaximumWealth(m));
+            Console.WriteLine("Richest Wealth = {0}", RCW.MaximumWealth(m));
 
             RichestCustomerWealth RCW1 = new RichestCustomerWealth();
             Console.WriteLine("Richest Wealth using method 2 = {0}", RCW1.MaximumWealth1(m));
@@ -360,23 +361,23 @@ namespace DataStructures
             Tt.PreOrderTraversalWithOutRecursion(root);
             Tt.PreOrderTraversalWithOutRecursion2(root);
             Tt.InOrderTraversal(root);
-            Tt.InOrderTraversalWithOutRecursion(root);           
+            Tt.InOrderTraversalWithOutRecursion(root);
             Tt.POstOrderTraversal(root);
-         //   Tt.POstOrderTraversalWithOutRecursion(root); failing
+            //   Tt.POstOrderTraversalWithOutRecursion(root); failing
             Tt.LevelOrderTraversalWithOutRecurrsion(root);
 
             MaxheapImplementation MHI = new MaxheapImplementation();
             var mhipresult = MHI.MaxHeapSort(new[] { 2, 9, 10, 10, 9, 9 });
             //Console.WriteLine("Max value of Heap = {0}", MHI.Peek(mhipresult));
-           
 
 
 
-           int[] arr = { 10, 5, 3, 2, 9 };
-           int n = arr.Length;
-           n = MHI.deleteRoot(arr, n);
-           n = MHI.deleteRoot(arr, n);
-           n = MHI.deleteRoot(arr, n);
+
+            int[] arr = { 10, 5, 3, 2, 9 };
+            int n = arr.Length;
+            n = MHI.deleteRoot(arr, n);
+            n = MHI.deleteRoot(arr, n);
+            n = MHI.deleteRoot(arr, n);
             MHI.printArray(arr, n);
 
             var btroot = new TreeNode(1);
@@ -394,67 +395,67 @@ namespace DataStructures
             sllnode.right.left = new TreeNode(15);
             sllnode.right.right = new TreeNode(7);
             SumofLeftLeaves Sll = new SumofLeftLeaves();
-            var sllans= Sll.SumOfLeftLeaves(sllnode);
+            var sllans = Sll.SumOfLeftLeaves(sllnode);
 
             InsertionSort Isort = new InsertionSort();
-            var rsultIsort = Isort.InsertionSorting(new[]{ 0, 43, 5, 1, 2, });
+            var rsultIsort = Isort.InsertionSorting(new[] { 0, 43, 5, 1, 2, });
 
 
             SelectionSort selectionSortj = new SelectionSort();
-            var selectionSortjresultSelectionSorting = selectionSortj.SelectionSorting(new[] { 0,43, 5, 1, 2, });
+            var selectionSortjresultSelectionSorting = selectionSortj.SelectionSorting(new[] { 0, 43, 5, 1, 2, });
 
             MajorityElement meMajorityElement = new MajorityElement();
-           var memajorityelement= meMajorityElement.MajorityElementProblem(new[] { 3, 1, 2, 3, 3, 3, 3 });
+            var memajorityelement = meMajorityElement.MajorityElementProblem(new[] { 3, 1, 2, 3, 3, 3, 3 });
 
 
-           LongestSubStringWithoutRepeatingCharactersProblem Lswrcp =
-               new LongestSubStringWithoutRepeatingCharactersProblem();
-          var Lswrcpresult = Lswrcp.LengthOfLongestSubstringBF(" ");
+            LongestSubStringWithoutRepeatingCharactersProblem Lswrcp =
+                new LongestSubStringWithoutRepeatingCharactersProblem();
+            var Lswrcpresult = Lswrcp.LengthOfLongestSubstringBF(" ");
 
-          var lswrcpresultbrute = Lswrcp.LengthOfLongestSubstringBFOptimized_O_Nsquare("dvdf");
+            var lswrcpresultbrute = Lswrcp.LengthOfLongestSubstringBFOptimized_O_Nsquare("dvdf");
 
-          ListNode reorderlist = new ListNode(1)
-          {
-              next = new ListNode(2)
-              {
-                  next = new ListNode(3)
-                  {
-                      next = new ListNode(4)
-                          { next = new ListNode(5) }
-                  }
-              }
-          };
-
-
-          ReorderListProblem rlpobj = new ReorderListProblem();
-             rlpobj.ReorderList(reorderlist);
+            ListNode reorderlist = new ListNode(1)
+            {
+                next = new ListNode(2)
+                {
+                    next = new ListNode(3)
+                    {
+                        next = new ListNode(4)
+                        { next = new ListNode(5) }
+                    }
+                }
+            };
 
 
-             MissingNumberProblem Mnp = new MissingNumberProblem();
-             var mnpreslt = Mnp.MissingNumber(new[]{3, 0, 1});
+            ReorderListProblem rlpobj = new ReorderListProblem();
+            rlpobj.ReorderList(reorderlist);
 
-             FindtheDuplicateNumber FtDn = new FindtheDuplicateNumber();
-             var Ftdnresult= FtDn.FindDuplicateLinkedList(new[] { 1, 3, 4, 2, 2 });
 
-             MergeKLinkedListProblem MKLp =new MergeKLinkedListProblem();
-             var Mklpresponse = MKLp.mergeKListsusingDivideAndConquer(new[]
-             {
+            MissingNumberProblem Mnp = new MissingNumberProblem();
+            var mnpreslt = Mnp.MissingNumber(new[] { 3, 0, 1 });
+
+            FindtheDuplicateNumber FtDn = new FindtheDuplicateNumber();
+            var Ftdnresult = FtDn.FindDuplicateLinkedList(new[] { 1, 3, 4, 2, 2 });
+
+            MergeKLinkedListProblem MKLp = new MergeKLinkedListProblem();
+            var Mklpresponse = MKLp.mergeKListsusingDivideAndConquer(new[]
+            {
                  new ListNode(1){next= new ListNode(4){next = new ListNode(5)}},
                  new ListNode(1){next= new ListNode(3){next = new ListNode(4)}},
                  new ListNode(2){next = new ListNode(6)}
              });
 
 
-             var jaggedarray = new int[][]
-             {
+            var jaggedarray = new int[][]
+            {
                 new int[] { 1, 3 },
                 new int[] { 2, 6 },
                 new int[] { 8, 10 },
                 new int[] { 15, 18 }
-             };
-             //[1,3],[2,6],[8,10],[15,18]
-             BasicsOfJaggedArray BOJA = new BasicsOfJaggedArray();
-             BOJA.AccessArrays(jaggedarray);
+            };
+            //[1,3],[2,6],[8,10],[15,18]
+            BasicsOfJaggedArray BOJA = new BasicsOfJaggedArray();
+            BOJA.AccessArrays(jaggedarray);
 
             var secondcase = new int[][]
             {
@@ -463,20 +464,20 @@ namespace DataStructures
                 new int[]{3, 5 }
             };
 
-             MergeIntervalsProblem MIP = new MergeIntervalsProblem();
-             var miresult = MIP.MergeAlternate_RC(secondcase);
+            MergeIntervalsProblem MIP = new MergeIntervalsProblem();
+            var miresult = MIP.MergeAlternate_RC(secondcase);
 
-            
-             var IIParray = new int[][]
-             {
+
+            var IIParray = new int[][]
+            {
                  new int[] { 1, 5 },
-               //  new int[] { 6, 9 },
-             };
+                //  new int[] { 6, 9 },
+            };
 
-             
-             var newinterval = new int[] { 0, 0 };
-             InsertIntervalProblem IIP = new InsertIntervalProblem();
-             var IIPresult = IIP.Insert(IIParray, newinterval);
+
+            var newinterval = new int[] { 0, 0 };
+            InsertIntervalProblem IIP = new InsertIntervalProblem();
+            var IIPresult = IIP.Insert(IIParray, newinterval);
 
             var nonparameter = new int[][]
             {
@@ -502,82 +503,82 @@ namespace DataStructures
             CBs.CountBits(10);
 
             ReversingBits rbs = new ReversingBits();
-           var rbsresult= rbs.ReverseBitsUsingBitManipulation(14);
+            var rbsresult = rbs.ReverseBitsUsingBitManipulation(14);
 
-           var meetingroomsobject = new int[][]
-           {
+            var meetingroomsobject = new int[][]
+            {
                 new int[]{7, 10},
                new int[] {2, 4}
-           };
+            };
 
-           MeetingRooms meetingRooms = new MeetingRooms();
-          var mrresult= meetingRooms.CanAttendMeetings(meetingroomsobject);
-
-
-          MeetingRooms2 meetingRooms2 = new MeetingRooms2();
-          var mr2result = meetingRooms2.MinMeetingRooms(meetingroomsobject);
+            MeetingRooms meetingRooms = new MeetingRooms();
+            var mrresult = meetingRooms.CanAttendMeetings(meetingroomsobject);
 
 
-          ValidPalindrome vp = new ValidPalindrome();
-          Console.WriteLine(vp.isPalindrome2("race a car"));
-
-          HowmanyApplesCanYouPutInBasket HMAB = new HowmanyApplesCanYouPutInBasket();
-          Console.WriteLine(HMAB.MaxNumberOfApples(new int[]{ 988, 641, 984, 635, 461, 527, 491, 610, 274, 104, 348, 468, 220, 837, 126, 111, 536, 368, 89, 201, 589, 481, 849, 708, 258, 853, 563, 868, 92, 76, 566, 398, 272, 697, 584, 851, 302, 766, 88, 428, 276, 797, 460, 244, 950, 134, 838, 161, 15, 330 }));
+            MeetingRooms2 meetingRooms2 = new MeetingRooms2();
+            var mr2result = meetingRooms2.MinMeetingRooms(meetingroomsobject);
 
 
-          FibonacciUsingMemoization fum = new FibonacciUsingMemoization();
-          Console.WriteLine("Fibonacci Number={0}", fum.CalculateFibonacci(50));
+            ValidPalindrome vp = new ValidPalindrome();
+            Console.WriteLine(vp.isPalindrome2("race a car"));
+
+            HowmanyApplesCanYouPutInBasket HMAB = new HowmanyApplesCanYouPutInBasket();
+            Console.WriteLine(HMAB.MaxNumberOfApples(new int[] { 988, 641, 984, 635, 461, 527, 491, 610, 274, 104, 348, 468, 220, 837, 126, 111, 536, 368, 89, 201, 589, 481, 849, 708, 258, 853, 563, 868, 92, 76, 566, 398, 272, 697, 584, 851, 302, 766, 88, 428, 276, 797, 460, 244, 950, 134, 838, 161, 15, 330 }));
 
 
-          //FibonacciUsingMemoization fum2 = new FibonacciUsingMemoization();
-          //Console.WriteLine("Fibonacci Number without memoization={0}", fum2.FibonacciWithOutMemoization(50));
-
-          KnapsackProblem ksp = new KnapsackProblem();
-          Console.WriteLine("Max cost using recursion with DP ={0}", ksp.KnapsackDPTopDown(new int[] { 1, 4, 5, 2 }, new int[] { 10, 15, 4, 6 }, 7, 4));
-          Console.WriteLine("Max cost using Bottom up with DP ={0}", ksp.KnapsackDPBottomUp(new int[] { 1, 4, 5, 2 }, new int[] { 10, 15, 4, 6 }, 7, 4));
+            FibonacciUsingMemoization fum = new FibonacciUsingMemoization();
+            Console.WriteLine("Fibonacci Number={0}", fum.CalculateFibonacci(50));
 
 
-          SubsetSum ssSubsetSum = new SubsetSum();
-         Console.WriteLine("Does Subset exist = {0}", ssSubsetSum.SubSetSum_DP(new int[] { 2, 3, 6, 8, 10 }, 15, 5));
+            //FibonacciUsingMemoization fum2 = new FibonacciUsingMemoization();
+            //Console.WriteLine("Fibonacci Number without memoization={0}", fum2.FibonacciWithOutMemoization(50));
 
-         PartitionEqualSubsetSum pess = new PartitionEqualSubsetSum();
-         Console.WriteLine("Equal Sum Partition Exist = {0}",pess.canPartitionUsingRecursion(new int[] { 1, 2, 3, 7 }));
-
-         CountOfSubSetProblem cosp = new CountOfSubSetProblem();
-         Console.WriteLine("Count of subsets in an array equal to input sum ={0}", cosp.COuntOfSubsetUsingRecursion(new int[]{2,3,5,8,10}, 10));
-
-         UnboundKnapsack uksp = new UnboundKnapsack();
-         Console.WriteLine("unbound knapsack max cost using recursion={0}", uksp.UnboundknapsackUsingRecursionMemoization(new int[] { 1, 4, 5, 2 }, new int[] { 10, 15, 4, 6 }, 7, 4));
-
-         CoinChangeWithMaximumWays ccwmw = new CoinChangeWithMaximumWays();
-         Console.WriteLine("maximum ways to get sum from coin array using DP={0}", ccwmw.CoinChangeWithMaximumWaysDP(new int[] { 1, 2, 5}, 5));
-         Console.WriteLine("maximum ways to get sum from coin array using recursion={0}", ccwmw.CoinChangeWithMaximumWaysRecursion_Memoize(new int[] { 1, 2, 5 }, 5));
-
-         CoinChangeProblemMinimumNumberofCoins ccpm = new CoinChangeProblemMinimumNumberofCoins();
-         Console.WriteLine("Minimum number of ways to get to sum = {0}", ccpm.CoinChangeUsingRecursionWithMemoize(new int[]{ 1, 2, 5 }, 11));
-         Console.WriteLine("Minimum number of ways to get to sum = {0}", ccpm.CoinChangeUsingDP(new int[] { 1, 2, 5 }, 11));
+            KnapsackProblem ksp = new KnapsackProblem();
+            Console.WriteLine("Max cost using recursion with DP ={0}", ksp.KnapsackDPTopDown(new int[] { 1, 4, 5, 2 }, new int[] { 10, 15, 4, 6 }, 7, 4));
+            Console.WriteLine("Max cost using Bottom up with DP ={0}", ksp.KnapsackDPBottomUp(new int[] { 1, 4, 5, 2 }, new int[] { 10, 15, 4, 6 }, 7, 4));
 
 
-         LongestCommonSubSequenceProblem lcsp = new LongestCommonSubSequenceProblem();
-         Console.WriteLine("Longest common Subsequence = {0}", lcsp.LongestCommonSubsequence3("abcde", "ace"));
+            SubsetSum ssSubsetSum = new SubsetSum();
+            Console.WriteLine("Does Subset exist = {0}", ssSubsetSum.SubSetSum_DP(new int[] { 2, 3, 6, 8, 10 }, 15, 5));
 
-         LongestCommonSubstringProblem lcsbp = new LongestCommonSubstringProblem();
-         Console.WriteLine("Longest common substring = {0}", lcsbp.LongestSubstring("abcde", "abdcf"));
+            PartitionEqualSubsetSum pess = new PartitionEqualSubsetSum();
+            Console.WriteLine("Equal Sum Partition Exist = {0}", pess.canPartitionUsingRecursion(new int[] { 1, 2, 3, 7 }));
 
-         PrintLongestCommonSubSequence pcls = new PrintLongestCommonSubSequence();
-         Console.WriteLine("Printing Longest common Subsequence = {0}", pcls.PrintLongestCommonSubsequence("abcde", "ace", 5,3));
+            CountOfSubSetProblem cosp = new CountOfSubSetProblem();
+            Console.WriteLine("Count of subsets in an array equal to input sum ={0}", cosp.COuntOfSubsetUsingRecursion(new int[] { 2, 3, 5, 8, 10 }, 10));
 
-         ShortestCommonSuperSequenceProblem Scssp = new ShortestCommonSuperSequenceProblem();
-         Console.WriteLine("Shortest common Super sequence = {0}", Scssp.ShortestCommonSuperSequence_DP("abcdemnk", "acenk", 8, 5));
+            UnboundKnapsack uksp = new UnboundKnapsack();
+            Console.WriteLine("unbound knapsack max cost using recursion={0}", uksp.UnboundknapsackUsingRecursionMemoization(new int[] { 1, 4, 5, 2 }, new int[] { 10, 15, 4, 6 }, 7, 4));
 
-         MinimumNumberOfInsertionAndDeletion mnoi = new MinimumNumberOfInsertionAndDeletion();
-         Console.WriteLine("Minimum number of inserts and deletes = {0}", mnoi.MinimumNumberOfInsertionAndDeletion_DP("heap", "pea", 4, 3));
+            CoinChangeWithMaximumWays ccwmw = new CoinChangeWithMaximumWays();
+            Console.WriteLine("maximum ways to get sum from coin array using DP={0}", ccwmw.CoinChangeWithMaximumWaysDP(new int[] { 1, 2, 5 }, 5));
+            Console.WriteLine("maximum ways to get sum from coin array using recursion={0}", ccwmw.CoinChangeWithMaximumWaysRecursion_Memoize(new int[] { 1, 2, 5 }, 5));
 
-         LongestPalindromicSubsequenceProblem lpsp = new LongestPalindromicSubsequenceProblem();
-         Console.WriteLine("Longest palindrome subsequence  = {0}", lpsp.LongestPalindromeSubsequence("bbbab"));
+            CoinChangeProblemMinimumNumberofCoins ccpm = new CoinChangeProblemMinimumNumberofCoins();
+            Console.WriteLine("Minimum number of ways to get to sum = {0}", ccpm.CoinChangeUsingRecursionWithMemoize(new int[] { 1, 2, 5 }, 11));
+            Console.WriteLine("Minimum number of ways to get to sum = {0}", ccpm.CoinChangeUsingDP(new int[] { 1, 2, 5 }, 11));
+
+
+            LongestCommonSubSequenceProblem lcsp = new LongestCommonSubSequenceProblem();
+            Console.WriteLine("Longest common Subsequence = {0}", lcsp.LongestCommonSubsequence3("abcde", "ace"));
+
+            LongestCommonSubstringProblem lcsbp = new LongestCommonSubstringProblem();
+            Console.WriteLine("Longest common substring = {0}", lcsbp.LongestSubstring("abcde", "abdcf"));
+
+            PrintLongestCommonSubSequence pcls = new PrintLongestCommonSubSequence();
+            Console.WriteLine("Printing Longest common Subsequence = {0}", pcls.PrintLongestCommonSubsequence("abcde", "ace", 5, 3));
+
+            ShortestCommonSuperSequenceProblem Scssp = new ShortestCommonSuperSequenceProblem();
+            Console.WriteLine("Shortest common Super sequence = {0}", Scssp.ShortestCommonSuperSequence_DP("abcdemnk", "acenk", 8, 5));
+
+            MinimumNumberOfInsertionAndDeletion mnoi = new MinimumNumberOfInsertionAndDeletion();
+            Console.WriteLine("Minimum number of inserts and deletes = {0}", mnoi.MinimumNumberOfInsertionAndDeletion_DP("heap", "pea", 4, 3));
+
+            LongestPalindromicSubsequenceProblem lpsp = new LongestPalindromicSubsequenceProblem();
+            Console.WriteLine("Longest palindrome subsequence  = {0}", lpsp.LongestPalindromeSubsequence("bbbab"));
 
             SubSetsProblem ssp = new SubSetsProblem();
-            var aaspresilt = ssp.findSubsets(new int[] { 1, 2});
+            var aaspresilt = ssp.findSubsets(new int[] { 1, 2 });
 
             PermutationsProblem Pp = new PermutationsProblem();
             var ppreuslt = Pp.Permute(new int[] { 1, 2, 3 });
@@ -601,11 +602,11 @@ namespace DataStructures
             List<Person> objstr2 = new List<Person>(objstr1);
 
             Person p1 = new Person(10, "Ram");
-          
+
 
             foreach (var item in objstr1)
             {
-                Console.WriteLine(item.Age+ " " + item.Name);
+                Console.WriteLine(item.Age + " " + item.Name);
             }
 
             foreach (var item in objstr2)
@@ -621,7 +622,7 @@ namespace DataStructures
             root1.left.left = new TreeNode(4);
             root1.right.right = new TreeNode(5);
             LevelOrderTraversalProblem lotp = new LevelOrderTraversalProblem();
-           var levelorderresults = lotp.LevelOrderIterative(root1);
+            var levelorderresults = lotp.LevelOrderIterative(root1);
 
             TreeNode vbst = new TreeNode(20);
             vbst.left = new TreeNode(17);
@@ -630,12 +631,12 @@ namespace DataStructures
             vbst.left.left = new TreeNode(16);
             vbst.left.left.left = new TreeNode(10);
             ValidateBinarySearchTreeProblem vbtp = new ValidateBinarySearchTreeProblem();
-           Console.WriteLine("Is Give tree a valid binary tree = {0}", vbtp.IsValidBST(vbst));
+            Console.WriteLine("Is Give tree a valid binary tree = {0}", vbtp.IsValidBST(vbst));
 
             TreeNode ksmbstt = new TreeNode(3);
             ksmbstt.left = new TreeNode(1);
             ksmbstt.right = new TreeNode(4);
-          //  ksmbstt.left.left = new TreeNode(15);
+            //  ksmbstt.left.left = new TreeNode(15);
             ksmbstt.left.right = new TreeNode(2);
             //ksmbstt.left.left.left = new TreeNode(10);
             KthSmallestElementinaBSTProblem ksmbst = new KthSmallestElementinaBSTProblem();
@@ -655,11 +656,11 @@ namespace DataStructures
             custv.left.left = new TreeNode(5);
             custv.left.right = new TreeNode(5);
             custv.right.right = new TreeNode(5);
-            CountUniValueSubTreesProblem cuvst =new CountUniValueSubTreesProblem();
+            CountUniValueSubTreesProblem cuvst = new CountUniValueSubTreesProblem();
             Console.WriteLine("Top down Approach of uni value nodes = {0}", cuvst.CountUnivalSubtrees(custv));
 
             ValidAnagramProblem vap = new ValidAnagramProblem();
-            Console.WriteLine("Are the given string form anagram {0}",vap.IsAnagramUsingArray( "anagram",  "samuela"));
+            Console.WriteLine("Are the given string form anagram {0}", vap.IsAnagramUsingArray("anagram", "samuela"));
 
             GroupAnagramProblem gap = new GroupAnagramProblem();
             var list = gap.GroupAnagrams(new string[] { "eat", "tea", "tan", "ate", "nat", "bat" });
@@ -671,13 +672,13 @@ namespace DataStructures
             muotppa[0] = new int[] { 1, 3 };
             muotppa[1] = new int[] { 2, 2 };
             muotppa[2] = new int[] { 3, 1 };
-        
+
 
             MaximumUnitsonaTruckProblem muotp = new MaximumUnitsonaTruckProblem();
             Console.WriteLine("max number of units = {0}", muotp.MaximumUnits(muotppa, 4));
 
             MaximumSubarrayProblem msp = new MaximumSubarrayProblem();
-            Console.WriteLine("Maximum Subarray = {0}", msp.MaxSubArrayKadaneAlgorithm(new int[] { -2, 1, -3, 4, -1, 2, 1, -5, 4 }));
+            Console.WriteLine("Maximum Subarray = {0}", msp.MaxSubArrayUnOptimizedBruteForce(new int[] { -2, -1}));
 
             ShuffletheArrayProblem sap = new ShuffletheArrayProblem();
             var saps = sap.Shuffle3(new int[] { 2, 5, 1, 3, 4, 7 }, 3);
@@ -717,7 +718,7 @@ namespace DataStructures
 
             };
             SwapNodesInPairsProblem snip = new SwapNodesInPairsProblem();
-           // var snipresult = snip.SwapPairsIterative(swapNodeslist);
+            // var snipresult = snip.SwapPairsIterative(swapNodeslist);
             var snipresulrrecursive = snip.SwapPairsRecursive(swapNodeslist);
 
             PascalTriangleProblem ptp = new PascalTriangleProblem();
@@ -730,19 +731,19 @@ namespace DataStructures
             var cspresult = csp.ClimbStairsUsingDP(5);
 
             PrintAdjacentGraphProblem pagp = new PrintAdjacentGraphProblem();
-           //initialize
+            //initialize
             var adjlist = new List<List<int>>();
             adjlist.Add(new List<int>());
             adjlist.Add(new List<int>());
             adjlist.Add(new List<int>());
             adjlist.Add(new List<int>());
-          
+
             // add list
-            var AdjList = pagp.AddEdge(adjlist,0,1) ;         
-            AdjList = pagp.AddEdge(adjlist, 0, 2);         
-            AdjList = pagp.AddEdge(adjlist, 1, 2);         
+            var AdjList = pagp.AddEdge(adjlist, 0, 1);
+            AdjList = pagp.AddEdge(adjlist, 0, 2);
+            AdjList = pagp.AddEdge(adjlist, 1, 2);
             AdjList = pagp.AddEdge(adjlist, 1, 3);
-          
+
             var paganns = pagp.PrintGraph(4, AdjList);
 
             adjlist.Add(new List<int>());
@@ -755,15 +756,15 @@ namespace DataStructures
             // adjacency list, number of vertices and source vertice 
             var bfsagpresult = BFSAgp.BFS(adjlist, 6, 0);
 
-           BFSAgp.BFSDIS(adjlist, 7);
+            BFSAgp.BFSDIS(adjlist, 7);
 
-        
-                var edges = new int[][]
-                {
+
+            var edges = new int[][]
+            {
                     new int[]{0,1},
                     new int[]{1,2},
                     new int[]{3,4}
-                };
+            };
 
             NumberofConnectedComponentsinanUndirectedGraphProblem noccugp = new NumberofConnectedComponentsinanUndirectedGraphProblem();
             var noccupgresult = noccugp.CountComponentsUsingDFS(5, edges);
@@ -771,7 +772,7 @@ namespace DataStructures
 
 
             IterativeBinarySearchInSortedArray IBSISA = new IterativeBinarySearchInSortedArray();
-            Console.WriteLine("Element is found at an index = {0}",IBSISA.FindtheIndexOfElementInSortedArrray(new int[] { 10, 20, 30, 40, 50, 60 }, 50));
+            Console.WriteLine("Element is found at an index = {0}", IBSISA.FindtheIndexOfElementInSortedArrray(new int[] { 10, 20, 30, 40, 50, 60 }, 50));
 
 
             RecursiveBinarySearchOfSortedArray RBSISA = new RecursiveBinarySearchOfSortedArray();
@@ -806,8 +807,8 @@ namespace DataStructures
             var tspiresult = tspi.TwoSumN2pointer(new int[] { 2, 3, 4 }, 6);
 
             IntersectionofTwoArraysII Iso2 = new IntersectionofTwoArraysII();
-            var Iso2result = Iso2.Intersect3(new int[] { 4, 9, 5 }, new int[] {9, 4, 9, 8, 4});
-            var Iso2result2 = Iso2.Intersect3(new int[] { 1,2,2,1 }, new int[] { 2,2 });
+            var Iso2result = Iso2.Intersect3(new int[] { 4, 9, 5 }, new int[] { 9, 4, 9, 8, 4 });
+            var Iso2result2 = Iso2.Intersect3(new int[] { 1, 2, 2, 1 }, new int[] { 2, 2 });
 
             TransposeMatrix867 TM = new TransposeMatrix867();
             var matrix = new int[][] { new int[] { 1, 2, 3 },
@@ -816,7 +817,7 @@ namespace DataStructures
                                                      };
             var matrix2 = new int[][] { new int[] { 1, 2, 3 },
                                        new int[]{ 4, 5, 6 }
-                                      
+
                                                      };
             var resulttm = TM.Transpose(matrix2);
 
@@ -900,21 +901,21 @@ namespace DataStructures
 
 
             SortedArray sa = new SortedArray();
-            Console.WriteLine("IS the given array sorted = {0}", sa.CHeckIfArrayisSorted(new int[] { 3,2, 4, 5, 8, 7 }));
+            Console.WriteLine("IS the given array sorted = {0}", sa.CHeckIfArrayisSorted(new int[] { 3, 2, 4, 5, 8, 7 }));
 
             SortedArray sa1 = new SortedArray();
-            Console.WriteLine("IS the given array sorted = {0}", sa1.CHeckIfArrayisSortedHelper1(new int[] { 1, 2, 4, 5, 7, 8 }, 0 , 5));
+            Console.WriteLine("IS the given array sorted = {0}", sa1.CHeckIfArrayisSortedHelper1(new int[] { 1, 2, 4, 5, 7, 8 }, 0, 5));
 
             LinearSearchUsingRecursion LSUr = new LinearSearchUsingRecursion();
             Console.WriteLine("target is found in given array at index = {0}", LSUr.PerformLinearSearch(new int[] { 1, 2, 4, 5, 7, 8 }, 7));
 
             LinearSearchUsingRecursion LSUr1 = new LinearSearchUsingRecursion();
-            var  resultsforMatchingMultipleElements = LSUr1.PerformSearchForMultipleMatchingElements(new int[] { 1, 2, 7, 7, 7, 8 }, 7);
+            var resultsforMatchingMultipleElements = LSUr1.PerformSearchForMultipleMatchingElements(new int[] { 1, 2, 7, 7, 7, 8 }, 7);
             foreach (var item in resultsforMatchingMultipleElements)
             {
                 Console.WriteLine("Indexes = {0}", item);
             }
-           
+
 
             ImplementBinarySearch IBS = new ImplementBinarySearch();
             Console.WriteLine("IMplement Binary Search using REcursion. The index for target is {0}", IBS.SearchusingRecursion(new int[] { 1, 4, 5, 6, 8, 9, 13, 18 }, 18));
@@ -967,6 +968,9 @@ namespace DataStructures
 
             Palindrome ps = new Palindrome();
             Console.WriteLine("Is Given number palindrome {0}", ps.IsPalindrome(10));
+
+            LuckyNumberInMatrix lnm = new LuckyNumberInMatrix();
+            Console.WriteLine("LuckyNumber = {0}", lnm.LuckyNumbers2(new int[][] { new int[] { 7,8 }, new int[] {1,2} }));
 
             Console.ReadLine();
 

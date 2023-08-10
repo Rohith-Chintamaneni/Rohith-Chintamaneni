@@ -21,6 +21,9 @@ Input: nums = [3,3], target = 6
 Output: [0,1]
 
 
+I think for prefix sum, usually the number range will be limited, this is an indication, and mostly contain positive numbers
+
+
 Two Sum
 Roman to Integer
 Palindrome Number
