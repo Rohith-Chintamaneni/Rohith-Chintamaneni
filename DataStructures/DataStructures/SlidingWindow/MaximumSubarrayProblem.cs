@@ -73,19 +73,18 @@ namespace DataStructures.SlidingWindow
             return maxsubarray;
         }
 
-        public int MaxSubArrayKadaneAlgorithm(int[] nums)
+        public int MaxSubArrayKadaneAlgorithm(int[] arr)
         {
-            int maxsubarray = int.MinValue;
-            int currsum = 0;
-            for (int i = 0; i < nums.Length; i++)
-            {
+            int maxEndingHere = arr[0];
+            int maxSoFar = arr[0];
 
-                currsum += nums[i];
-                maxsubarray = Math.Max(maxsubarray, currsum);
-                if (currsum < 0)
-                    currsum = 0;
+            for (int i = 1; i < arr.Length; i++)
+            {
+                maxEndingHere = Math.Max(arr[i], maxEndingHere + arr[i]);
+                maxSoFar = Math.Max(maxSoFar, maxEndingHere);
             }
-            return maxsubarray;
+
+            return maxSoFar;
         }
         public int MaxSubArrayUsingSliding(int[] nums)
         {

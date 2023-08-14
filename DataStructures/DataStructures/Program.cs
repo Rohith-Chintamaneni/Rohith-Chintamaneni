@@ -975,6 +975,9 @@ namespace DataStructures
             ReshapeMatrix Rm = new ReshapeMatrix();
             var rmans = Rm.MatrixReshape(new int[][] { new int[] { 1 },new int[] { 2 }, new int[] { 3 },new int[]{ 4 }}, 2, 2);
 
+            MinimumCostTOMoveChips mctm = new MinimumCostTOMoveChips();
+            Console.WriteLine("minimum chips ={0}", mctm.MinCostToMoveChips(new int[] { 2, 2, 2, 3, 3 }));
+
 
             Console.ReadLine();
 
