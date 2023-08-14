@@ -972,6 +972,10 @@ namespace DataStructures
             LuckyNumberInMatrix lnm = new LuckyNumberInMatrix();
             Console.WriteLine("LuckyNumber = {0}", lnm.LuckyNumbers2(new int[][] { new int[] { 7,8 }, new int[] {1,2} }));
 
+            ReshapeMatrix Rm = new ReshapeMatrix();
+            var rmans = Rm.MatrixReshape(new int[][] { new int[] { 1 },new int[] { 2 }, new int[] { 3 },new int[]{ 4 }}, 2, 2);
+
+
             Console.ReadLine();
 
             //   [1987,2047],[1952,2006],[2021,2042],[2047,2049],[2036,2040],[1994,2009]

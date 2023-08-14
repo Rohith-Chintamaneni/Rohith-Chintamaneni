@@ -19,10 +19,10 @@ namespace DataStructures.Arrays
             int arrLength = num.Length;
             int numofDigits = (int)Math.Log10(k) + 1;
             int i = arrLength - 1;
-            while(i >=0 || numofDigits > 0)
+            while (i >= 0 || numofDigits > 0)
             {
-                if(i>=0)
-                sum = num[i];
+                if (i >= 0)
+                    sum = num[i];
 
                 remainder = k % 10;
                 if (remainder > 0)
@@ -125,6 +125,28 @@ So, we add at the beginning of num
             }
             res.Reverse();
             return res;
+        }
+
+
+        // this is also easy and I like it more. Add num[i] to K and insert k%10. After adding remainder, find it quotient. run until you check that K >0
+        public IList<int> AddToArrayForm3(int[] num, int k)
+        {
+            LinkedList<int> result = new LinkedList<int>();
+            int len = num.Length - 1;
+         
+            while (len >= 0 || k != 0)
+            {
+
+                if (len >= 0)
+                {
+                    k += num[len--];
+                }
+
+                result.AddFirst(k % 10);
+                k /= 10;
+            }
+
+            return result.ToArray();
         }
     }
 }
