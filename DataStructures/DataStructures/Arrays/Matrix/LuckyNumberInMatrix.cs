@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+//https://leetcode.com/problems/lucky-numbers-in-a-matrix/
 namespace DataStructures.Arrays.Matrix
 {
     public class LuckyNumberInMatrix
@@ -59,6 +59,7 @@ namespace DataStructures.Arrays.Matrix
 
         }
         // Advanced way. This GOes by the initial idea I had but I could not implement it properly
+        // once you find the lowest number in your row get the index and check if that number is maximum in that column. By traversing through all rows and this item you have the column index 
         public List<int> LuckyNumbers2(int[][] matrix)
         {
             int n = matrix.Length;

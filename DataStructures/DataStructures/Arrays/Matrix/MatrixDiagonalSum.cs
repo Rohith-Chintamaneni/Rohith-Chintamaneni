@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
-
+//https://leetcode.com/problems/matrix-diagonal-sum/submissions/
 namespace DataStructures.Arrays.Matrix
 {
     public class MatrixDiagonalSum
@@ -68,6 +68,22 @@ namespace DataStructures.Arrays.Matrix
 
 
 
+        }
+
+        // add both diagonal sums and subtract later when based on even or odd number of matrix.
+        // When asked for diagonal we don't have to use 2 for loops.
+        public int DiagonalSum2(int[][] mat)
+        {
+
+            int n = mat.Length;
+            int sum = 0;
+
+            for (int i = 0; i < n; i++)
+            {
+                sum += mat[i][i];
+                sum += mat[i][n - i - 1];
+            }
+            return (n % 2 == 0) ? sum : sum - mat[n / 2][n / 2];
         }
     }
 }

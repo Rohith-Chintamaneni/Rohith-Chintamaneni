@@ -70,7 +70,7 @@ namespace DataStructures.Arrays.Matrix
             else
                 ans[rlimit] = columnaaray.ToArray();
             return ans;
-            return ans;
+     
         }
 
         // Modulo approach

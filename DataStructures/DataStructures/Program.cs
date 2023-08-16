@@ -979,6 +979,17 @@ namespace DataStructures
             Console.WriteLine("minimum chips ={0}", mctm.MinCostToMoveChips(new int[] { 2, 2, 2, 3, 3 }));
 
 
+            BubbleSort bubbleSort = new BubbleSort();
+            var bsort = bubbleSort.Sort(new int[] { 1,2,3,5,4});
+
+            SpiralMatrix sm = new SpiralMatrix();
+            sm.SpiralOrder(new int[3][] { new int[4] { 1, 2, 3, 4 }, new int[4] { 5, 6, 7, 8 } , new int[4] { 9, 10, 11, 12 } });
+
+
+            MatrixDiagonalSum matrixDiagonalSum = new MatrixDiagonalSum();
+           Console.WriteLine("Matrix diagonal sum = {0}", matrixDiagonalSum.DiagonalSum2(new int[][] {new int[] { 1, 2, 3 },new int[] {4,5,6}, new int[]{7,8,9}
+            }));
+
             Console.ReadLine();
 
             //   [1987,2047],[1952,2006],[2021,2042],[2047,2049],[2036,2040],[1994,2009]
