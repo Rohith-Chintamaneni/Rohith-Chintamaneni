@@ -990,6 +990,58 @@ namespace DataStructures
            Console.WriteLine("Matrix diagonal sum = {0}", matrixDiagonalSum.DiagonalSum2(new int[][] {new int[] { 1, 2, 3 },new int[] {4,5,6}, new int[]{7,8,9}
             }));
 
+            ShiftingElementsInArray seia = new ShiftingElementsInArray();
+            Array.ForEach(seia.ShiftToLeft(new int[] { 1, 2, 3, 4, 5 }, 2), x=>Console.WriteLine(x));
+
+            CountFrequenciesInASortedArray CfIS = new CountFrequenciesInASortedArray();
+            CfIS.CountFrequencies(new int[] { 10, 10, 10, 20, 30, 30 });
+
+            Console.WriteLine('c' - 0);
+            Console.WriteLine((char)(50 + '0'));
+
+            var listsam = new List<int>();
+            listsam.Add(1);
+            listsam.Add(12);
+            listsam.Add(16);
+            listsam.Add(18);
+            foreach (var item in listsam)
+            {
+                Console.WriteLine(item);
+            }
+            // Deep Copy
+            var seconlistsam = new List<int>(listsam.ToArray());
+
+            Console.WriteLine("new List by passing old list in constructor");
+
+            foreach (var item in seconlistsam)
+            {
+                Console.WriteLine(item);
+            }
+
+            Console.WriteLine("new List by referencing the old list and changing the value");
+
+            var seconlistsam2 = listsam;
+            seconlistsam2[1] = 100;
+            foreach (var item in seconlistsam2)
+            {
+                Console.WriteLine(item);
+            }
+
+            Console.WriteLine("Displaying old list again");
+            foreach (var item in listsam)
+            {
+                Console.WriteLine(item);
+            }
+
+            ProductExceptSelf PES = new ProductExceptSelf();
+            var PESANS = PES.productExceptSelf2(new int[] { 1, 2, 3, 4 });
+
+            MinimumSizeSubarraySum209 msss = new MinimumSizeSubarraySum209();
+            Console.WriteLine("Minimum length = {0}", msss.MinSubArrayLen(4, new int[] { 1,4,4}));
+
+            MaximumProductSubarray mps = new MaximumProductSubarray();
+            Console.WriteLine("Product of maximum ={0}", mps.MaxProduct(new int[] { -2, 3, -4 }));
+
             Console.ReadLine();
 
             //   [1987,2047],[1952,2006],[2021,2042],[2047,2049],[2036,2040],[1994,2009]

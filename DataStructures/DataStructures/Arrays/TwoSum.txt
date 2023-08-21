@@ -30,8 +30,8 @@ Palindrome Number
 Maximum Subarray
 Remove Element
 Contains Duplicate
-Add Two Numbers
+Add Two Numbers -- TO DO
 Majority Element
-Remove Duplicates from Sorted Array
+Remove Duplicates from Sorted Array -- TO DO
 Valid Anagram
-Group Anagrams
+Group Anagrams-- TO DO
