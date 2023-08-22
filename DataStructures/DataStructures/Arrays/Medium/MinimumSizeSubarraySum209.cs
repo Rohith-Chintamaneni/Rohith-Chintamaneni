@@ -8,6 +8,7 @@ namespace DataStructures.Arrays.Medium
 {
     public class MinimumSizeSubarraySum209
     {
+        public int N;
         // Using Slidin Window. 
         public int MinSubArrayLen(int target, int[] nums)
         {
@@ -46,7 +47,7 @@ namespace DataStructures.Arrays.Medium
 
             return ans;
         }
-
+        // optimized in terms of variables.
         public int MinSubArrayLen2(int target, int[] nums)
         {
             int rsum = 0;
@@ -55,7 +56,7 @@ namespace DataStructures.Arrays.Medium
                 rsum += nums[i];
             }
             if (rsum < target) return 0;
-            int ans = nums.Length+1;
+            int ans = nums.Length + 1;
             int s = 0;
             rsum = 0;
             int MinLength = nums.Length + 1;
@@ -63,12 +64,12 @@ namespace DataStructures.Arrays.Medium
             {
 
                 rsum = rsum + nums[i];
-             
+
 
                 while (rsum >= target)
                 {
                     MinLength = i - s + 1;
-                    ans = Math.Min(ans, MinLength);                  
+                    ans = Math.Min(ans, MinLength);
                     rsum = rsum - nums[s];
                     s++;
 
@@ -77,9 +78,37 @@ namespace DataStructures.Arrays.Medium
                 }
             }
 
-       
+
 
             return ans;
+        }
+
+        public int MinSubArrayLen3(int target, int[] A)
+        {
+           N = A.Length;
+            for (int i = 1; i < N; i++)
+                A[i] += A[i - 1];
+
+            int l = 1, r = N;
+            while (l < r) {
+                int mid = (l + r) / 2;
+                if (overTarget(mid, target, A))
+                    r = mid;
+                else
+                    l = mid + 1;
+            }
+            return overTarget(l, target, A) ? l : 0;
+        }
+    
+        private bool overTarget(int len, int target, int[] A)
+        {
+             for (int i = 0; i <= N - len; i++)
+             {
+                 int sum = i > 0 ? A[i + len - 1] - A[i - 1] : A[i + len - 1];
+                 if (sum >= target)
+                     return true;
+             }
+             return false;
         }
     }
 }

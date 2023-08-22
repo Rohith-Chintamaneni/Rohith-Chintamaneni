@@ -28,6 +28,7 @@ using DataStructures.LowLevelDesign.SlotMachine;
 using DataStructures.MathProblems;
 using DataStructures.SimpleForloops;
 using DataStructures.Arrays.Matrix;
+using DataStructures.Arrays.PrefixSum;
 
 namespace DataStructures
 {
@@ -1037,10 +1038,19 @@ namespace DataStructures
             var PESANS = PES.productExceptSelf2(new int[] { 1, 2, 3, 4 });
 
             MinimumSizeSubarraySum209 msss = new MinimumSizeSubarraySum209();
-            Console.WriteLine("Minimum length = {0}", msss.MinSubArrayLen(4, new int[] { 1,4,4}));
+            Console.WriteLine("Minimum length = {0}", msss.MinSubArrayLen3(7, new int[] { 2, 3, 1, 2, 4, 3 }));
 
             MaximumProductSubarray mps = new MaximumProductSubarray();
             Console.WriteLine("Product of maximum ={0}", mps.MaxProduct(new int[] { -2, 3, -4 }));
+
+            SumOfAllOddLengthSubArray Soals = new SumOfAllOddLengthSubArray();
+            Console.WriteLine("Sum = {0}", Soals.SumOddLengthSubarrays2(new int[] { 1, 4, 2, 5, 3 }));
+
+            FindPivotIndex fpi = new FindPivotIndex();
+            Console.WriteLine("Pivot Index ={0}", fpi.PivotIndex(new int[] { 1, 7, 3, 6, 5, 6 }));
+
+            LeftandRightSumDifferences lrsd = new LeftandRightSumDifferences();
+            var lrsdans = lrsd.LeftRightDifference(new int[] { 10, 4, 8, 3 });
 
             Console.ReadLine();
 
