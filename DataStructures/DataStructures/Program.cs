@@ -1052,6 +1052,12 @@ namespace DataStructures
             LeftandRightSumDifferences lrsd = new LeftandRightSumDifferences();
             var lrsdans = lrsd.LeftRightDifference(new int[] { 10, 4, 8, 3 });
 
+            SubarraySumEqualsK ssek = new SubarraySumEqualsK();
+            Console.WriteLine("COunt = {0}", ssek.SubarraySum(new int[] { -1,1,1,1,8,5,8,9 }, 9));
+
+            ContinuousSubarraySum css = new ContinuousSubarraySum();
+            Console.WriteLine("Is the array good array ={}", css.CheckSubarraySum2(new int[] { 23, 2, 4, 6, 6 }, 7));
+
             Console.ReadLine();
 
             //   [1987,2047],[1952,2006],[2021,2042],[2047,2049],[2036,2040],[1994,2009]
