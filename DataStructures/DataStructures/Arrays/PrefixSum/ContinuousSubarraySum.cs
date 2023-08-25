@@ -41,7 +41,7 @@ namespace DataStructures.Arrays.PrefixSum
             else
                 return prefix[right] - prefix[left - 1];
         }
-
+        // Store the index instead of count
         public bool CheckSubarraySum2(int[] nums, int k)
         {
             int sum = 0;

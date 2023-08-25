@@ -1056,7 +1056,13 @@ namespace DataStructures
             Console.WriteLine("COunt = {0}", ssek.SubarraySum(new int[] { -1,1,1,1,8,5,8,9 }, 9));
 
             ContinuousSubarraySum css = new ContinuousSubarraySum();
-            Console.WriteLine("Is the array good array ={}", css.CheckSubarraySum2(new int[] { 23, 2, 4, 6, 6 }, 7));
+            Console.WriteLine("Is the array good array ={0}", css.CheckSubarraySum(new int[] { 23, 2, 4, 6, 6 }, 7));
+
+            Carpooling c = new Carpooling();
+            Console.WriteLine("does carpooling exist={0}", c.CarPooling(new int[][] { new int[]{ 2, 2, 6 }, new int[] { 2, 4, 7 }, new int[] { 8, 6, 7 } }, 11));
+
+            SpiralMatrix2 sm2 = new SpiralMatrix2();
+            sm2.GenerateMatrix(3);
 
             Console.ReadLine();
 
