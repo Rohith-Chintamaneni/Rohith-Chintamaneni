@@ -1064,6 +1064,14 @@ namespace DataStructures
             SpiralMatrix2 sm2 = new SpiralMatrix2();
             sm2.GenerateMatrix(3);
 
+            SetMatrixZeroes smz = new SetMatrixZeroes();
+            smz.SetZeroes(new int[][] { new int[] { 1, 1, 1 }, new int[] { 1, 0, 1 }, new int[] { 1, 1, 1 } });
+
+            SubarraySumDivisibleByK ssdk = new SubarraySumDivisibleByK();
+            Console.WriteLine(ssdk.SubarraysDivByK(new int[] { -1, 2, 9 }, 2));
+
+            Console.WriteLine(((-3 % 5)+5)%5);
+
             Console.ReadLine();
 
             //   [1987,2047],[1952,2006],[2021,2042],[2047,2049],[2036,2040],[1994,2009]
