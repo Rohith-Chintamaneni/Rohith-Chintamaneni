@@ -1070,7 +1070,14 @@ namespace DataStructures
             SubarraySumDivisibleByK ssdk = new SubarraySumDivisibleByK();
             Console.WriteLine(ssdk.SubarraysDivByK(new int[] { -1, 2, 9 }, 2));
 
-            Console.WriteLine(((-3 % 5)+5)%5);
+            CheckifAlltheIntegersinaRangeAreCovered cair = new CheckifAlltheIntegersinaRangeAreCovered();
+            cair.IsCovered(new int[][] { new int[] { 1, 2 }, new int[] { 3, 4 }, new int[] { 5, 7 } }, 2, 5);
+
+            RearrangeArrayElementsbySign RAE = new RearrangeArrayElementsbySign();
+            var raeans = RAE.RearrangeArray(new int[] { 3, 1, -2, -5, 2, -4 });
+
+            HouseRobber hr = new HouseRobber();
+            Console.WriteLine("Max Stolen Money = {0}", hr.Rob(new int[] { 2, 1, 1, 2 }));
 
             Console.ReadLine();
 
