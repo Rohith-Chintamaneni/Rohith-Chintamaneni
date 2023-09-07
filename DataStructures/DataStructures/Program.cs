@@ -1079,6 +1079,12 @@ namespace DataStructures
             HouseRobber hr = new HouseRobber();
             Console.WriteLine("Max Stolen Money = {0}", hr.Rob(new int[] { 2, 1, 1, 2 }));
 
+            FindAllAnagramsinaString fais = new FindAllAnagramsinaString();
+            var faisans = fais.FindAnagrams("cbaebabacd", "abc");
+
+            SubstringsofSizeThreewithDistinctCharacters sub = new SubstringsofSizeThreewithDistinctCharacters();
+            Console.WriteLine("Count of good strings = {0}", sub.CountGoodSubstrings("aababcabc"));
+
             Console.ReadLine();
 
             //   [1987,2047],[1952,2006],[2021,2042],[2047,2049],[2036,2040],[1994,2009]
@@ -1109,3 +1115,4 @@ namespace DataStructures
         }
     }
 }
+//https://leetcode.com/problems/frequency-of-the-most-frequent-element/solutions/1175088/c-maximum-sliding-window-cheatsheet-template/
