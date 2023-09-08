@@ -1085,6 +1085,9 @@ namespace DataStructures
             SubstringsofSizeThreewithDistinctCharacters sub = new SubstringsofSizeThreewithDistinctCharacters();
             Console.WriteLine("Count of good strings = {0}", sub.CountGoodSubstrings("aababcabc"));
 
+            MaximumPointsYouCanObtainfromCards mpyc = new MaximumPointsYouCanObtainfromCards();
+            Console.WriteLine("Max count = {0}", mpyc.MaxScore(new int[] { 1, 2, 3, 4, 5, 6, 1 }, 3)); 
+
             Console.ReadLine();
 
             //   [1987,2047],[1952,2006],[2021,2042],[2047,2049],[2036,2040],[1994,2009]
