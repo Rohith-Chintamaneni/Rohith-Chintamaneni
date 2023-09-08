@@ -21,7 +21,7 @@ namespace DataStructures.SlidingWindow.Medium
                 else
                 map.Add(c, 1);
             }
-            char temp = new char();
+            char temp;
             List<int> ans = new List<int>();
             int start = 0, end = 0;
             while (end < s.Length)

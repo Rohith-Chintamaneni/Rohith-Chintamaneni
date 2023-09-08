@@ -29,6 +29,7 @@ using DataStructures.MathProblems;
 using DataStructures.SimpleForloops;
 using DataStructures.Arrays.Matrix;
 using DataStructures.Arrays.PrefixSum;
+using DataStructures.SlidingWindow.VariableWindow;
 
 namespace DataStructures
 {
@@ -1086,7 +1087,13 @@ namespace DataStructures
             Console.WriteLine("Count of good strings = {0}", sub.CountGoodSubstrings("aababcabc"));
 
             MaximumPointsYouCanObtainfromCards mpyc = new MaximumPointsYouCanObtainfromCards();
-            Console.WriteLine("Max count = {0}", mpyc.MaxScore(new int[] { 1, 2, 3, 4, 5, 6, 1 }, 3)); 
+            Console.WriteLine("Max count = {0}", mpyc.MaxScore(new int[] { 1, 2, 3, 4, 5, 6, 1 }, 3));
+
+            MaximumVowelsInaGivenString mvigs = new MaximumVowelsInaGivenString();
+            Console.WriteLine("Vowel count = {0}", mvigs.MaxVowels2("abciiidef", 3));
+
+            MinimumSizeSubArraySum msss1 = new MinimumSizeSubArraySum();
+            Console.WriteLine("subarray Count = {0}", msss1.MinSubArrayLen( 7, new int[] { 2, 3, 1, 2, 4, 3 }));
 
             Console.ReadLine();
 
