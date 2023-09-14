@@ -17,7 +17,7 @@ namespace DataStructures.BinarySearchArrays
             while (low <= high)
             {
                 mid = low + (high - low) / 2;
-                currcoins = mid * (mid + 1) / 2;
+                currcoins = mid * (mid + 1) / 2; // we are checking the number of coins at the mid level. SInce the sum of n number is n(n+1)/2 we are comparing that to total coins.
 
                 if (n == currcoins) return (int)mid;
                 else if (currcoins > n) high = mid - 1;
@@ -26,6 +26,19 @@ namespace DataStructures.BinarySearchArrays
 
             }
             return (int)high;
+
+        }
+
+        // basic Idea is to have a multipler and you know that every step the of multipler it needs reduce by that;
+        public int ArrangeCoins2(int n)
+        {
+            int multipler = 1;
+            while (n >= 0)
+            {
+                n -= multipler;
+                multipler++;
+            }
+            return n == 0 ? multipler - 1 : multipler - 2;
 
         }
     }

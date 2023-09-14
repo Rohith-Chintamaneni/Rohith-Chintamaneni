@@ -30,6 +30,8 @@ using DataStructures.SimpleForloops;
 using DataStructures.Arrays.Matrix;
 using DataStructures.Arrays.PrefixSum;
 using DataStructures.SlidingWindow.VariableWindow;
+using DataStructures.Arrays.Hard;
+using DataStructures.BinarySearchArrays.Easy;
 
 namespace DataStructures
 {
@@ -1094,6 +1096,17 @@ namespace DataStructures
 
             MinimumSizeSubArraySum msss1 = new MinimumSizeSubArraySum();
             Console.WriteLine("subarray Count = {0}", msss1.MinSubArrayLen( 7, new int[] { 2, 3, 1, 2, 4, 3 }));
+
+            DailyTemp Dt = new DailyTemp();
+            var dtans = Dt.DailyTemperatures2(new int[] { 73, 74, 75, 71, 69, 72, 76, 73 });
+
+
+            FirstMissingPositiveNumber FMPN = new FirstMissingPositiveNumber();
+            Console.WriteLine("MIssing Number={0}", FMPN.FirstMissingPositive(new int[] { 3, 4, -1, 1 }));
+
+            Console.WriteLine('a'.CompareTo('b'));
+            FindSmallestLetterGreaterThanTarget fslgtt = new FindSmallestLetterGreaterThanTarget();
+            Console.WriteLine(fslgtt.NextGreatestLetter(new char[] { 'c', 'f', 'j' }, 'd'));
 
             Console.ReadLine();
 
