@@ -22,5 +22,26 @@ namespace DataStructures.BinarySearchArrays
             }
             return low;
         }
+
+        public int SearchInsert2(int[] nums, int target)
+        {
+            int low = 0, high = nums.Length - 1;
+            int ans = nums.Length;
+            while (low <= high)
+            {
+                int mid = low + (high - low) / 2;
+
+                if (nums[mid] >= target) // this may be my answer but I want to search more.
+                {
+                    ans = mid;
+                    high = mid - 1;
+                }
+                else low = mid + 1;
+
+            }
+
+            return ans;
+
+        }
     }
 }
