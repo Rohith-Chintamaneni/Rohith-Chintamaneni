@@ -288,7 +288,7 @@ namespace DataStructures
             var result = SOSAP.SortedSquares(new int[5] { -7, -3, 2, 3, 11 });
 
             IntersectionofTwoArraysIIProblem IOTP = new IntersectionofTwoArraysIIProblem();
-            IOTP.Intersect2(new[] { 4, 9, 5 }, new[] { 9, 4, 9, 8, 4 });
+            IOTP.Intersect4(new[] { 61, 24, 20, 58, 95, 53, 17, 32, 45, 85, 70, 20, 83, 62, 35, 89, 5, 95, 12, 86, 58, 77, 30, 64, 46, 13, 5, 92, 67, 40, 20, 38, 31, 18, 89, 85, 7, 30, 67, 34, 62, 35, 47, 98, 3, 41, 53, 26, 66, 40, 54, 44, 57, 46, 70, 60, 4, 63, 82, 42, 65, 59, 17, 98, 29, 72, 1, 96, 82, 66, 98, 6, 92, 31, 43, 81, 88, 60, 10, 55, 66, 82, 0, 79, 11, 81 }, new[] { 5, 25, 4, 39, 57, 49, 93, 79, 7, 8, 49, 89, 2, 7, 73, 88, 45, 15, 34, 92, 84, 38, 85, 34, 16, 6, 99, 0, 2, 36, 68, 52, 73, 50, 77, 44, 61, 48 });
 
             IntersectionofTwoArrays IOTA = new IntersectionofTwoArrays();
             IOTA.Intersection(new[] { 4, 9, 5 }, new[] { 9, 4, 9, 8, 4 });
@@ -682,7 +682,7 @@ namespace DataStructures
             Console.WriteLine("max number of units = {0}", muotp.MaximumUnits(muotppa, 4));
 
             MaximumSubarrayProblem msp = new MaximumSubarrayProblem();
-            Console.WriteLine("Maximum Subarray = {0}", msp.MaxSubArrayUnOptimizedBruteForce(new int[] { -2, -1}));
+            Console.WriteLine("Maximum Subarray = {0}", msp.MaxSubArrayUnOptimizedBruteForce(new int[] { -2, -1 }));
 
             ShuffletheArrayProblem sap = new ShuffletheArrayProblem();
             var saps = sap.Shuffle3(new int[] { 2, 5, 1, 3, 4, 7 }, 3);
@@ -974,28 +974,28 @@ namespace DataStructures
             Console.WriteLine("Is Given number palindrome {0}", ps.IsPalindrome(10));
 
             LuckyNumberInMatrix lnm = new LuckyNumberInMatrix();
-            Console.WriteLine("LuckyNumber = {0}", lnm.LuckyNumbers2(new int[][] { new int[] { 7,8 }, new int[] {1,2} }));
+            Console.WriteLine("LuckyNumber = {0}", lnm.LuckyNumbers2(new int[][] { new int[] { 7, 8 }, new int[] { 1, 2 } }));
 
             ReshapeMatrix Rm = new ReshapeMatrix();
-            var rmans = Rm.MatrixReshape(new int[][] { new int[] { 1 },new int[] { 2 }, new int[] { 3 },new int[]{ 4 }}, 2, 2);
+            var rmans = Rm.MatrixReshape(new int[][] { new int[] { 1 }, new int[] { 2 }, new int[] { 3 }, new int[] { 4 } }, 2, 2);
 
             MinimumCostTOMoveChips mctm = new MinimumCostTOMoveChips();
             Console.WriteLine("minimum chips ={0}", mctm.MinCostToMoveChips(new int[] { 2, 2, 2, 3, 3 }));
 
 
             BubbleSort bubbleSort = new BubbleSort();
-            var bsort = bubbleSort.Sort(new int[] { 1,2,3,5,4});
+            var bsort = bubbleSort.Sort(new int[] { 1, 2, 3, 5, 4 });
 
             SpiralMatrix sm = new SpiralMatrix();
-            sm.SpiralOrder(new int[3][] { new int[4] { 1, 2, 3, 4 }, new int[4] { 5, 6, 7, 8 } , new int[4] { 9, 10, 11, 12 } });
+            sm.SpiralOrder(new int[3][] { new int[4] { 1, 2, 3, 4 }, new int[4] { 5, 6, 7, 8 }, new int[4] { 9, 10, 11, 12 } });
 
 
             MatrixDiagonalSum matrixDiagonalSum = new MatrixDiagonalSum();
-           Console.WriteLine("Matrix diagonal sum = {0}", matrixDiagonalSum.DiagonalSum2(new int[][] {new int[] { 1, 2, 3 },new int[] {4,5,6}, new int[]{7,8,9}
+            Console.WriteLine("Matrix diagonal sum = {0}", matrixDiagonalSum.DiagonalSum2(new int[][] {new int[] { 1, 2, 3 },new int[] {4,5,6}, new int[]{7,8,9}
             }));
 
             ShiftingElementsInArray seia = new ShiftingElementsInArray();
-            Array.ForEach(seia.ShiftToLeft(new int[] { 1, 2, 3, 4, 5 }, 2), x=>Console.WriteLine(x));
+            Array.ForEach(seia.ShiftToLeft(new int[] { 1, 2, 3, 4, 5 }, 2), x => Console.WriteLine(x));
 
             CountFrequenciesInASortedArray CfIS = new CountFrequenciesInASortedArray();
             CfIS.CountFrequencies(new int[] { 10, 10, 10, 20, 30, 30 });
@@ -1056,13 +1056,13 @@ namespace DataStructures
             var lrsdans = lrsd.LeftRightDifference(new int[] { 10, 4, 8, 3 });
 
             SubarraySumEqualsK ssek = new SubarraySumEqualsK();
-            Console.WriteLine("COunt = {0}", ssek.SubarraySum(new int[] { -1,1,1,1,8,5,8,9 }, 9));
+            Console.WriteLine("COunt = {0}", ssek.SubarraySum(new int[] { -1, 1, 1, 1, 8, 5, 8, 9 }, 9));
 
             ContinuousSubarraySum css = new ContinuousSubarraySum();
             Console.WriteLine("Is the array good array ={0}", css.CheckSubarraySum(new int[] { 23, 2, 4, 6, 6 }, 7));
 
             Carpooling c = new Carpooling();
-            Console.WriteLine("does carpooling exist={0}", c.CarPooling(new int[][] { new int[]{ 2, 2, 6 }, new int[] { 2, 4, 7 }, new int[] { 8, 6, 7 } }, 11));
+            Console.WriteLine("does carpooling exist={0}", c.CarPooling(new int[][] { new int[] { 2, 2, 6 }, new int[] { 2, 4, 7 }, new int[] { 8, 6, 7 } }, 11));
 
             SpiralMatrix2 sm2 = new SpiralMatrix2();
             sm2.GenerateMatrix(3);
@@ -1095,7 +1095,7 @@ namespace DataStructures
             Console.WriteLine("Vowel count = {0}", mvigs.MaxVowels2("abciiidef", 3));
 
             MinimumSizeSubArraySum msss1 = new MinimumSizeSubArraySum();
-            Console.WriteLine("subarray Count = {0}", msss1.MinSubArrayLen( 7, new int[] { 2, 3, 1, 2, 4, 3 }));
+            Console.WriteLine("subarray Count = {0}", msss1.MinSubArrayLen(7, new int[] { 2, 3, 1, 2, 4, 3 }));
 
             DailyTemp Dt = new DailyTemp();
             var dtans = Dt.DailyTemperatures2(new int[] { 73, 74, 75, 71, 69, 72, 76, 73 });
@@ -1107,6 +1107,16 @@ namespace DataStructures
             Console.WriteLine('a'.CompareTo('b'));
             FindSmallestLetterGreaterThanTarget fslgtt = new FindSmallestLetterGreaterThanTarget();
             Console.WriteLine(fslgtt.NextGreatestLetter(new char[] { 'c', 'f', 'j' }, 'd'));
+
+            kth_missing_positive_number kmpn = new kth_missing_positive_number();
+            Console.WriteLine("Kth missing number in an array ={0}", kmpn.FindKthPositive5(new int[] { 2, 3, 4, 7, 11 }, 5));
+
+            FairCandySwap fcs = new FairCandySwap();
+            var fcsans = fcs.FairCandySwap1(new int[] { 2}, new int[]{1,3});
+
+            Special_array_with_x_elements_greater_than_or_equal_x sawx = new Special_array_with_x_elements_greater_than_or_equal_x();
+            Console.WriteLine("Specia Array ={0}", sawx.SpecialArray(new int[] { 3,5 }));
+
 
             Console.ReadLine();
 

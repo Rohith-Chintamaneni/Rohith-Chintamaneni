@@ -21,5 +21,7 @@ namespace DataStructures.BinarySearchArrays
             }
             return low;
         }
+
+       
     }
 }

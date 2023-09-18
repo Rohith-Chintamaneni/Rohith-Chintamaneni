@@ -26,7 +26,7 @@ namespace DataStructures.Arrays._2pointer
                 }
                 else
                 {
-                    keydictionary[nums1[i]]= keydictionary.GetValueOrDefault(nums1[i]) + 1;
+                    keydictionary[nums1[i]] = keydictionary.GetValueOrDefault(nums1[i]) + 1;
                 }
 
                 count = 0;
@@ -37,7 +37,7 @@ namespace DataStructures.Arrays._2pointer
             for (int i = 0; i < nums2.Length; i++)
             {
                 // reduce the count from dictionary everytime when a value is present
-                if (keydictionary.ContainsKey(nums2[i]) && keydictionary.GetValueOrDefault(nums2[i])>0)
+                if (keydictionary.ContainsKey(nums2[i]) && keydictionary.GetValueOrDefault(nums2[i]) > 0)
                 {
                     list.Add(nums2[i]);
                     // reduce the count on dictionary
@@ -110,6 +110,98 @@ namespace DataStructures.Arrays._2pointer
             return ans.ToArray();
         }
 
+        // Using Indexing
+        public int[] Intersect3(int[] nums1, int[] nums2)
+        {
+
+            if (nums2.Length < nums1.Length) Intersect3(nums2, nums1);
+
+            int[] index = new int[1001];
+
+            for (int i = 0; i < nums2.Length; i++)
+            {
+                index[nums2[i]] = index[nums2[i]] + 1;
+
+            }
+            List<int> ans = new List<int>();
+            for (int i = 0; i < nums1.Length; i++)
+            {
+                if (index[nums1[i]] > 0)
+                {
+                    ans.Add(nums1[i]);
+                    index[nums1[i]] = index[nums1[i]] - 1;
+                }
+            }
+
+            return ans.ToArray();
+        }
+
+        public int[] Intersect4(int[] nums1, int[] nums2)
+        {
+            if (nums2.Length < nums1.Length) Intersect4(nums2, nums1);
+
+            Array.Sort(nums2);
+            Array.Sort(nums1);
+            List<int> sol = new List<int>();
+            int leftindex = 0;
+            for (int i = 0; i < nums1.Length; i++)
+            {
+                int index = BinarySearch(nums2, nums1[i], leftindex);
+
+                if (index != -1)
+                {
+                    sol.Add(nums1[i]);
+                    leftindex = index + 1;
+                }
+            }
+            return sol.ToArray();
+        }
+
+        public int BinarySearch(int[] arr, int target, int left)
+        {
+            int right = arr.Length - 1;
+            int index = -1;
+
+            while (left <= right)
+            {
+                int middle = left + (right - left) / 2;
+
+                if (arr[middle] == target)
+                {
+                    index = middle;
+
+                    right = middle - 1;
+                }
+                else if (arr[middle] > target)
+                {
+                    right = middle - 1;
+                }
+                else
+                {
+                    left = middle + 1;
+                }
+            }
+
+            return index;
+        }
 
     }
 }
+
+
+
+
+//main idea:
+
+//using binary search, search for the elements of the smallest array(nums1) in the largest array(nums2)
+
+//sort the largest array o that binary search is feasible
+//sort the smallest array so that we can seach sequentially
+
+//if element is found,
+//	keep searching to the left until we find the first occurrence of the element
+
+//	add element to the result
+
+//when element is found, keep track of the last index where element was found so that next binary search ignores previous used indexes
+//	ie. nums1 = 1,1   nums2 = 1,2,2 - output should be [1] -once we found first 1 at index 0 and next search is done as of index 1
