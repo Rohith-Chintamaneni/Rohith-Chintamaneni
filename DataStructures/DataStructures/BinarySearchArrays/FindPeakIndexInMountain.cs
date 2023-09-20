@@ -22,6 +22,35 @@ namespace DataStructures.BinarySearchArrays
             return low;
         }
 
-       
+        // if you start from low =1 and high =  length-2 then you can compare to previous element also
+        public int PeakIndexInMountainArray2(int[] nums)
+        {
+            int low = 1; int high = nums.Length - 2;
+
+            while (low <= high)
+            {
+                int mid = low + (high - low) / 2;
+                if (nums[mid - 1] < nums[mid] && nums[mid] < nums[mid + 1]) low = mid + 1;
+                else high = mid - 1;
+            }
+            return low;
+
+        }
+
+        // just check the variation in all 3 problems
+        public int PeakIndexInMountainArray3(int[] nums)
+        {
+            int low = 1; int high = nums.Length - 2;
+
+            while (low <= high)
+            {
+                int mid = low + (high - low) / 2;
+                if (nums[mid - 1] < nums[mid]) low = mid + 1;
+                else high = mid - 1;
+            }
+            return high;
+
+        }
     }
+   
 }

@@ -71,5 +71,35 @@ namespace DataStructures.BinarySearchArrays
 
             return -1;
         }
+
+        // Look for Sorted subarray inside rotated array and look for the target inside that.
+        public int Search2(int[] nums, int target)
+        {
+            int low = 1, high = nums.Length - 2;
+            if (nums[0] == target) return 0;
+            if (nums[nums.Length - 1] == target) return nums.Length - 1;
+
+            while (low <= high)
+            {
+                int mid = low + (high - low) / 2;
+
+                if (nums[mid] == target) return mid;
+                // left half is sorted
+                else if (nums[low] <= nums[mid])
+                {
+                    if ((target >= nums[low] && target <= nums[mid]))
+                        high = mid - 1;
+                    else
+                        low = mid + 1;
+                }
+                else // right half is sorted. Then check in right half
+               if (nums[mid] <= target && target <= nums[high])
+                    low = mid + 1;
+                else
+                    high = mid - 1;
+            }
+
+            return -1;
+        }
     }
 }
