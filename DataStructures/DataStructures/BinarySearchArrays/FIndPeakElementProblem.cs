@@ -62,7 +62,37 @@ namespace DataStructures.BinarySearchArrays
             return 0;
         }
 
-      
+        // my own version to find the peak.
+        public int FindPeakElement3(int[] nums)
+        {
+
+            int low = 1, high = nums.Length - 2;
+            int ans = int.MinValue;
+            if (nums.Length == 1) return 0;
+            if (nums.Length == 2) return nums[0] > nums[1] ? 0 : 1;
+            while (low <= high)
+            {
+                int mid = low + (high - low) / 2;
+                if (nums[mid] < nums[mid + 1]) low = mid + 1;
+                else
+                {
+                    ans = mid;
+                    high = mid - 1;
+                }
+            }
+
+            if (ans != int.MinValue && nums[0] > nums[ans])
+            {
+                ans = 0;
+            }
+            else if (ans != int.MinValue && nums[nums.Length - 1] > nums[ans])
+            {
+                ans = nums.Length - 1;
+            }
+
+            return ans != int.MinValue ? ans : low;
+        }
+
 
     }
 

@@ -697,7 +697,13 @@ namespace DataStructures
             var cteiaresult = cteia.COunttheElementsINSortedArrayProblem(new int[] { 1, 3, 7, 7, 7, 8, 9 }, 7);
 
             FIndPeakElementProblem fpep = new FIndPeakElementProblem();
-            var fpepresult = fpep.FindPeakElement(new int[] { 1, 2, 3, 1 });
+            var fpepresult = fpep.FindPeakElement3(new int[] { 3,1,2});
+
+            KokoEatingBanana KEB = new KokoEatingBanana();
+            Console.WriteLine("minimum bananas for hour = {0}", KEB.MinEatingSpeed(new int[] { 3, 6, 7, 11 }, 8));
+
+            AssignCookies Ac = new AssignCookies();
+            Console.WriteLine("count of kids={0}", Ac.FindContentChildren(new int[] { 1, 2, 3 }, new int[] { 1, 1 }));
 
             PermutationsProblem pp = new PermutationsProblem();
             var ppresult = pp.PermuteUsingSwap(new int[] { 1, 2 });
