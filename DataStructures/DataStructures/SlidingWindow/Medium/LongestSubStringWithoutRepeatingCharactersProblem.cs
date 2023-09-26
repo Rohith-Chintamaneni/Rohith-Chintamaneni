@@ -115,7 +115,7 @@ namespace DataStructures.SlidingWindow.Medium
 
 
       
-            public int lengthOfLongestSubstringOptimizedSLidingWindowBydirectlyskipping(String s)
+        public int lengthOfLongestSubstringOptimizedSLidingWindowBydirectlyskipping(String s)
             {
             Dictionary<char, int> map = new Dictionary<char, int>();
             int start = 0, len = 0;
@@ -135,6 +135,43 @@ namespace DataStructures.SlidingWindow.Medium
 
             return len;
         }
-        
+
+        public int LengthOfLongestSubstring_UsingCOmprehensiveGuide(string s)
+        {
+
+            if (s.Length == 0) return 0;
+            if (s.Length == 1) return 1;
+            HashSet<char> list = new HashSet<char>();
+            int end = 0; int start = 0, count = 0, ans = int.MinValue;
+            while (end < s.Length)
+            {
+
+                if (!list.Contains(s[end]))
+                {
+                    list.Add(s[end]);
+                    count++;
+                    end++;
+                    ans = Math.Max(ans, count);
+                }
+                else
+                {
+
+
+                    // perform calculations
+                    while (list.Contains(s[start]) && list.Contains(s[end]))
+                    {
+                        list.Remove(s[start]);
+                        count--;
+                        ans = Math.Max(ans, count);
+                        start++;
+                    }
+                    list.Add(s[end]);
+                    end++;
+                    count++;
+                }
+            }
+            return ans;
+        }
+
     }
 }

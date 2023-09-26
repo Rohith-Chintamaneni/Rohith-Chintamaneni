@@ -414,7 +414,7 @@ namespace DataStructures
 
             LongestSubStringWithoutRepeatingCharactersProblem Lswrcp =
                 new LongestSubStringWithoutRepeatingCharactersProblem();
-            var Lswrcpresult = Lswrcp.LengthOfLongestSubstringBF(" ");
+            var Lswrcpresult = Lswrcp.LengthOfLongestSubstring_UsingCOmprehensiveGuide("dvdf");
 
             var lswrcpresultbrute = Lswrcp.LengthOfLongestSubstringBFOptimized_O_Nsquare("dvdf");
 
@@ -1122,6 +1122,12 @@ namespace DataStructures
 
             Special_array_with_x_elements_greater_than_or_equal_x sawx = new Special_array_with_x_elements_greater_than_or_equal_x();
             Console.WriteLine("Specia Array ={0}", sawx.SpecialArray(new int[] { 3,5 }));
+
+            CyclicSortImplementation csi = new CyclicSortImplementation();
+            csi.SortCyclic(new int[] { 5, 1, 2, 3, 4 });
+
+            HeightChecker1051 HC = new HeightChecker1051();
+            Console.WriteLine("Count = {0}", HC.HeightChecker(new int[] { 1, 1, 4, 2, 1, 3 }));
 
 
             Console.ReadLine();
