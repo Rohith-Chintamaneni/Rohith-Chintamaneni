@@ -1130,6 +1130,9 @@ namespace DataStructures
             Console.WriteLine("Count = {0}", HC.HeightChecker(new int[] { 1, 1, 4, 2, 1, 3 }));
 
 
+            MinimumNumberOfDaystoMakemBouquets mnodmb = new MinimumNumberOfDaystoMakemBouquets();
+            Console.WriteLine("NUmber of Bookays={0}", mnodmb.MinDays(new int[] { 1, 10, 3, 10, 2 }, 3, 1));
+
             Console.ReadLine();
 
             //   [1987,2047],[1952,2006],[2021,2042],[2047,2049],[2036,2040],[1994,2009]
