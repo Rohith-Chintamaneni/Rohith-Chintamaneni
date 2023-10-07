@@ -32,6 +32,7 @@ using DataStructures.Arrays.PrefixSum;
 using DataStructures.SlidingWindow.VariableWindow;
 using DataStructures.Arrays.Hard;
 using DataStructures.BinarySearchArrays.Easy;
+using DataStructures.Divide_and_Conquer;
 
 namespace DataStructures
 {
@@ -682,7 +683,7 @@ namespace DataStructures
             Console.WriteLine("max number of units = {0}", muotp.MaximumUnits(muotppa, 4));
 
             MaximumSubarrayProblem msp = new MaximumSubarrayProblem();
-            Console.WriteLine("Maximum Subarray = {0}", msp.MaxSubArrayUnOptimizedBruteForce(new int[] { -2, -1 }));
+            Console.WriteLine("Maximum Subarray = {0}", msp.MaxSubArrayDC(new int[] { 5, 4, -1, 7, 8 }));
 
             ShuffletheArrayProblem sap = new ShuffletheArrayProblem();
             var saps = sap.Shuffle3(new int[] { 2, 5, 1, 3, 4, 7 }, 3);
@@ -841,7 +842,7 @@ namespace DataStructures
             var fucsindex = fucs.FirstUniqChar("leetcode");
 
             FindAllNumbersDisappearedInArray448 fandia = new FindAllNumbersDisappearedInArray448();
-            var fandiaresult = fandia.FindDisappearedNumbers(new int[] { 4, 3, 2, 7, 8, 2, 3, 1 });
+            var fandiaresult = fandia.FindDisappearedNumbers3(new int[] { 4, 3, 2, 7, 8, 2, 3, 1 });
 
             RecursionBasics rb = new RecursionBasics();
             var rbinterative = rb.CountListIterative(new List<int> { 1, 2, 3, 4 });
@@ -1133,6 +1134,35 @@ namespace DataStructures
             MinimumNumberOfDaystoMakemBouquets mnodmb = new MinimumNumberOfDaystoMakemBouquets();
             Console.WriteLine("NUmber of Bookays={0}", mnodmb.MinDays(new int[] { 1, 10, 3, 10, 2 }, 3, 1));
 
+            RelativeSortArray rsa = new RelativeSortArray();
+            var rsaresult = rsa.RelativeSortArrayFunction(new int[] { 2, 3, 1, 3, 2, 4, 6, 7, 9, 2, 19 }, new int[] { 2, 1, 4, 3, 9, 6 });
+
+
+            HowManyNumbersSmallerThanCurrent1365 Hmns = new HowManyNumbersSmallerThanCurrent1365();
+            var hmnsans = Hmns.SmallerNumbersThanCurrent(new int[] { 5, 0, 10, 0, 10, 6 });
+
+            GroupAnagrams49 ga49 = new GroupAnagrams49();
+            var ga40ans = ga49.GroupAnagrams2(new string[] { "eat", "tea", "tan", "ate", "nat", "bat" });
+
+            LargestNumber179 Ln179 = new LargestNumber179();
+            var lnans = Ln179.LargestNumber(new int[] { 3, 30, 34, 5, 9 });
+
+            KLargestElementInArray klea = new KLargestElementInArray();
+            int kleaans = klea.FindKthLargest(new int[] { 3, 2, 3, 1, 2, 4, 5, 5, 6 }, 4);
+
+            VariableScope vs = new VariableScope();
+            vs.Print(5);
+
+            Number_of_steps_to_reduce_a_number_to_zero Nosr = new Number_of_steps_to_reduce_a_number_to_zero();
+            var nosrans = Nosr.NumberOfSteps(14);
+
+            CheckIfArrayIsSortedUsingRecursion CiAs = new CheckIfArrayIsSortedUsingRecursion();
+            Console.WriteLine("Is Array sorted ={0}", CiAs.Check(new int[] { 1, 2, 3, 4, 0 }));
+
+            ArrayLengthUsingDnC alu = new ArrayLengthUsingDnC();
+            Console.WriteLine("Array Length = {0}", alu.GetArrayLength(new int[] { 1, 5, 6, 7, 8, 8, 9, 10 }));
+            Console.WriteLine("Array sum = {0}", alu.GetArraySum(new int[] { 1, 5, 6, 7, 8, 8, 9, 10 }));
+            Console.WriteLine("Array Max = {0}", alu.GetArrayMax(new int[] { 1, 5, 6, 7, 22, 8, 9, 10 }));
             Console.ReadLine();
 
             //   [1987,2047],[1952,2006],[2021,2042],[2047,2049],[2036,2040],[1994,2009]

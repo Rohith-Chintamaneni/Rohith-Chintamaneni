@@ -73,7 +73,34 @@ namespace DataStructures.Sort.CyclicSort
         nums[i] = nums[j];
         nums[j] = temp;
     }
+        // CYclic Sort
+        public IList<int> FindDisappearedNumbers3(int[] nums)
+        {
+            int i = 0;
+            while (i < nums.Length)
+            {
+                int corrected = nums[i] - 1;
+                if (nums[i] != nums[corrected])
+                {
+                    Swap(nums, i, corrected);
+                }
+                else i++;
+            }
+            var list = new List<int>();
+            for (int m = 0; m < nums.Length; m++)
+            {
+                if (m != nums[m] - 1) list.Add(m + 1);
+            }
 
+            return list;
+        }
+
+        public void Swap(int[] nums, int i, int j)
+        {
+            var temp = nums[i];
+            nums[i] = nums[j];
+            nums[j] = temp;
+        }
 
     }  
 }

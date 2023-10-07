@@ -72,7 +72,7 @@ namespace DataStructures.SlidingWindow
             }
             return maxsubarray;
         }
-
+        // using this also like Greedy, Every every point local optimal will lead to global optimal
         public int MaxSubArrayKadaneAlgorithm(int[] arr)
         {
             int maxEndingHere = arr[0];
@@ -117,6 +117,52 @@ namespace DataStructures.SlidingWindow
             }
 
             return maxSum;
+        }
+        // using Divide and conquer
+        public int MaxSubArrayDC(int[] arr)
+        {
+
+            return MaxSubArrayHelper(arr, 0, arr.Length - 1);
+
+        }
+
+        public int MaxSubArrayHelper(int[] arr, int low, int high)
+        {
+
+            // Base case: If there is only one element in the subarray, return it.
+            if (low == high)
+            {
+                return arr[low];
+            }
+
+            // Divide: Find the midpoint.
+            int mid = (low + high) / 2;
+
+            // Conquer: Recursively find the maximum subarray sums for the left and right halves.
+            int leftMax = MaxSubArrayHelper(arr, low, mid);
+            int rightMax = MaxSubArrayHelper(arr, mid + 1, high);
+
+            // Combine: Find the maximum subarray sum that crosses the midpoint.
+            // This involves finding the maximum sum for the left and right subarrays.
+            // Start from the midpoint and extend to the left and right.
+            int leftSum = int.MinValue;
+            int sum = 0;
+            for (int i = mid; i >= low; i--)
+            {
+                sum += arr[i];
+                leftSum = Math.Max(leftSum, sum);
+            }
+
+            int rightSum = int.MinValue;
+            sum = 0;
+            for (int i = mid + 1; i <= high; i++)
+            {
+                sum += arr[i];
+                rightSum = Math.Max(rightSum, sum);
+            }
+
+            // Return the maximum of the three possibilities.
+            return Math.Max(leftMax, Math.Max(rightMax, leftSum + rightSum));
         }
     }
 }
