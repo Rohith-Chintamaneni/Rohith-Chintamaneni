@@ -55,7 +55,7 @@ namespace DataStructures.Recursion
                 return;
             }
 
-            List<int> op1 = new List<int>(op);
+          //  List<int> op1 = new List<int>(op);
             List<int> op2 = new List<int>(op);
 
             op2.Add(ip[length]);
@@ -102,7 +102,7 @@ namespace DataStructures.Recursion
         {
             if (idx == nums.Length)
             {
-                subsets.Add(new List<int>(slate)); // still need to do a deep copy if not local change will modify the global value
+                subsets.Add(new List<int>(slate)); // still need to do a deep copy if not local change will modify the global value. If the changes made to arrays will be reflected. you dont want that
                 return;
             }
 
@@ -112,7 +112,7 @@ namespace DataStructures.Recursion
             // Include the current value.
             slate.Add(nums[idx]);
             helper(nums, idx + 1, slate, subsets);
-            slate.RemoveAt(slate.Count() - 1);
+            slate.RemoveAt(slate.Count() - 1); // we need to clean array. Include and exclude at that level. WHen you go to a new level of hierarcy we still want array to be empty 
         }
 
         // iterative approach
@@ -135,6 +135,37 @@ namespace DataStructures.Recursion
                 }
             }
             return subsets.ToArray();
+        }
+
+        // Using INclude Exclude method but creating the list inside the helper method instead of passing it as argument.
+        public IList<IList<int>> Subsets4(int[] nums)
+        {
+
+            return SubsetsHelper4(nums, 0, new List<int>()).ToArray();
+
+
+
+        }
+
+        public List<List<int>> SubsetsHelper4(int[] nums, int l, List<int> temp)
+        {
+
+            if (l == nums.Length)
+            {
+                var results = new List<List<int>>();
+                results.Add(new List<int>(temp));
+                return results;
+            }
+
+
+
+            var leftans = SubsetsHelper4(nums, l + 1, temp);
+            temp.Add(nums[l]);
+            var rightans = SubsetsHelper4(nums, l + 1, temp);
+            temp.RemoveAt(temp.Count - 1);
+
+            leftans.AddRange(rightans);
+            return leftans;
         }
 
     }

@@ -583,7 +583,7 @@ namespace DataStructures
             Console.WriteLine("Longest palindrome subsequence  = {0}", lpsp.LongestPalindromeSubsequence("bbbab"));
 
             SubSetsProblem ssp = new SubSetsProblem();
-            var aaspresilt = ssp.findSubsets(new int[] { 1, 2 });
+            var aaspresilt = ssp.SubsetsIncludeExcludeMethod(new int[] { 1, 2 });
 
             PermutationsProblem Pp = new PermutationsProblem();
             var ppreuslt = Pp.Permute(new int[] { 1, 2, 3 });
@@ -1163,6 +1163,15 @@ namespace DataStructures
             Console.WriteLine("Array Length = {0}", alu.GetArrayLength(new int[] { 1, 5, 6, 7, 8, 8, 9, 10 }));
             Console.WriteLine("Array sum = {0}", alu.GetArraySum(new int[] { 1, 5, 6, 7, 8, 8, 9, 10 }));
             Console.WriteLine("Array Max = {0}", alu.GetArrayMax(new int[] { 1, 5, 6, 7, 22, 8, 9, 10 }));
+
+            List<int> tem = new List<int>();
+            tem.Add(10);
+
+            List<int> rstemp = tem;
+            rstemp.Clear();
+            tem.Add(10);
+            List<int> rstemp2 = new List<int>(tem);
+            rstemp2.Clear();
             Console.ReadLine();
 
             //   [1987,2047],[1952,2006],[2021,2042],[2047,2049],[2036,2040],[1994,2009]
