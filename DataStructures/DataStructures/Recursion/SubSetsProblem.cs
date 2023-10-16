@@ -1,8 +1,5 @@
-﻿using System;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace DataStructures.Recursion
 {
@@ -29,11 +26,11 @@ namespace DataStructures.Recursion
             //List<int> op1 = new List<int>(op);
             List<int> op2 = new List<int>(op);
 
-             op2.Add(ip[length-1]);
+            op2.Add(ip[length - 1]);
 
             //helper(ip, op1, length - 1); by just using single variable to improve performance
-            helper(ip, op, length-1);
-            helper(ip, op2, length-1);
+            helper(ip, op, length - 1);
+            helper(ip, op2, length - 1);
 
 
         }
@@ -55,7 +52,7 @@ namespace DataStructures.Recursion
                 return;
             }
 
-          //  List<int> op1 = new List<int>(op);
+            //  List<int> op1 = new List<int>(op);
             List<int> op2 = new List<int>(op);
 
             op2.Add(ip[length]);
@@ -68,6 +65,7 @@ namespace DataStructures.Recursion
         }
 
         // understand this vs the above one. 
+        // THis is backTracking approach
         public IList<IList<int>> Subsets2(int[] nums)
         {
             var result = new List<IList<int>>();
@@ -168,6 +166,40 @@ namespace DataStructures.Recursion
             return leftans;
         }
 
+        // Pay attention to problem type. Sometimes it can be asked on strings which could be different from the Array implementation here.
+
+        public IList<IList<int>> Subsets5(int[] nums)
+        {
+
+
+            var ans = SubsetsHelper5(nums, new List<int>(), 0);
+            return ans.ToArray();
+
+        }
+
+        public List<List<int>> SubsetsHelper5(int[] nums, List<int> local, int index)
+        {
+
+            if (index > nums.Length - 1)
+            {
+                var results = new List<List<int>>();
+                results.Add(new List<int>(local));
+                return results;
+            }
+
+            local.Add(nums[index]);
+            var include = SubsetsHelper5(nums, local, index + 1);
+            local.RemoveAt(local.Count - 1);
+
+            var exclude = SubsetsHelper5(nums, local, index + 1);
+
+            include.AddRange(exclude);
+
+            return include;
+
+        }
     }
+
+
 
 }

@@ -33,6 +33,7 @@ using DataStructures.SlidingWindow.VariableWindow;
 using DataStructures.Arrays.Hard;
 using DataStructures.BinarySearchArrays.Easy;
 using DataStructures.Divide_and_Conquer;
+using DataStructures.Recursion.BackTracking;
 
 namespace DataStructures
 {
@@ -583,7 +584,10 @@ namespace DataStructures
             Console.WriteLine("Longest palindrome subsequence  = {0}", lpsp.LongestPalindromeSubsequence("bbbab"));
 
             SubSetsProblem ssp = new SubSetsProblem();
-            var aaspresilt = ssp.SubsetsIncludeExcludeMethod(new int[] { 1, 2 });
+            var aaspresilt = ssp.Subsets2(new int[] { 1, 2, 3});
+
+            Subsets2 ss2 = new Subsets2();
+            var ss2ans= ss2.SubsetsWithDup(new int[] { 1, 2, 3 });
 
             PermutationsProblem Pp = new PermutationsProblem();
             var ppreuslt = Pp.Permute(new int[] { 1, 2, 3 });
@@ -1162,7 +1166,36 @@ namespace DataStructures
             ArrayLengthUsingDnC alu = new ArrayLengthUsingDnC();
             Console.WriteLine("Array Length = {0}", alu.GetArrayLength(new int[] { 1, 5, 6, 7, 8, 8, 9, 10 }));
             Console.WriteLine("Array sum = {0}", alu.GetArraySum(new int[] { 1, 5, 6, 7, 8, 8, 9, 10 }));
+
+            CombinationSumProblem cs = new CombinationSumProblem();
+            var csans = cs.CombinationSum(new int[] { 1, 2 }, 2);
+
             Console.WriteLine("Array Max = {0}", alu.GetArrayMax(new int[] { 1, 5, 6, 7, 22, 8, 9, 10 }));
+
+            SortSentenceProblem ssp1 = new SortSentenceProblem();
+            Console.WriteLine("Sorted Sentence = {0}", ssp1.SortSentence("is2 sentence4 This1 a3"));
+
+            NumberOfStringsThatAppearInSubString Nostaisans = new NumberOfStringsThatAppearInSubString();
+            Console.WriteLine("Count ={0}", Nostaisans.NumOfStrings(new string[] { "a", "b", "c" }, "aaaaabbbbb"));
+
+            ReverseWordsInString RWIS = new ReverseWordsInString();
+            Console.WriteLine(RWIS.ReverseWords("Let's take LeetCode contest"));
+
+
+
+            ExcelSheetColumn ESC = new ExcelSheetColumn();
+            Console.WriteLine(ESC.ConvertToTitle(701));
+
+
+    Console.WriteLine('c' - 0); // automatic promotion of data type from char to int. gives 99
+            Console.WriteLine('c' + 0); // same thing. automatic promotion of data type from char to int. gives 99
+
+            var t = new List<List<int>>();
+            t.Add(new List<int>() { 1, 2, 3 });
+
+            var secondlist =new List<List<int>>(t);
+            secondlist.Add(new List<int>() { 4, 5, 6 });
+
 
             List<int> tem = new List<int>();
             tem.Add(10);

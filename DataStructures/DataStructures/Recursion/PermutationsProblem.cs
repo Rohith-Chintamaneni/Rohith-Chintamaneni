@@ -18,6 +18,7 @@ namespace DataStructures.Recursion
             return result;
         }
         // think of this as tree and always remember that the tree will use DFS. So it will go all the way to build one combination and then it will come back if it fails.
+        // this is more like Backtracking then we need to understand what is back tracking
         private void DFS(int[] nums, List<int> curr)
         {
             if (nums.Length == curr.Count)
