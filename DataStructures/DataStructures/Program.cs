@@ -675,8 +675,9 @@ namespace DataStructures
             var list = gap.GroupAnagrams(new string[] { "eat", "tea", "tan", "ate", "nat", "bat" });
 
             ValidParenthesesProblem vpp = new ValidParenthesesProblem();
-            Console.WriteLine("Is given input has valid parenthesis {0}", vpp.IsValid("()"));
+            Console.WriteLine("Is given input has valid parenthesis {0}", vpp.IsValid2("()"));
 
+            
             var muotppa = new int[3][];
             muotppa[0] = new int[] { 1, 3 };
             muotppa[1] = new int[] { 2, 2 };
@@ -1181,13 +1182,25 @@ namespace DataStructures
             ReverseWordsInString RWIS = new ReverseWordsInString();
             Console.WriteLine(RWIS.ReverseWords("Let's take LeetCode contest"));
 
+            ValidPalindrome vp12 = new ValidPalindrome();
+            vp12.IsPalindrome("0P");
 
+            ValidPalindrome2 vp2 = new ValidPalindrome2();
+            Console.WriteLine(vp2.ValidPalindrome("abc"));
 
             ExcelSheetColumn ESC = new ExcelSheetColumn();
             Console.WriteLine(ESC.ConvertToTitle(701));
 
+            LongestCommonPrefix14 lcp = new LongestCommonPrefix14();
+            Console.WriteLine(lcp.LongestCommonPrefix(new string[] { "reflower", "flow", "flight" }));
 
-    Console.WriteLine('c' - 0); // automatic promotion of data type from char to int. gives 99
+
+
+            Maximum_Repeating_Substring mrs = new Maximum_Repeating_Substring();
+            Console.WriteLine(mrs.MaxRepeating("ababaab", "ab"));
+
+
+            Console.WriteLine('c' - 0); // automatic promotion of data type from char to int. gives 99
             Console.WriteLine('c' + 0); // same thing. automatic promotion of data type from char to int. gives 99
 
             var t = new List<List<int>>();

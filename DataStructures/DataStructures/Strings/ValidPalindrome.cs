@@ -10,7 +10,7 @@ namespace DataStructures.Strings
     class ValidPalindrome
     {
         
-        public bool isPalindrome(String s)
+        public bool isPalindrome1(String s)
         {
             if (s == " ") return true;
 
@@ -62,6 +62,28 @@ namespace DataStructures.Strings
             return true;
         }
 
-    
+        public bool IsPalindrome(string s)
+        {
+            if (s == " ") return true;
+            s = s.ToLower();
+            int i = 0;
+            int j = s.Length - 1;
+            while (i <= s.Length - 1)
+            {
+                if (!char.IsLetterOrDigit(s[i])) i++;
+                else if (!char.IsLetterOrDigit(s[j])) j--;
+
+                else if (s[i] == s[j])
+                {
+                    i++;
+                    j--;
+                }
+                else return false;
+            }
+
+            return true;
+        }
+
+
     }
 }
